@@ -19,24 +19,42 @@ class ProfileViewController: UIViewController, LoginButtonDelegate {
     
     
     @IBAction func continueBtn(_ sender: Any) {
-        func login(email: String, password: String) {
-            struct Login: Encodable {
-                        let email: String
-                        let password: String
-                    }
+        if(emailAdressTextField.text != "" && passwordTextField.text != ""){
+                   LoginUser(email: emailAdressTextField.text!, password: passwordTextField.text!)
+                   self.navigationController?.popViewController(animated: true)
+                   NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+            
+               }else{
+                   let alert = UIAlertController(title: "Warning", message: "You must fill all the fields", preferredStyle: .alert)
+                   let action = UIAlertAction(title: "OK", style: .cancel)
+                   alert.addAction(action)
+                   self.present(alert, animated: true)
+               }
+         
 
-                    let login = Login(email: emailAdressTextField.text!, password: passwordTextField.text!)
-
-                    AF.request("http://172.27.32.1:3000/users",
-                               method: .post,
-                               parameters: login,
-                               encoder: JSONParameterEncoder.default).response { response in
-                        print(response)
-                               }
-        }
-        
     }
-    
+    func LoginUser(email: String, password: String) {
+            let url = "http://172.27.32.1:3000/users/login"
+        let params: Parameters = [
+            "email": emailAdressTextField.text!,
+            "password": passwordTextField.text!
+            
+        ]
+            
+            
+            AF.request(url, method: .post,parameters: params)
+                .validate()
+                .responseJSON { response in
+                    switch response.result {
+                        case .success:
+                            print("Validation Successful")
+                        self.performSegue(withIdentifier: "signinhomesegue", sender: "yes")
+                        case .failure(let error):
+                        self.prompt(title: "Echec", message: "Email ou mot de passe incorrect")
+                            print(error)
+                    }
+                }
+    }
     
 
     
@@ -89,34 +107,6 @@ class ProfileViewController: UIViewController, LoginButtonDelegate {
              print(userG)
                 print(userG?.profile?.imageURL(withDimension: 512))
                 
-//                if let dataPhoto = try? Data(contentsOf: (userG?.profile?.imageURL(withDimension: 512))!) {
-//                                 faza = UIImage(data: dataPhoto)
-//                            }
-//                            UserService().loginSocialMedia(username: user.email) { succes, reponse in
-//                                if succes, let json = reponse as? String{
-//                                    self.performSegue(withIdentifier: "connexion", sender: reponse)
-//                                    if json == "pas inscrit" {
-//                                        print("pas inscrit avec facebook")
-//                                    }
-//                                    
-//                                }
-//                                
-//                                else{
-//                                    
-//                                    UserService().CreationCompteSocial(user: user, image: faza! ) { succes, reponse in
-//                                        if succes, let json = reponse{
-//                                            if (json == "ok"){
-//                                                self.performSegue(withIdentifier: "connexion", sender: reponse)
-//                                            }
-//                                        }
-//                                        else if (reponse == "mail existant"){
-//                                            self.propmt(title: "Echec", message: "Mail deja Existant")
-//                                            
-//                                        }
-//                                    }
-//                                }
-                
-                    
                     
                 self.performSegue(withIdentifier: "signinhomesegue", sender: "yes")
             }
@@ -199,5 +189,10 @@ class ProfileViewController: UIViewController, LoginButtonDelegate {
         }
 
 
-    
+    func prompt(title:String, message:String){
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .destructive , handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
 }
