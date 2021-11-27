@@ -19,33 +19,27 @@ class ProfileViewController: UIViewController, LoginButtonDelegate {
     
     
     @IBAction func continueBtn(_ sender: Any) {
-                
+        func login(email: String, password: String) {
+            struct Login: Encodable {
+                        let email: String
+                        let password: String
+                    }
+
+                    let login = Login(email: emailAdressTextField.text!, password: passwordTextField.text!)
+
+                    AF.request("http://172.27.32.1:3000/users",
+                               method: .post,
+                               parameters: login,
+                               encoder: JSONParameterEncoder.default).response { response in
+                        print(response)
+                               }
+        }
         
     }
     
-    var users = [String]()
     
 
-    func login(email: String, password: String) {
-            let url = "http://172.27.32.1:3000/users"
-        let params: Parameters = [
-            "email": emailAdressTextField.text!,
-            "password": passwordTextField.text!,
-            
-        ]
-            
-            
-            AF.request(url, method: .get,parameters: params)
-                .validate()
-                .responseJSON { response in
-                    switch response.result {
-                        case .success:
-                            print("Validation Successful")
-                        case .failure(let error):
-                            print(error)
-                    }
-                }
-    }
+    
     
    
 

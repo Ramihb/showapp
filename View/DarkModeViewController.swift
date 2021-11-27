@@ -7,6 +7,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import Alamofire
 
 class DarkModeViewController: UIViewController {
     @IBOutlet var darkmodeSwitch: UISwitch!
@@ -39,6 +40,19 @@ class DarkModeViewController: UIViewController {
         loginManager.logOut()
         performSegue(withIdentifier: "logOutSegue", sender: "yes")
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
     
 }
 
