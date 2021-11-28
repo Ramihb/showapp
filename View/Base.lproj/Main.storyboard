@@ -1921,6 +1921,19 @@
                                     <action selector="back:" destination="lPT-Wj-M8H" eventType="touchUpInside" id="aHq-9v-uPu"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y4o-PG-Vfc">
+                                <rect key="frame" x="20" y="607" width="130" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zM2-vY-cn7">
+                                <rect key="frame" x="259" y="656" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="addImagePress:" destination="lPT-Wj-M8H" eventType="touchUpInside" id="h5u-nE-yzd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tNo-Rq-uRE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1964,6 +1977,7 @@
                         <outlet property="confirmPasswordTextField" destination="89O-M6-e7d" id="pe1-wq-h94"/>
                         <outlet property="emailAdressTextField" destination="mp7-OL-dYu" id="njS-zn-ggx"/>
                         <outlet property="firstNameTextField" destination="N9B-V6-YeR" id="Cc8-hn-OwQ"/>
+                        <outlet property="imageView" destination="y4o-PG-Vfc" id="XPs-2Z-PdI"/>
                         <outlet property="lastNameTextField" destination="NU7-wh-bvo" id="Qt1-Lw-vFi"/>
                         <outlet property="passwordTextField" destination="nZs-OH-o13" id="9gg-bh-Z0c"/>
                         <outlet property="phoneNumberTextField" destination="oPO-dt-Gvs" id="HaQ-gk-Cly"/>
@@ -1971,7 +1985,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3s-aZ-n0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1917" y="-117"/>
+            <point key="canvasLocation" x="1915.9420289855075" y="-117.1875"/>
         </scene>
         <!--Company News View Controller-->
         <scene sceneID="DcM-RR-Nhu">

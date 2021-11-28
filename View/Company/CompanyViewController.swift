@@ -23,19 +23,55 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
     
     @IBAction func registerBusiness(_ sender: Any) {
         if(firstNameTextField.text != "" && lastNameTextField.text != "" && businessNameTextField.text != "" && ContactNumberTextField.text != "" && emailCompanyTextField.text != "" && passwordTextField.text != "" && categoryTextField.text != ""){
-            AddCompany(firstNameCompany: firstNameTextField.text!, lastNameCompany: lastNameTextField.text!, emailCompany: emailCompanyTextField.text!, passwordCompany: passwordTextField.text!, phoneNumberCompany: ContactNumberTextField.text!, categoryCompany: categoryTextField.text!, businessNameCompany: businessNameTextField.text!)
-                   self.navigationController?.popViewController(animated: true)
-                   NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-               }else{
-                   let alert = UIAlertController(title: "Warning", message: "You must fill all the fields", preferredStyle: .alert)
-                   let action = UIAlertAction(title: "OK", style: .cancel)
-                   alert.addAction(action)
-                   self.present(alert, animated: true)
-               }
-        
-        
+//            AddCompany(firstNameCompany: firstNameTextField.text!, lastNameCompany: lastNameTextField.text!, emailCompany: emailCompanyTextField.text!, passwordCompany: passwordTextField.text!, phoneNumberCompany: ContactNumberTextField.text!, categoryCompany: categoryTextField.text!, businessNameCompany: businessNameTextField.text!)
+//                   self.navigationController?.popViewController(animated: true)
+//                   NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+//
+//
+//
+//
+//
+//
+//               }else{
+//                   let alert = UIAlertController(title: "Warning", message: "You must fill all the fields", preferredStyle: .alert)
+//                   let action = UIAlertAction(title: "OK", style: .cancel)
+//                   alert.addAction(action)
+//                   self.present(alert, animated: true)
+//               }
+            let url = URL(string: "http://172.27.32.1:3000/company/signup")
+            
+            let params: Parameters = [
+                "emailCompany": emailCompanyTextField.text!,
+                "passwordCompany": passwordTextField.text!,
+                "phoneNumberCompany": ContactNumberTextField.text!,
+                "firstNameCompany": firstNameTextField.text!,
+                "lastNameCompany": lastNameTextField.text!,
+                "businessNameCompany": businessNameTextField.text!,
+                "categoryCompany": categoryTextField.text!,
+                "brandPicCompany": imageView.image!
+            ]
+            ApiService.callPost(url: url!, params: params, finish: finishPost)
+        }
         
     }
+        struct Response: Decodable {
+            let message: String
+        }
+        func finishPost (message:String, data:Data?) -> Void
+        {
+            do
+            {
+                if let jsonData = data
+                {
+                    let parsedData = try JSONDecoder().decode(Response.self, from: jsonData)
+                    print(parsedData)
+                }
+            }
+            catch
+            {
+                print("Parse Error: \(error)")
+            }
+        }
     
     
     func AddCompany(firstNameCompany: String, lastNameCompany: String, emailCompany: String, passwordCompany: String, phoneNumberCompany: String, categoryCompany: String, businessNameCompany: String) {
@@ -62,9 +98,12 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
                             print(error)
                     }
                 }
+        
     }
     
     
+    
+      
     
     override func viewDidLoad() {
         super.viewDidLoad()

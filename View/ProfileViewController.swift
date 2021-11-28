@@ -23,12 +23,15 @@ class ProfileViewController: UIViewController, LoginButtonDelegate {
                    LoginUser(email: emailAdressTextField.text!, password: passwordTextField.text!)
                    self.navigationController?.popViewController(animated: true)
                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-            
+
                }else{
                    let alert = UIAlertController(title: "Warning", message: "You must fill all the fields", preferredStyle: .alert)
                    let action = UIAlertAction(title: "OK", style: .cancel)
                    alert.addAction(action)
                    self.present(alert, animated: true)
+            
+            
+
                }
          
 
@@ -38,10 +41,10 @@ class ProfileViewController: UIViewController, LoginButtonDelegate {
         let params: Parameters = [
             "email": emailAdressTextField.text!,
             "password": passwordTextField.text!
-            
+
         ]
-            
-            
+
+
             AF.request(url, method: .post,parameters: params)
                 .validate()
                 .responseJSON { response in
