@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Alamofire
 class CategorieModelViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
     
@@ -25,7 +26,6 @@ class CategorieModelViewController: UIViewController, UITableViewDataSource, UIT
 
         scName.text = sousCategorieName
         loadArticleToTableview(tableau:self.tableArticle)
-       
         
     }
     
@@ -34,7 +34,6 @@ class CategorieModelViewController: UIViewController, UITableViewDataSource, UIT
            super.viewWillAppear(animated)
            tableArticle.reloadData()
        }
-    
     
     func loadArticleToTableview (tableau:UITableView){
         articleService().getArticle { succes, reponse in
