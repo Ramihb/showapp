@@ -27,33 +27,7 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
     
     @IBAction func continueClick(_ sender: Any) {
         if(emailAdressTextField.text != "" && passwordTextField.text != "" && phoneNumberTextField.text != "" && firstNameTextField.text != "" && lastNameTextField.text != ""){
-//                   AddUser(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailAdressTextField.text!, password: passwordTextField.text!, phoneNumber: phoneNumberTextField.text!)
-//                   self.navigationController?.popViewController(animated: true)
-//                   NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-//               }else{
-//                   let alert = UIAlertController(title: "Warning", message: "You must fill all the fields", preferredStyle: .alert)
-//                   let action = UIAlertAction(title: "OK", style: .cancel)
-//                   alert.addAction(action)
-//                   self.present(alert, animated: true)
-            
-            
-            
-            
-            
-            
-            
-//            let url = URL(string: "http://172.27.32.1:3000/users/signup")
-//
-//        let params: Parameters = [
-//            "email": emailAdressTextField.text!,
-//            "password": passwordTextField.text!,
-//            "phoneNumber": phoneNumberTextField.text!,
-//            "firstName": firstNameTextField.text!,
-//            "lastName": lastNameTextField.text!,
-//            "profilePicture": imageView.image!
-//        ]
-//            print(imageView.image!)
-//            ApiService.callPost(url: url!, params: params, finish: finishPost)
+
             let params: Parameters = [
                         "email": emailAdressTextField.text!,
                         "password": passwordTextField.text!,
@@ -109,6 +83,7 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
             "phoneNumber": phoneNumberTextField.text!,
             "firstName": firstNameTextField.text!,
             "lastName": lastNameTextField.text!
+            
         ]
             
             

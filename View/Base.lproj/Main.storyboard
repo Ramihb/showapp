@@ -1240,6 +1240,7 @@
                     <connections>
                         <outlet property="email" destination="GLf-5d-sWx" id="7Di-0O-Zf2"/>
                         <outlet property="nom" destination="BmF-34-qLd" id="Vyj-d7-wVk"/>
+                        <outlet property="profileImage" destination="DaU-Qe-An9" id="FqU-VF-sqG"/>
                         <segue destination="6Ep-DF-EGL" kind="presentation" identifier="logOutSegue" modalPresentationStyle="fullScreen" id="Kza-w1-WLq"/>
                     </connections>
                 </viewController>
@@ -1921,7 +1922,7 @@
                                     <action selector="back:" destination="lPT-Wj-M8H" eventType="touchUpInside" id="aHq-9v-uPu"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y4o-PG-Vfc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="y4o-PG-Vfc">
                                 <rect key="frame" x="20" y="607" width="130" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -2157,7 +2158,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bpe-0i-qVU"/>
+        <segue reference="bcT-Ku-0F3"/>
         <segue reference="e8y-lW-icu"/>
         <segue reference="FdU-sM-cdB"/>
         <segue reference="GMF-1X-hGr"/>
@@ -2176,6 +2177,7 @@
         <image name="newspaper" catalog="system" width="128" height="111"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="plus.message" catalog="system" width="128" height="113"/>
         <image name="search" width="32" height="32"/>

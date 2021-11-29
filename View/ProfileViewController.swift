@@ -37,7 +37,9 @@ class ProfileViewController: UIViewController, LoginButtonDelegate {
 
     }
     func LoginUser(email: String, password: String) {
-            let url = "http://172.27.32.1:3000/users/login"
+        guard let url = URL(string: "http://172.27.32.1:3000/users/login") else {
+            fatalError("Error getting the url")
+        }
         let params: Parameters = [
             "email": emailAdressTextField.text!,
             "password": passwordTextField.text!
@@ -49,20 +51,34 @@ class ProfileViewController: UIViewController, LoginButtonDelegate {
                 .validate()
                 .responseJSON { response in
                     switch response.result {
-                        case .success:
+                        case .success (let json):
+
+                        let response = json as! NSDictionary
+                        if let faza = response["user"] as? [String: Any]{
+                            for(key, value) in faza{
+                                UserDefaults.standard.setValue(value, forKey: key)
+                            }
+
+                        }
+                        let token = response["token"]
+                        
+                        UserDefaults.standard.setValue(response["token"]!, forKey: "token")
+//                        UserDefaults.standard.setValue(response["userId"]!, forKey: "userId")
                             print("Validation Successful")
                         self.performSegue(withIdentifier: "signinhomesegue", sender: "yes")
                         case .failure(let error):
                         self.prompt(title: "Echec", message: "Email ou mot de passe incorrect")
-                            print(error)
+                        if let data = response.data {
+                            let json = String(data: data, encoding: String.Encoding.utf8)
+                            print("Failure Response: \(json)")
+                        }
+                        
+                        
                     }
                 }
     }
     
-
     
-    
-   
 
     
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
@@ -86,7 +102,7 @@ class ProfileViewController: UIViewController, LoginButtonDelegate {
         facebookLoginButton.delegate = self
                 facebookLoginButton.isHidden = true
         // Do any additional setup after loading the view.
-        fetchData()
+        //fetchData()
         
     }
     
