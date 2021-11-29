@@ -35,7 +35,7 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewData = [cellData(opened: false, data: "Home", insidedata: []),
-                         cellData(opened: false, data: "Mode", insidedata: ["Shirts", "T-Shirt", "Pants & Jeans", "Underware", "Jackets", "Coats", "Sweaters"]),
+                         cellData(opened: false, data: "Mode", insidedata: ["Shirts", "T-Shirt", "pants", "Underware", "Jackets", "Coats", "Sweaters"]),
                          cellData(opened: false, data: "Hi-tech", insidedata: ["haja1", "haja2", "haja3", "haja4"]),
                          cellData(opened: false, data: "Make up", insidedata: ["haja1", "haja2", "haja3", "haja4"]),
                          cellData(opened: false, data: "Jewellery", insidedata: ["haja1", "haja2", "haja3", "haja4"]),
@@ -169,7 +169,7 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
         }else if segue.identifier == "segueSearchToModePants&Jeans" {
             
             let destination = segue.destination as! CategorieModelViewController
-            destination.sousCategorieName = "Pants & Jeans"
+            destination.sousCategorieName = "pants"
         }else if segue.identifier == "segueSearchToModeUnderware" {
             
             let destination = segue.destination as! CategorieModelViewController
