@@ -8,25 +8,61 @@
 import UIKit
 import CoreData
 import Alamofire
+import DropDown
 class AddArticleViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     @IBOutlet weak var Quantity: UITextField!
     @IBOutlet weak var NameAdd: UITextField!
     @IBOutlet weak var PriceAdd: UITextField!
-    @IBOutlet weak var CategorieAdd: UITextField!
     @IBOutlet weak var LogoAdd: UIImageView!
-    @IBOutlet weak var Typee: UITextField!
+    
+    //Test Drop Down menu Category
+    @IBOutlet weak var vwDropDown:UIView!
+    @IBOutlet weak var Category:UILabel!
     
     
+    let categoryDropDown = DropDown()
+    let typeDropDown = DropDown()
+    let categoryValue = ["mode", "high tech", "beauty", "baby", "jewerly", "art deco"]
+    @IBAction func showCategoryOptions(_ sender: Any) {
+        categoryDropDown.show()
+    }
     
-    
-    
-    
+    //Test Drop Down menu Type
+    @IBOutlet weak var vwDropDownType:UIView!
+    @IBOutlet weak var Typee:UILabel!
+    let typeValue = ["sweaters", "pants", "outlet", "jacket", "shoes",
+                     "Dress", "Pc", "Tv", "Computers' accessories", "make-up", "Art Supplies", "jewerly", "art deco", "Other"
+                 ]
+    @IBAction func showTypeOptions(_ sender: Any) {
+        typeDropDown.show()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //Category
+        Category.text = "Select a category"
+        categoryDropDown.anchorView = vwDropDown
+        categoryDropDown.dataSource = categoryValue
+        categoryDropDown.bottomOffset = CGPoint(x: 0, y:(categoryDropDown.anchorView?.plainView.bounds.height)!)
+        categoryDropDown.topOffset = CGPoint(x: 0, y:-(categoryDropDown.anchorView?.plainView.bounds.height)!)
+        categoryDropDown.direction = .bottom
+        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+          print("Selected item: \(item) at index: \(index)")
+            self.Category.text = categoryValue[index]
+        }
+            //Type
+            Typee.text = "Select a type"
+        typeDropDown.anchorView = vwDropDownType
+        typeDropDown.dataSource = typeValue
+        typeDropDown.bottomOffset = CGPoint(x: 0, y:(typeDropDown.anchorView?.plainView.bounds.height)!)
+        typeDropDown.topOffset = CGPoint(x: 0, y:-(typeDropDown.anchorView?.plainView.bounds.height)!)
+        typeDropDown.direction = .bottom
+        typeDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+              print("Selected item: \(item) at index: \(index)")
+                self.Typee.text = typeValue[index]
+            
+        }
     }
     
 
@@ -68,11 +104,11 @@ class AddArticleViewController: UIViewController,UIImagePickerControllerDelegate
         picker.dismiss(animated: true, completion: nil)
 }
     @IBAction func buttonAddArticle(_ sender: Any) {
-        if(NameAdd.text != "" && CategorieAdd.text != "" && PriceAdd.text != "" && Quantity.text != "" && Typee.text != ""){
+        if(NameAdd.text != "" && Category.text != "" && PriceAdd.text != "" && Quantity.text != "" && Typee.text != ""){
 
             let params: Parameters = [
                 "name": NameAdd.text!,
-                "category": CategorieAdd.text!,
+                "category": Category.text!,
                 "price": PriceAdd.text!,
                 "quantity": Quantity.text!,
                 "type": Typee.text!
@@ -106,7 +142,7 @@ class AddArticleViewController: UIViewController,UIImagePickerControllerDelegate
             let url = "http://172.27.32.1:3000/articles"
         let params: Parameters = [
             "name": NameAdd.text!,
-            "category": CategorieAdd.text!,
+            "category": Category.text!,
             "price": PriceAdd.text!,
             "quantity": Quantity.text!,
             "type": Typee.text!
