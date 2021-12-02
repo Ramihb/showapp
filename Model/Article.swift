@@ -15,7 +15,7 @@ struct Article: Codable {
     var _id:String
     var name:String?
     var category:String?
-    var price:Int?
+    var price:String?
     var articlePicture:String?
     var quantity:Int
     var type:String?

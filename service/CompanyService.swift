@@ -52,8 +52,9 @@ class ApiService
     
 }
 
+
 import UIKit
-class ApiMouchService {
+class ApiCompanyService {
     struct Media {
         let key: String
         let filename: String
@@ -69,8 +70,8 @@ class ApiMouchService {
     }
     static func uploadImageToServer(image: UIImage,parameters:[String:Any]) {
        
-       guard let mediaImage = Media(withImage: image, forKey: "profilePicture") else { return }
-       guard let url = URL(string: "http://172.27.32.1:3000/users/signup") else { return }
+       guard let mediaImage = Media(withImage: image, forKey: "brandPicCompany") else { return }
+       guard let url = URL(string: "http://172.27.32.1:3000/company/signup") else { return }
        var request = URLRequest(url: url)
        request.httpMethod = "POST"
        //create boundary
@@ -127,12 +128,8 @@ class ApiMouchService {
     }
     
     
+    
+    
+    
 }
-extension Data {
-   mutating func append(_ string: String) {
-      if let data = string.data(using: .utf8) {
-         append(data)
-         print("data======>>>",data)
-      }
-   }
-}
+

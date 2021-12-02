@@ -7,11 +7,26 @@
 
 import Foundation
 
-struct User: Decodable {
-    let email: String
-    let password: String
-    let phoneNumber: Int
-    let firstName: String
+struct User: Codable {
+    var _id:String
+    var email: String
+    var password: String
+    var profilePicture:String
+    var firstName: String
     let lastName: String
+    var isVerified:Bool
+    var __v:Int
+    
+    
+    init(id:String, email:String,password:String,profilePicture:String,firstName:String,lastName:String,isVerified:Bool,__v:Int) {
+            self._id = id
+            self.email = email
+            self.password=password
+            self.profilePicture=profilePicture
+            self.firstName=firstName
+            self.lastName=lastName
+            self.isVerified = isVerified
+            self.__v = 0
+        }
     
 }
