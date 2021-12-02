@@ -38,7 +38,7 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
 //                   alert.addAction(action)
 //                   self.present(alert, animated: true)
 //               }
-            let url = URL(string: "http://172.27.32.1:3000/company/signup")
+            //let url = URL(string: "http://172.27.32.1:3000/company/signup")
             
             let params: Parameters = [
                 "emailCompany": emailCompanyTextField.text!,
@@ -47,10 +47,10 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
                 "firstNameCompany": firstNameTextField.text!,
                 "lastNameCompany": lastNameTextField.text!,
                 "businessNameCompany": businessNameTextField.text!,
-                "categoryCompany": categoryTextField.text!,
-                "brandPicCompany": imageView.image!
+                "categoryCompany": categoryTextField.text!
             ]
-            ApiService.callPost(url: url!, params: params, finish: finishPost)
+            ApiCompanyService.uploadImageToServer(image: imageView.image!, parameters: params)
+            //ApiService.callPost(url: url!, params: params, finish: finishPost)
         }
         
     }

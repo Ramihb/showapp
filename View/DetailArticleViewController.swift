@@ -11,16 +11,19 @@ class DetailArticleViewController: UIViewController {
 
     var ArticleTitle:String?
     var ArticleImage:String?
-    
+   
     
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label: UILabel! //nom de l'article
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         image.image = UIImage(named: ArticleImage!)
         label.text = ArticleTitle!
+        
     }
     
     func insertItem(name: String, image: String) {

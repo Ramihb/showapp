@@ -19,7 +19,7 @@
 		4769FCBD274738C4007EED85 /* DetailArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */; };
 		476D80812743086D0068053D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D80802743086D0068053D /* HomeViewController.swift */; };
 		476D8083274308B50068053D /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D8082274308B50068053D /* FavouriteViewController.swift */; };
-		476D8085274308DB0068053D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D8084274308DB0068053D /* ProfileViewController.swift */; };
+		476D8085274308DB0068053D /* ConnexionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D8084274308DB0068053D /* ConnexionViewController.swift */; };
 		476D8087274309100068053D /* BrandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D8086274309100068053D /* BrandsViewController.swift */; };
 		476D808927430AA80068053D /* BrandDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D808827430AA80068053D /* BrandDetailsViewController.swift */; };
 		476D808B27430AD80068053D /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D808A27430AD80068053D /* CompanyProfileViewController.swift */; };
@@ -33,7 +33,7 @@
 		477935E02752454300D22A40 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477935DF2752454300D22A40 /* Login.swift */; };
 		479C253A275546E70082BF8F /* AddArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C2539275546E70082BF8F /* AddArticleService.swift */; };
 		479C253C2755558C0082BF8F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C253B2755558C0082BF8F /* Article.swift */; };
-		47B1B1712739A43900650C1D /* DarkModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B1B1702739A43900650C1D /* DarkModeViewController.swift */; };
+		47B1B1712739A43900650C1D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B1B1702739A43900650C1D /* ProfileViewController.swift */; };
 		47CA579D27380A68005E3096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA579C27380A68005E3096 /* AppDelegate.swift */; };
 		47CA579F27380A68005E3096 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA579E27380A68005E3096 /* SceneDelegate.swift */; };
 		47CA57A127380A68005E3096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA57A027380A68005E3096 /* ViewController.swift */; };
@@ -78,7 +78,7 @@
 		4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleViewController.swift; sourceTree = "<group>"; };
 		476D80802743086D0068053D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		476D8082274308B50068053D /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
-		476D8084274308DB0068053D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		476D8084274308DB0068053D /* ConnexionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnexionViewController.swift; sourceTree = "<group>"; };
 		476D8086274309100068053D /* BrandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsViewController.swift; sourceTree = "<group>"; };
 		476D808827430AA80068053D /* BrandDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandDetailsViewController.swift; sourceTree = "<group>"; };
 		476D808A27430AD80068053D /* CompanyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		477935DF2752454300D22A40 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		479C2539275546E70082BF8F /* AddArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleService.swift; sourceTree = "<group>"; };
 		479C253B2755558C0082BF8F /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
-		47B1B1702739A43900650C1D /* DarkModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeViewController.swift; sourceTree = "<group>"; };
+		47B1B1702739A43900650C1D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		47CA579927380A68005E3096 /* showapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = showapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CA579C27380A68005E3096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47CA579E27380A68005E3096 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,16 +179,16 @@
 			isa = PBXGroup;
 			children = (
 				4795CD362752045C00CA792B /* Company */,
-				47CA57A227380A68005E3096 /* Main.storyboard */,
 				47CA57AA27380A69005E3096 /* LaunchScreen.storyboard */,
-				47B1B1702739A43900650C1D /* DarkModeViewController.swift */,
+				47CA57A227380A68005E3096 /* Main.storyboard */,
+				47B1B1702739A43900650C1D /* ProfileViewController.swift */,
 				47CA57A027380A68005E3096 /* ViewController.swift */,
 				47CA57CF27382018005E3096 /* CartViewController.swift */,
 				47CA57D327385F15005E3096 /* SearchViewController.swift */,
 				476871592742CBDE00D225DF /* CategorieViewController.swift */,
 				476D80802743086D0068053D /* HomeViewController.swift */,
 				476D8082274308B50068053D /* FavouriteViewController.swift */,
-				476D8084274308DB0068053D /* ProfileViewController.swift */,
+				476D8084274308DB0068053D /* ConnexionViewController.swift */,
 				476D8086274309100068053D /* BrandsViewController.swift */,
 				476D808827430AA80068053D /* BrandDetailsViewController.swift */,
 				476D808C27430B090068053D /* UserSignInViewController.swift */,
@@ -537,7 +537,7 @@
 			files = (
 				476D808927430AA80068053D /* BrandDetailsViewController.swift in Sources */,
 				479C253A275546E70082BF8F /* AddArticleService.swift in Sources */,
-				47B1B1712739A43900650C1D /* DarkModeViewController.swift in Sources */,
+				47B1B1712739A43900650C1D /* ProfileViewController.swift in Sources */,
 				4769FCBB2747039E007EED85 /* CategorieModelViewController.swift in Sources */,
 				476F1F40274EFF02000AAA17 /* User.swift in Sources */,
 				4768715A2742CBDE00D225DF /* CategorieViewController.swift in Sources */,
@@ -552,7 +552,7 @@
 				479C253C2755558C0082BF8F /* Article.swift in Sources */,
 				47CA579D27380A68005E3096 /* AppDelegate.swift in Sources */,
 				4767EA212752FAC400993309 /* CompanyService.swift in Sources */,
-				476D8085274308DB0068053D /* ProfileViewController.swift in Sources */,
+				476D8085274308DB0068053D /* ConnexionViewController.swift in Sources */,
 				476D80812743086D0068053D /* HomeViewController.swift in Sources */,
 				477935E02752454300D22A40 /* Login.swift in Sources */,
 				476D809527430C610068053D /* ArticleListeViewController.swift in Sources */,

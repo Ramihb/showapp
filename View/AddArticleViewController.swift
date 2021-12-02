@@ -35,9 +35,13 @@ class AddArticleViewController: UIViewController,UIImagePickerControllerDelegate
     let typeValue = ["sweaters", "pants", "outlet", "jacket", "shoes",
                      "Dress", "Pc", "Tv", "Computers' accessories", "make-up", "Art Supplies", "jewerly", "art deco", "Other"
                  ]
+    let typeMode = ["sweaters", "pants", "outlet", "jacket", "shoes",
+                     "Dress"]
+    let typeHighTech = ["Pc", "Tv", "Computers' accessories"]
     @IBAction func showTypeOptions(_ sender: Any) {
         typeDropDown.show()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Category
@@ -61,8 +65,9 @@ class AddArticleViewController: UIViewController,UIImagePickerControllerDelegate
         typeDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
               print("Selected item: \(item) at index: \(index)")
                 self.Typee.text = typeValue[index]
-            
+        
         }
+        
     }
     
 

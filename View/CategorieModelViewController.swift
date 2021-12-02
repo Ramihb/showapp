@@ -9,7 +9,9 @@ import UIKit
 import CoreData
 import Alamofire
 class CategorieModelViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-   
+    var articleNamee: String?
+    var articlePricee: String?
+    var articleImagee: String?
     
     @IBOutlet weak var tableArticle: UITableView!
     
@@ -18,7 +20,7 @@ class CategorieModelViewController: UIViewController, UITableViewDataSource, UIT
     
 
     @IBOutlet weak var scName: UILabel!
-
+    //@IBOutlet weak var
     
     
     override func viewDidLoad() {
@@ -63,12 +65,13 @@ class CategorieModelViewController: UIViewController, UITableViewDataSource, UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath)
                 let contentView = cell.contentView
                 let image = contentView.viewWithTag(1) as! UIImageView
-                let label1 = contentView.viewWithTag(2) as! UILabel
-                
+                let labelName = contentView.viewWithTag(2) as! UILabel
+                let labelPrice = contentView.viewWithTag(3) as! UILabel
         
         if scName.text == "pants" {
             image.imageFromServerURL(urlString: tableauArticle[indexPath.row].articlePicture!)
-            label1.text = tableauArticle[indexPath.row].name
+            labelName.text = tableauArticle[indexPath.row].name
+            labelPrice.text = tableauArticle[indexPath.row].price
         }
                 
 
@@ -95,6 +98,9 @@ class CategorieModelViewController: UIViewController, UITableViewDataSource, UIT
 //           }
 //
 //    }
+    
+    //add to favourite
+
 }
 
 extension UITableView {
@@ -114,4 +120,6 @@ extension UITableView {
             delayCounter += 1
         }
     }
+    
+    
 }

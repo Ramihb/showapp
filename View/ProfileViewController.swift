@@ -1,217 +1,104 @@
 //
-//  ProfileViewController.swift
+//  DarkModeViewController.swift
 //  showapp
 //
-//  Created by rami on 15/11/2021.
+//  Created by rami on 8/11/2021.
 //
 
 import UIKit
-import GoogleSignIn
 import FBSDKLoginKit
 import Alamofire
+import SwiftUI
 
+class ProfileViewController: UIViewController {
+    @IBOutlet var darkmodeSwitch: UISwitch!
 
-class ProfileViewController: UIViewController, LoginButtonDelegate {
-    
-    @IBOutlet weak var emailAdressTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-    
-    
-    @IBAction func continueBtn(_ sender: Any) {
-        if(emailAdressTextField.text != "" && passwordTextField.text != ""){
-                   LoginUser(email: emailAdressTextField.text!, password: passwordTextField.text!)
-                   self.navigationController?.popViewController(animated: true)
-                   NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-
-               }else{
-                   let alert = UIAlertController(title: "Warning", message: "You must fill all the fields", preferredStyle: .alert)
-                   let action = UIAlertAction(title: "OK", style: .cancel)
-                   alert.addAction(action)
-                   self.present(alert, animated: true)
-            
-            
-
-               }
-         
-
-    }
-    func LoginUser(email: String, password: String) {
-        guard let url = URL(string: "http://172.27.32.1:3000/users/login") else {
-            fatalError("Error getting the url")
-        }
-        let params: Parameters = [
-            "email": emailAdressTextField.text!,
-            "password": passwordTextField.text!
-
-        ]
-
-
-            AF.request(url, method: .post,parameters: params)
-                .validate()
-                .responseJSON { response in
-                    switch response.result {
-                        case .success (let json):
-
-                        let response = json as! NSDictionary
-                        if let faza = response["user"] as? [String: Any]{
-                            for(key, value) in faza{
-                                UserDefaults.standard.setValue(value, forKey: key)
-                            }
-
-                        }
-                        let token = response["token"]
-                        
-                        UserDefaults.standard.setValue(response["token"]!, forKey: "token")
-//                        UserDefaults.standard.setValue(response["userId"]!, forKey: "userId")
-                            print("Validation Successful")
-                        self.performSegue(withIdentifier: "signinhomesegue", sender: "yes")
-                        case .failure(let error):
-                        self.prompt(title: "Echec", message: "Email ou mot de passe incorrect")
-                        if let data = response.data {
-                            let json = String(data: data, encoding: String.Encoding.utf8)
-                            print("Failure Response: \(json)")
-                        }
-                        
-                        
-                    }
-                }
-    }
-    
-    
-
-    
-    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        getUserDataFromFacebook()
-    }
-    
-    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-        
-    }
-    
-    
-    @IBOutlet weak var EmailAdress: UITextField!
-    
-    @IBOutlet weak var Password: UITextField!
-    
-    
-    
-   
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var nom: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        facebookLoginButton.delegate = self
-                facebookLoginButton.isHidden = true
-        // Do any additional setup after loading the view.
-        //fetchData()
         
-    }
-    
-   
-    
-   
-    
-    
-    @IBAction func signUp(_ sender: Any) {
-        performSegue(withIdentifier: "signUpSegue", sender: "yes")
-        
+//        let url = "http://172.27.32.1:3000/users"
+//        fetchData(from: url)
+        //display(userId: UserDefaults.standard.string(forKey: "userId")!)
+        nom.text = UserDefaults.standard.string(forKey: "firstName")
+        email.text = UserDefaults.standard.string(forKey: "email")
+        profileImage.imageFromServerURL(urlString: UserDefaults.standard.string(forKey: "profilePicture")!)
     }
     
     
-    //google
-    func getUserDataFromGoogle (){
-            let signInConfig = GIDConfiguration.init(clientID: "280752879728-vofjf8m8g5h6u9vr188i4fp8m06fiopd.apps.googleusercontent.com")
-            
-            GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { userG, error in
-              guard error == nil else { return }
-             print(userG)
-                print(userG?.profile?.imageURL(withDimension: 512))
-                
-                    
-                self.performSegue(withIdentifier: "signinhomesegue", sender: "yes")
+    @IBAction func switchToDarkMode(_sender: UISwitch) {
+    
+        if _sender.isOn {
+            UIApplication.shared.windows.forEach{
+                window in window.overrideUserInterfaceStyle = .dark
+            }}else{
+                UIApplication.shared.windows.forEach{ window in window.overrideUserInterfaceStyle = .light
             }
-        }
-
-
-    @IBAction func logingoogle(_ sender: Any) {
-        getUserDataFromGoogle()
-        
+            } }
+    
+    
+    
+    @IBAction func logOutbutton(_ sender: Any) {
+        var loginManager = LoginManager()
+        loginManager.logOut()
+        UserDefaults.standard.removeObject(forKey: "_id")
+        UserDefaults.standard.removeObject(forKey: "email")
+        UserDefaults.standard.removeObject(forKey: "firstName")
+        UserDefaults.standard.removeObject(forKey: "lastName")
+        UserDefaults.standard.removeObject(forKey: "password")
+        UserDefaults.standard.removeObject(forKey: "profilePicture")
+        UserDefaults.standard.removeObject(forKey: "verified")
+        performSegue(withIdentifier: "logOutSegue", sender: "yes")
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if let token = AccessToken.current, !token.isExpired{
-            
-                    performSegue(withIdentifier: "signinhomesegue", sender: "yes")
-            
-                }
-    }
     
     
     
     
     
-    //facebook
-    let facebookLoginButton = FBLoginButton(frame: .zero, permissions: [.publicProfile,.email])
     
     
-    @IBAction func loginfacebook(_ sender: Any) {
-        facebookLoginButton.sendActions(for: .touchUpInside)
-    }
+//    struct MyResult: Codable {
+//        let _id: String
+//        let email: String
+//        let password: String
+//        let profilePicture: String
+//        let firstName: String
+//        let lastName: String
+//        let verified: Bool
+//        let __v: Int
+//    }
     
-    func getUserDataFromFacebook() {
+    
 
-            	
-
-            GraphRequest(graphPath: "me", parameters: ["fields": "first_name,last_name, picture,email, id"]).start { (connection, result, error) in
-
-                if let err = error { print(err.localizedDescription); return } else {
-
-                    if let fields = result as? [String:Any],let lastname = fields["last_name"] as? String,let firstName = fields["first_name"] as? String,let email = fields["email"] as? String, let id = fields["id"] as? String {
-
-                        var facebookProfileUrl = NSURL(string: "https://graph.facebook.com/\(id)/picture?type=large")
-                        UserDefaults.standard.setValuesForKeys([lastname : "nom"])
-                        UserDefaults.standard.setValuesForKeys([firstName : "prenom"])
-                        UserDefaults.standard.setValuesForKeys([email : "email"])
-                        
-                        print("variable recherche   ",facebookProfileUrl)
-
-                        if let data = NSData(contentsOf: facebookProfileUrl! as URL) {
-
-                            print("variable recherche   ",data)
-                            print("facebook connecter")
-                            
-
-                        }
-
-                        
-                    }
-
-                }
-                self.performSegue(withIdentifier: "signinhomesegue", sender: "yes")
-            }
-        }
 
     
     
     
+
     
-    func fetchData() {
-        guard let url = URL(string: "http://172.27.32.1:3000/users") else { return}
-        let session = URLSession.shared.dataTask(with: url) {
-            data, response, error in
-            if let error = error {
-                print("There was an error: \(error.localizedDescription)")
-            } else {
-                let jsonRes = try? JSONSerialization.jsonObject(with: data!, options: [])
-                print("the response: \(jsonRes)")
-            }
-        }.resume()
-        }
-
-
-    func prompt(title:String, message:String){
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .destructive , handler: nil)
-            alert.addAction(action)
-            present(alert, animated: true, completion: nil)
-        }
 }
+
+
+
+
+extension UIImageView {
+    public func imageFromServerURL(urlString: String) {
+        self.image = nil
+        let urlStringNew = urlString.replacingOccurrences(of: " ", with: "%20")
+        URLSession.shared.dataTask(with: NSURL(string: urlStringNew)! as URL, completionHandler: { (data, response, error) -> Void in
+            
+            if error != nil {
+                print(error as Any)
+                return
+            }
+            DispatchQueue.main.async(execute: { () -> Void in
+                let image = UIImage(data: data!)
+                self.image = image
+            })
+            
+        }).resume()
+    }}
+
