@@ -60,16 +60,6 @@ class ProfileViewController: UIViewController {
     
     
     
-//    struct MyResult: Codable {
-//        let _id: String
-//        let email: String
-//        let password: String
-//        let profilePicture: String
-//        let firstName: String
-//        let lastName: String
-//        let verified: Bool
-//        let __v: Int
-//    }
     
     
 

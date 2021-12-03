@@ -105,7 +105,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
                         case .success (let json):
 
                         let response = json as! NSDictionary
-                        if let faza = response["company"] as? [String: Any]{
+                        if let faza = response["Company"] as? [String: Any]{
                             for(key, value) in faza{
                                 UserDefaults.standard.setValue(value, forKey: key)
                             }

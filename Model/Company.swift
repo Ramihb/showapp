@@ -11,7 +11,7 @@ struct Company: Codable {
     var emailCompany: String?
     var passwordCompany: String?
     var phoneNumberCompany: String?
-    var profilePictureCompany: String?
+//    var profilePictureCompany: String?
     var lastNameCompany: String?
     var firstNameCompany: String?
     var categoryCompany: String?
