@@ -38,7 +38,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
                    alert.addAction(action)
                    self.present(alert, animated: true)
             
-            
+  
 
                }
          
@@ -116,7 +116,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
                         UserDefaults.standard.setValue(response["token"]!, forKey: "token")
 //                        UserDefaults.standard.setValue(response["userId"]!, forKey: "userId")
                             print("Validation Successful")
-                        self.performSegue(withIdentifier: "signinhomesegue", sender: "yes")
+                        self.performSegue(withIdentifier: "companyStoryBoardSegue", sender: "yes")
                         case .failure(let error):
                         self.prompt(title: "Echec", message: "Email ou mot de passe incorrect")
                         if let data = response.data {

@@ -21,6 +21,11 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var imageView: UIImageView!
     
+    
+    
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     @IBAction func registerBusiness(_ sender: Any) {
         if(firstNameTextField.text != "" && lastNameTextField.text != "" && businessNameTextField.text != "" && ContactNumberTextField.text != "" && emailCompanyTextField.text != "" && passwordTextField.text != "" && categoryTextField.text != ""){
 //            AddCompany(firstNameCompany: firstNameTextField.text!, lastNameCompany: lastNameTextField.text!, emailCompany: emailCompanyTextField.text!, passwordCompany: passwordTextField.text!, phoneNumberCompany: ContactNumberTextField.text!, categoryCompany: categoryTextField.text!, businessNameCompany: businessNameTextField.text!)

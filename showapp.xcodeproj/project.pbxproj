@@ -46,6 +46,7 @@
 		47CA57C327380A69005E3096 /* showappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA57C227380A69005E3096 /* showappUITestsLaunchTests.swift */; };
 		47CA57D027382018005E3096 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA57CF27382018005E3096 /* CartViewController.swift */; };
 		47CA57D427385F15005E3096 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA57D327385F15005E3096 /* SearchViewController.swift */; };
+		47CE020B275A437F004F8B92 /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CE020A275A437F004F8B92 /* Company.storyboard */; };
 		638686B1122F88D0C290951F /* Pods_showapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADCBF86011BDC23632C3470 /* Pods_showapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		47CA57C227380A69005E3096 /* showappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		47CA57CF27382018005E3096 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		47CA57D327385F15005E3096 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		47CE020A275A437F004F8B92 /* Company.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Company.storyboard; sourceTree = "<group>"; };
 		7540897CF77771ED63FDEC7B /* Pods-showapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showapp.release.xcconfig"; path = "Target Support Files/Pods-showapp/Pods-showapp.release.xcconfig"; sourceTree = "<group>"; };
 		9BCC5FE246AEE1652F6F97F4 /* Pods-showappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showappTests.debug.xcconfig"; path = "Target Support Files/Pods-showappTests/Pods-showappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC2D1B7EA30C4B27BEA925F0 /* Pods-showapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showapp.debug.xcconfig"; path = "Target Support Files/Pods-showapp/Pods-showapp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				476D809627430CD10068053D /* UpdateArticleViewController.swift */,
 				4769FCBA2747039E007EED85 /* CategorieModelViewController.swift */,
 				4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */,
+				47CE020A275A437F004F8B92 /* Company.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47CE020B275A437F004F8B92 /* Company.storyboard in Resources */,
 				47CA57AC27380A69005E3096 /* LaunchScreen.storyboard in Resources */,
 				47CA57A927380A69005E3096 /* Assets.xcassets in Resources */,
 				47CA57A427380A68005E3096 /* Main.storyboard in Resources */,
