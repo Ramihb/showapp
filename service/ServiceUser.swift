@@ -164,4 +164,104 @@ class ServiceUser {
             return "Boundary-\(NSUUID().uuidString)"
         }
     
+    
+    
+    func UpdateProfil(user:User, image :UIImage, callback: @escaping (Bool,String?)->Void){
+            guard let mediaImage = Media(withImage: image, forKey: "profilePicture") else { return }
+            guard let url = URL(string: "http://172.27.32.1:3000/users/"+UserDefaults.standard.string(forKey: "_id")!) else { return }
+            var request = URLRequest(url: url)
+            request.httpMethod = "PUT"
+            //create boundary
+            
+            let boundary = generateBoundary()
+            //set content type
+            let token = UserDefaults.standard.string(forKey: "token")!
+            //print("token",token)
+            request.setValue( "Bearer \(token)", forHTTPHeaderField: "Authorization")
+            request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+            
+            
+            //call createDataBody method
+            
+            let dataBody = DataBody(user:user, media: [mediaImage], boundary: boundary)
+            request.httpBody = dataBody
+            let session = URLSession.shared
+            session.dataTask(with: request) { (data, response, error) in
+                DispatchQueue.main.async {
+                    if let response = response {
+                    }
+                    if let data = data {
+                        do {
+                            if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]{
+                                print("json",json)
+                                print("hedha star el data")
+                                if let reponse = json["message"] as? String{
+                                    print(json)
+                                    print("blablabla")
+                                    if (reponse.contains("user modified !")){
+                                        if let validUser = json["user"] as? [String:Any]{
+                                            print("cc")
+                                            for (key,value) in validUser{
+                                                UserDefaults.standard.setValue(value, forKey: key)
+                                                print("cc2")
+                                            }
+                                        }
+                                        callback(true,"user modified !")
+                                       
+                                    }
+                                    else{
+                                        callback(false,"ICIIII")
+                                    }
+                                } else{
+                                    callback(false,"erreur")
+                                }
+                            }
+                        } catch {
+                            callback(false,nil)
+                        }
+                    }else{
+                        callback(false,nil)}}
+            }.resume()
+        }
+    
+    
+    
+    func DataBody(user:User, media: [Media]?, boundary: String) -> Data {
+            let lineBreak = "\r\n"
+            var body = Data()
+            body.append("--\(boundary + lineBreak)")
+            body.append("Content-Disposition: form-data; name=\"firstName\"\(lineBreak + lineBreak)")
+            body.append("\(user.firstName + lineBreak)")
+            
+            
+            
+            body.append("--\(boundary + lineBreak)")
+            body.append("Content-Disposition: form-data; name=\"prenom\"\(lineBreak + lineBreak)")
+            body.append("\(user.lastName + lineBreak)")
+            
+            
+            body.append("--\(boundary + lineBreak)")
+            body.append("Content-Disposition: form-data; name=\"lastName\"\(lineBreak + lineBreak)")
+            body.append("\(user.email + lineBreak)")
+            if !(user.password ?? "").isEmpty{
+                body.append("--\(boundary + lineBreak)")
+                body.append("Content-Disposition: form-data; name=\"password\"\(lineBreak + lineBreak)")
+                body.append("\(user.password + lineBreak)")
+            }
+            
+           
+            
+            if let media = media {
+                for photo in media {
+                    body.append("--\(boundary + lineBreak)")
+                    body.append("Content-Disposition: form-data; name=\"\(photo.key)\"; filename=\"\(photo.filename)\"\(lineBreak)")
+                    body.append("Content-Type: \(photo.mimeType + lineBreak + lineBreak)")
+                    body.append(photo.data)
+                    body.append(lineBreak)
+                }
+            }
+            body.append("--\(boundary)--\(lineBreak)")
+            return body
+        }
+      
 }

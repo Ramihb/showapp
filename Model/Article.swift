@@ -13,6 +13,7 @@ struct Articles: Codable {
 
 struct Article: Codable {
     var _id:String
+    var brand:String?
     var name:String?
     var category:String?
     var price:String?

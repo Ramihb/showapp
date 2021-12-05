@@ -10,7 +10,10 @@ import CoreData
 import Alamofire
 import DropDown
 class AddArticleViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
     @IBOutlet weak var Quantity: UITextField!
     @IBOutlet weak var NameAdd: UITextField!
@@ -112,6 +115,7 @@ class AddArticleViewController: UIViewController,UIImagePickerControllerDelegate
         if(NameAdd.text != "" && Category.text != "" && PriceAdd.text != "" && Quantity.text != "" && Typee.text != ""){
 
             let params: Parameters = [
+                "brand": UserDefaults.standard.string(forKey: "_id")!,
                 "name": NameAdd.text!,
                 "category": Category.text!,
                 "price": PriceAdd.text!,

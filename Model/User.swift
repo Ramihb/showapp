@@ -29,4 +29,14 @@ struct User: Codable {
             self.__v = 0
         }
     
+//    init(id:String, email:String,profilePicture:String,firstName:String,lastName:String,isVerified:Bool,__v:Int) {
+//            self._id = id
+//            self.email = email
+//            self.profilePicture = profilePicture
+//            self.firstName = firstName
+//            self.lastName = lastName
+//            self.isVerified = isVerified
+//            self.__v = 0
+//    }
+    
 }

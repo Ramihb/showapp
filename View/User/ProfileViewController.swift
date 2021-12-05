@@ -4,7 +4,7 @@
 //
 //  Created by rami on 8/11/2021.
 //
-
+import Foundation
 import UIKit
 import FBSDKLoginKit
 import Alamofire
@@ -19,14 +19,22 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let url = "http://172.27.32.1:3000/users"
-//        fetchData(from: url)
-        //display(userId: UserDefaults.standard.string(forKey: "userId")!)
+        updateProfile()
+        let name = Notification.Name("updateProfil")
+               NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: name, object: nil)
+        
+    }
+    
+    @objc func updateProfile(){
         nom.text = UserDefaults.standard.string(forKey: "firstName")
         email.text = UserDefaults.standard.string(forKey: "email")
         profileImage.imageFromServerURL(urlString: UserDefaults.standard.string(forKey: "profilePicture")!)
+        
+        
     }
-    
+    @IBAction func modifyProfile(_ sender: Any) {
+        performSegue(withIdentifier: "profileModifySegue", sender: "yes")
+    }
     
     @IBAction func switchToDarkMode(_sender: UISwitch) {
     
