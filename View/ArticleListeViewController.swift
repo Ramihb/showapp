@@ -18,8 +18,7 @@ class ArticleListeViewController: UIViewController, UITableViewDelegate, UITable
     var tableauArticle = [Article]()
     
     @IBOutlet weak var tableArticle: UITableView!
-    override func viewWillAppear(_ animated: Bool) {
-               super.viewWillAppear(animated)
+    func viewWillAppear() {
                tableArticle.reloadData()
            }
         
@@ -29,7 +28,7 @@ class ArticleListeViewController: UIViewController, UITableViewDelegate, UITable
                         for article in reponse!.articles!{
                             self.tableauArticle.append(article)
                             DispatchQueue.main.async {
-                                tableau.reloadWithAnimation()
+                                tableau.reloadData()
                                         }
                         }
                     }

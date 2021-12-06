@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                             for new in reponse!.news!{
                                 self.tableauNews.append(new)
                                 DispatchQueue.main.async {
-                                    tableau.reloadWithAnimation()
+                                    tableau.reloadData()
                                             }
                             }
                         }
@@ -51,8 +51,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     
     @IBOutlet weak var tableNews: UITableView!
-       override func viewWillAppear(_ animated: Bool) {
-                  super.viewWillAppear(animated)
+       func viewWillAppear() {
            tableNews.reloadData()
               }
 
