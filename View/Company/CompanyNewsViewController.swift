@@ -15,7 +15,6 @@ class CompanyNewsViewController: UIViewController,UIImagePickerControllerDelegat
         }
     
     @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var brandNameTextField: UITextField!
     @IBOutlet weak var newsTitleTextField: UITextField!
     
 

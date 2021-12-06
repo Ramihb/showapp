@@ -7,23 +7,53 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+        var tableauNews = [New]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loadNewsToTableview(tableau:self.tableNews)
     }
     
+    func loadNewsToTableview (tableau:UITableView){
+        ApiCompanyService().getCompanyNews { succes, reponse in
+                        if succes {
+                            for new in reponse!.news!{
+                                self.tableauNews.append(new)
+                                DispatchQueue.main.async {
+                                    tableau.reloadWithAnimation()
+                                            }
+                            }
+                        }
+                        else{
+                            print("pas de news a afficher")
+                        }
+                    }
+                }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return tableauNews.count
+        }
 
-    /*
-    // MARK: - Navigation
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
+                            let contentView = cell.contentView
+                            let image = contentView.viewWithTag(5) as! UIImageView
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+                        image.imageFromServerURL(urlString: tableauNews[indexPath.row].newsPicture!)
+
+
+                    
+                            
+
+                            return cell
+        }
+    
+    @IBOutlet weak var tableNews: UITableView!
+       override func viewWillAppear(_ animated: Bool) {
+                  super.viewWillAppear(animated)
+           tableNews.reloadData()
+              }
 
 }
