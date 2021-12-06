@@ -70,6 +70,7 @@ class ArticleListeViewController: UIViewController, UITableViewDelegate, UITable
     
     
     @IBAction func buttonAddArticle(_ sender: Any) {
+        performSegue(withIdentifier: "articleListToAddArticleSegue", sender: "yes")
     }
     
     

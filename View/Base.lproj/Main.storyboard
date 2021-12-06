@@ -794,7 +794,7 @@
         <!--Profile-->
         <scene sceneID="XWd-BD-luP">
             <objects>
-                <viewController id="6Ep-DF-EGL" customClass="ConnexionViewController" customModule="showapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Connexion" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Ep-DF-EGL" customClass="ConnexionViewController" customModule="showapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="by4-u4-fhe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

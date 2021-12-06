@@ -19,5 +19,20 @@ class CompanyProfileViewController: UIViewController {
     
 
     
+    @IBAction func LogOut(_ sender: Any) {
 
+        UserDefaults.standard.removeObject(forKey: "_id")
+        UserDefaults.standard.removeObject(forKey: "emailCompany")
+        UserDefaults.standard.removeObject(forKey: "passwordCompany")
+        UserDefaults.standard.removeObject(forKey: "phoneNumberCompany")
+        UserDefaults.standard.removeObject(forKey: "lastNameCompany")
+        UserDefaults.standard.removeObject(forKey: "firstNameCompany")
+        UserDefaults.standard.removeObject(forKey: "categoryCompany")
+        UserDefaults.standard.removeObject(forKey: "brandPicCompany")
+        UserDefaults.standard.removeObject(forKey: "businessNameCompany")
+        UserDefaults.standard.removeObject(forKey: "verifiedCompany")
+        UserDefaults.standard.removeObject(forKey: "__v")
+        performSegue(withIdentifier: "logOutCompanySegue", sender: "yes")
+    }
+    
 }
