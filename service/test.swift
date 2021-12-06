@@ -51,6 +51,7 @@ class test {
                                  
                                  if let validPhoto = json["profilePicture"] as? String{
                                      print("aaaaaa",validPhoto)
+                                     UserDefaults.standard.string(forKey: "profilePicture")
                                  }
                                  if let validUser = json["user"] as? [String:Any]{
                                      for (key,value) in validUser{

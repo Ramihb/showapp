@@ -9,33 +9,13 @@ import UIKit
 
 
 class SearchViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
-    
-    
-    //var dataa = ["Home", "Mode", "Hi-tech", "Make up", "Jewellery", "Art deco", "Shoes"]
 
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return data.count //return de 4 elements
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "CategorieSearch")
-//            let contentView = cell?.contentView
-//
-//            let label = contentView?.viewWithTag(1) as! UILabel
-//            let imageView = contentView?.viewWithTag(2) as! UIImageView
-//
-//            label.text = data[indexPath.row]
-//            imageView.image = UIImage(named: data[indexPath.row])
-//
-//        return cell!
-//
-//    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewData = [cellData(opened: false, data: "Home", insidedata: []),
-                         cellData(opened: false, data: "Mode", insidedata: ["Shirts", "T-Shirt", "pants", "Underware", "Jackets", "Coats", "Sweaters"]),
+                         cellData(opened: false, data: "Mode", insidedata: ["Sweaters", "Outlet", "Pants", "Shoes", "Jackets", "Dress"]),
                          cellData(opened: false, data: "Hi-tech", insidedata: ["haja1", "haja2", "haja3", "haja4"]),
                          cellData(opened: false, data: "Make up", insidedata: ["haja1", "haja2", "haja3", "haja4"]),
                          cellData(opened: false, data: "Jewellery", insidedata: ["haja1", "haja2", "haja3", "haja4"]),
@@ -46,8 +26,6 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
 
     
     }
-    
-    //trying expanding table view cells
     
     
     struct cellData {
@@ -96,25 +74,7 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
             return cell
         }
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if tableViewData[indexPath.section].opened == true {
-//            tableViewData[indexPath.section].opened = false
-//                let sections = IndexSet.init(integer: indexPath.section)
-//                tableView.reloadSections(sections, with: .none)
-//            print("hedhi eli tsakar")
-//        } else {
-//            tableViewData[indexPath.section].opened = true
-//                let sections = IndexSet.init(integer: indexPath.section)
-//                tableView.reloadSections(sections, with: .none)
-//            print("hedhi eli thell")
-//        }
-//
-//        if tableViewData[indexPath.section].data == "Home" {
-//            performSegue(withIdentifier: "segueSearchToHome", sender: indexPath)
-//        } else if tableViewData[indexPath.section].insidedata == ["T-Shirt"] {
-//                performSegue(withIdentifier: "segueSearchToModeTshirt", sender: indexPath)
-//        }
-//    }
+
 
     
     
@@ -136,56 +96,49 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
         performSegue(withIdentifier: "segueSearchToHome", sender: indexPath)
         }
         if tableViewData[indexPath.section].data == "Mode" && indexPath.row == 1 {
-        performSegue(withIdentifier: "segueSearchToModeShirt", sender: indexPath)
+        performSegue(withIdentifier: "segueSearchToModeSweaters", sender: indexPath)
         }
         if tableViewData[indexPath.section].data == "Mode" && indexPath.row == 2 {
-        performSegue(withIdentifier: "segueSearchToModeTshirt", sender: indexPath)
+        performSegue(withIdentifier: "segueSearchToModeOutlet", sender: indexPath)
         }
         if tableViewData[indexPath.section].data == "Mode" && indexPath.row == 3 {
-        performSegue(withIdentifier: "segueSearchToModePants&Jeans", sender: indexPath)
+        performSegue(withIdentifier: "segueSearchToModePants", sender: indexPath)
         }
         if tableViewData[indexPath.section].data == "Mode" && indexPath.row == 4 {
-        performSegue(withIdentifier: "segueSearchToModeUnderware", sender: indexPath)
+        performSegue(withIdentifier: "segueSearchToModeShoes", sender: indexPath)
         }
         if tableViewData[indexPath.section].data == "Mode" && indexPath.row == 5 {
         performSegue(withIdentifier: "segueSearchToModeJackets", sender: indexPath)
         }
         if tableViewData[indexPath.section].data == "Mode" && indexPath.row == 6 {
-        performSegue(withIdentifier: "segueSearchToModeCoats", sender: indexPath)
-        }
-        if tableViewData[indexPath.section].data == "Mode" && indexPath.row == 7 {
-        performSegue(withIdentifier: "segueSearchToModeSweaters", sender: indexPath)
+        performSegue(withIdentifier: "segueSearchToModeDress", sender: indexPath)
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueSearchToModeShirt" {
+        if segue.identifier == "segueSearchToModeSweaters" {
             
-            let destination = segue.destination as! CategorieModelViewController
-            destination.sousCategorieName = "Shirt"
-        } else if segue.identifier == "segueSearchToModeTshirt" {
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "sweaters"
+        } else if segue.identifier == "segueSearchToModeOutlet" {
             
-            let destination = segue.destination as! CategorieModelViewController
-            destination.sousCategorieName = "T-Shirt"
-        }else if segue.identifier == "segueSearchToModePants&Jeans" {
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "outlet"
+        }else if segue.identifier == "segueSearchToModePants" {
             
-            let destination = segue.destination as! CategorieModelViewController
+            let destination = segue.destination as! CategoryClothesViewController
             destination.sousCategorieName = "pants"
-        }else if segue.identifier == "segueSearchToModeUnderware" {
+        }else if segue.identifier == "segueSearchToModeShoes" {
             
-            let destination = segue.destination as! CategorieModelViewController
-            destination.sousCategorieName = "Underware"
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "shoes"
         }else if segue.identifier == "segueSearchToModeJackets" {
             
-            let destination = segue.destination as! CategorieModelViewController
-            destination.sousCategorieName = "Jackets"
-        }else if segue.identifier == "segueSearchToModeCoats" {
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "jacket"
+        }else if segue.identifier == "segueSearchToModeDress" {
             
-            let destination = segue.destination as! CategorieModelViewController
-            destination.sousCategorieName = "Coats"
-        }else if segue.identifier == "segueSearchToModeSweaters" {
-            
-            let destination = segue.destination as! CategorieModelViewController
-            destination.sousCategorieName = "Sweaters"
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "Dress"
         }
         
     }

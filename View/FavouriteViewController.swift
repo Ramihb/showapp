@@ -59,7 +59,7 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
                     
                     articleName.append(item.value(forKey: "nameFavourite") as! String)
                     articleImage.append(item.value(forKey: "imageFavourite") as! String)
-                    articlePrice.append(item.value(forKey: "priceFavourite") as! String)
+                    //articlePrice.append(item.value(forKey: "priceFavourite") as! String)
                     
                 }
                 
