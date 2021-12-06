@@ -124,6 +124,9 @@
                                                 <rect key="frame" x="243.5" y="0.0" width="44" height="36"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="arrow.right.circle" catalog="system"/>
+                                                <connections>
+                                                    <action selector="News:" destination="YQo-cm-Zdy" eventType="touchUpInside" id="XLt-h9-YFm"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -182,6 +185,7 @@
                     <connections>
                         <outlet property="profileCompanyImage" destination="CW4-4N-g8u" id="Afe-MF-B1r"/>
                         <segue destination="tbQ-Zs-kCL" kind="presentation" identifier="logOutCompanySegue" modalPresentationStyle="fullScreen" id="diy-YW-Orc"/>
+                        <segue destination="TVc-iW-0T9" kind="presentation" identifier="addNewsSegue" modalPresentationStyle="fullScreen" id="XBE-hs-nC2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eO0-fe-Vs2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -683,71 +687,105 @@
             </objects>
             <point key="canvasLocation" x="3213" y="1383"/>
         </scene>
-        <!--Promotion View Controller-->
+        <!--Company News View Controller-->
         <scene sceneID="jWN-Of-FDb">
             <objects>
-                <viewController id="TVc-iW-0T9" customClass="PromotionViewController" customModule="showapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TVc-iW-0T9" customClass="CompanyNewsViewController" customModule="showapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mBH-T7-IPN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GmH-7G-kU1">
-                                <rect key="frame" x="221" y="405" width="120" height="120"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GmH-7G-kU1">
+                                <rect key="frame" x="82" y="105" width="250" height="247.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="Mdt-Sc-U3j"/>
-                                    <constraint firstAttribute="width" constant="120" id="rvA-2m-FGY"/>
+                                    <constraint firstAttribute="width" constant="250" id="7Jr-gM-O42"/>
+                                    <constraint firstAttribute="height" constant="250" id="cXl-Sv-wwc"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZa-vW-LEb">
-                                <rect key="frame" x="8" y="445.5" width="108.5" height="39"/>
+                                <rect key="frame" x="82" y="104" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="192-LQ-InK"/>
+                                    <constraint firstAttribute="width" constant="250" id="adn-Vk-uxV"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add Logo">
+                                <buttonConfiguration key="configuration" style="plain" title="">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonForAddingLogo:" destination="TVc-iW-0T9" eventType="touchUpInside" id="bk6-9Y-JqA"/>
+                                    <action selector="imageNewsButton:" destination="TVc-iW-0T9" eventType="touchUpInside" id="se2-qx-pXB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCR-0X-2dw">
-                                <rect key="frame" x="162" y="657" width="90" height="31"/>
+                                <rect key="frame" x="157" y="762" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5hB-MS-bcg"/>
+                                    <constraint firstAttribute="width" constant="100" id="cNf-Ow-kA9"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add News"/>
                                 <connections>
-                                    <action selector="addingNews:" destination="TVc-iW-0T9" eventType="touchUpInside" id="kKy-aX-ovB"/>
+                                    <action selector="addNewsButton:" destination="TVc-iW-0T9" eventType="touchUpInside" id="BNJ-QO-c7T"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert your promo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R46-Sf-AqK">
-                                <rect key="frame" x="41" y="229" width="136" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODn-4z-Hqm">
+                                <rect key="frame" x="50" y="534" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="cRp-6W-pLg"/>
+                                    <constraint firstAttribute="height" constant="30" id="lpC-Hj-Qij"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epq-Bd-IB2">
+                                <rect key="frame" x="170" y="530" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DZL-SL-Slj"/>
+                                    <constraint firstAttribute="height" constant="30" id="cvl-bD-nrU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyP-ey-IGi">
+                                <rect key="frame" x="0.0" y="44" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LOg-jG-igV"/>
+                                    <constraint firstAttribute="width" constant="50" id="aI3-ec-K4O"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="back:" destination="TVc-iW-0T9" eventType="touchUpInside" id="35a-7i-fjB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xyW-N5-ZyI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GmH-7G-kU1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jZa-vW-LEb" secondAttribute="trailing" constant="8" symbolic="YES" id="0cO-28-42D"/>
-                            <constraint firstItem="zCR-0X-2dw" firstAttribute="leading" secondItem="xyW-N5-ZyI" secondAttribute="leading" constant="162" id="1vF-WB-Imy"/>
-                            <constraint firstItem="R46-Sf-AqK" firstAttribute="top" secondItem="xyW-N5-ZyI" secondAttribute="top" constant="185" id="8PR-zP-7UB"/>
-                            <constraint firstItem="xyW-N5-ZyI" firstAttribute="trailing" secondItem="GmH-7G-kU1" secondAttribute="trailing" constant="73" id="Rd6-Jb-bdD"/>
-                            <constraint firstItem="xyW-N5-ZyI" firstAttribute="trailing" secondItem="R46-Sf-AqK" secondAttribute="trailing" constant="237" id="Tgg-Ul-opS"/>
-                            <constraint firstItem="GmH-7G-kU1" firstAttribute="top" secondItem="xyW-N5-ZyI" secondAttribute="top" constant="361" id="VY4-II-Zih"/>
-                            <constraint firstItem="jZa-vW-LEb" firstAttribute="top" secondItem="R46-Sf-AqK" secondAttribute="bottom" constant="196" id="Vf8-LJ-N5K"/>
-                            <constraint firstItem="jZa-vW-LEb" firstAttribute="leading" secondItem="xyW-N5-ZyI" secondAttribute="leading" constant="8" id="Vj7-zO-Fuc"/>
-                            <constraint firstItem="xyW-N5-ZyI" firstAttribute="bottom" secondItem="zCR-0X-2dw" secondAttribute="bottom" constant="174" id="Z7Y-PL-kuc"/>
-                            <constraint firstItem="xyW-N5-ZyI" firstAttribute="trailing" secondItem="zCR-0X-2dw" secondAttribute="trailing" constant="162" id="ihm-wT-ao3"/>
-                            <constraint firstItem="GmH-7G-kU1" firstAttribute="centerY" secondItem="jZa-vW-LEb" secondAttribute="centerY" id="ucD-RR-kJm"/>
-                            <constraint firstItem="R46-Sf-AqK" firstAttribute="leading" secondItem="xyW-N5-ZyI" secondAttribute="leading" constant="41" id="ymL-3s-w5f"/>
+                            <constraint firstItem="GmH-7G-kU1" firstAttribute="centerX" secondItem="xyW-N5-ZyI" secondAttribute="centerX" id="75b-Pg-FXb"/>
+                            <constraint firstItem="eyP-ey-IGi" firstAttribute="leading" secondItem="xyW-N5-ZyI" secondAttribute="leading" id="7GU-Jy-msu"/>
+                            <constraint firstItem="epq-Bd-IB2" firstAttribute="leading" secondItem="ODn-4z-Hqm" secondAttribute="trailing" constant="20" id="CLH-QV-Qtb"/>
+                            <constraint firstItem="xyW-N5-ZyI" firstAttribute="bottom" secondItem="zCR-0X-2dw" secondAttribute="bottom" constant="50" id="Gzr-eg-kdV"/>
+                            <constraint firstItem="jZa-vW-LEb" firstAttribute="top" secondItem="xyW-N5-ZyI" secondAttribute="top" constant="60" id="INb-Ou-8kk"/>
+                            <constraint firstItem="GmH-7G-kU1" firstAttribute="top" secondItem="xyW-N5-ZyI" secondAttribute="top" constant="60" id="J7t-Mo-W6M"/>
+                            <constraint firstItem="eyP-ey-IGi" firstAttribute="top" secondItem="xyW-N5-ZyI" secondAttribute="top" id="fM7-Lp-pEH"/>
+                            <constraint firstItem="ODn-4z-Hqm" firstAttribute="leading" secondItem="xyW-N5-ZyI" secondAttribute="leading" constant="50" id="n4V-dG-kjQ"/>
+                            <constraint firstItem="jZa-vW-LEb" firstAttribute="centerX" secondItem="xyW-N5-ZyI" secondAttribute="centerX" id="pV8-bm-1MG"/>
+                            <constraint firstItem="epq-Bd-IB2" firstAttribute="top" secondItem="GmH-7G-kU1" secondAttribute="bottom" constant="176" id="r1n-yn-2dZ"/>
+                            <constraint firstItem="ODn-4z-Hqm" firstAttribute="top" secondItem="GmH-7G-kU1" secondAttribute="bottom" constant="180" id="u0U-dy-ZR0"/>
+                            <constraint firstItem="zCR-0X-2dw" firstAttribute="centerX" secondItem="xyW-N5-ZyI" secondAttribute="centerX" id="vQE-U0-8Rv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0fr-Re-z3l"/>
                     <connections>
-                        <outlet property="ImageDuLogo" destination="GmH-7G-kU1" id="Pvi-pT-uQ9"/>
+                        <outlet property="newsImage" destination="GmH-7G-kU1" id="dxd-zQ-QvY"/>
+                        <outlet property="newsTitleTextField" destination="epq-Bd-IB2" id="c84-Kd-iNL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wyj-aK-5Po" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4928.985507246377" y="1383.4821428571429"/>
+            <point key="canvasLocation" x="-1184" y="1619"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="t0z-c2-epv">
@@ -787,6 +825,7 @@
         <image name="building.2.fill" catalog="system" width="128" height="106"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="star.circle" catalog="system" width="128" height="121"/>

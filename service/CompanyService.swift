@@ -129,6 +129,35 @@ class ApiCompanyService {
     
     
     
+    static func addNewsToServer(image: UIImage,parameters:[String:Any]) {
+           
+           guard let mediaImage = Media(withImage: image, forKey: "newsPicture") else { return }
+           guard let url = URL(string: "http://172.27.32.1:3000/news") else { return }
+           var request = URLRequest(url: url)
+           request.httpMethod = "POST"
+           //create boundary
+           let boundary = generateBoundary()
+           //set content type
+           request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+           //call createDataBody method
+           let dataBody = createDataBody(withParameters: parameters, media: [mediaImage], boundary: boundary)
+           request.httpBody = dataBody
+           let session = URLSession.shared
+           session.dataTask(with: request) { (data, response, error) in
+              if let response = response {
+                 print(response)
+              }
+              if let data = data {
+                 do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+                 } catch {
+                    print(error)
+                 }
+              }
+           }.resume()
+        }
+    
     
     
 }

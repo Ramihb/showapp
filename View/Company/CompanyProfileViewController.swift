@@ -17,7 +17,11 @@ class CompanyProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func News(_ sender: Any) {
+        performSegue(withIdentifier: "addNewsSegue", sender: "yes")
+    }
+    
     
     @IBAction func LogOut(_ sender: Any) {
 
