@@ -49,10 +49,10 @@ class test {
 //                             print("blablabla")
                              if (reponse.contains("user modified !")){
                                  
-                                 if let validPhoto = json["profilePicture"] as? String{
-                                     print("aaaaaa",validPhoto)
-                                     UserDefaults.standard.string(forKey: "profilePicture")
-                                 }
+//                                 if let validPhoto = json["profilePicture"] as? String{
+//                                     print("aaaaaa",validPhoto)
+//                                     UserDefaults.standard.string(forKey: "profilePicture")
+//                                 }
                                  if let validUser = json["user"] as? [String:Any]{
                                      for (key,value) in validUser{
                                          UserDefaults.standard.setValue(value, forKey: key)
