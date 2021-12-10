@@ -6,12 +6,19 @@
 //
 
 import UIKit
-import CoreData
+import Alamofire
 class DetailArticleViewController: UIViewController {
 
+    @IBAction func backButton(_ sender: Any) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    
     var ArticleTitle:String?
     var ArticleImage:String?
-   
+    var ArticlePrice:String?
+    var idUser:String?
+    var idArticle:String?
+    var article :Article?
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var label: UILabel! //nom de l'article
@@ -21,35 +28,15 @@ class DetailArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        image.image = UIImage(named: ArticleImage!)
-        label.text = ArticleTitle!
+        image.imageFromServerURL(urlString: article!.articlePicture!)
+        label.text = article!.name!
         
     }
     
-    func insertItem(name: String, image: String) {
-            
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let persistentContainer = appDelegate.persistentContainer
-            let managedContext = persistentContainer.viewContext
-            
-            
-            let entityDescription = NSEntityDescription.entity(forEntityName: "Favourite", in: managedContext)
-            let object = NSManagedObject.init(entity: entityDescription!, insertInto: managedContext)
-            
-            object.setValue(ArticleTitle!, forKey: "nameFavourite")
-            object.setValue(ArticleImage!, forKey: "imageFavourite")
-            
-            do {
-                
-                try managedContext.save()
-                alertMessage(message: "article is added to favourite")
-                
-            } catch {
-                
-                alertMessage(message:"article insert error !")
-            }
-
-        }
+//    func insertItem(name: String, image: String) {
+//
+//
+//        }
         
         
         
@@ -63,42 +50,53 @@ class DetailArticleViewController: UIViewController {
         }
         
         
-        func getByCreateria(name: String) -> Bool{
-            
-            var movieExist = false
-            
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let persistentContainer = appDelegate.persistentContainer
-            let managedContext = persistentContainer.viewContext
-            
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Favourite")
-            let predicate = NSPredicate(format: "nameFavourite = %@", name)
-            request.predicate = predicate
-            
-            do {
-                let result = try managedContext.fetch(request)
-                if result.count > 0 {
-                    
-                    movieExist = true
-                    // lezemni nredha ki nawed nenzel aal add to favourite tetnaha mel favouri
-                    self.alertMessage(message: "Article allready added to favourite ")
-                    
-                }
-                
-            } catch {
-                
-                print("Fetching by criteria error !")
-            }
-            
-            
-            return movieExist
-        }
-    @IBAction func addToFavourite(_ sender: Any) {
-        if !getByCreateria(name: ArticleTitle!) {
-                   
-                   insertItem(name: ArticleTitle!, image: ArticleImage!)
-               }
-    }
-   
+    var isActive:Bool = false
+    @IBAction func addToFavourite(_ sender: UIButton) {
+                if isActive {
+                    isActive = false
+                    guard let url = URL(string: "http://192.168.1.13:3000/favorites/"+article!._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
+                                fatalError("Error getting the url")
+                            }
 
+                    AF.request(url, method: .delete,parameters: nil)
+                               .validate()
+                               .responseJSON { response in
+                                   switch response.result {
+                                       case .success:
+                                           print("Article deleted from favourit")
+                                       case .failure(let error):
+                                           print(error)
+                                   }
+                               }
+        
+    
+        sender.setImage(UIImage(named: "whiteHeart"), for: .normal)
+            } else {
+                isActive = true
+                sender.setImage(UIImage(named: "redHeart"), for: .normal)
+                guard let url = URL(string: "http://192.168.1.13:3000/favorites/add") else {
+                            fatalError("Error getting the url")
+                        }
+
+                        let params: Parameters = [
+                                    "name": article!.name!,
+                                    "price": article!.price!,
+                                    "refArticle": article!._id,
+                                    "refuser": UserDefaults.standard.string(forKey: "_id")!,
+                                    "favPicture": article!.articlePicture!
+                                ]
+
+                AF.request(url, method: .post,parameters: params)
+                           .validate()
+                           .responseJSON { response in
+                               switch response.result {
+                                   case .success:
+                                       print("Article added to favourit")
+                                   case .failure(let error):
+                                       print(error)
+                               }
+                           }
+            }
+
+}
 }

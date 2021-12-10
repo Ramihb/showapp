@@ -24,7 +24,7 @@ class test {
         static func uploadImageToServer(image: UIImage,parameters:[String:Any], callback: @escaping (Bool,String?)->Void) {
            
            guard let mediaImage = Media(withImage: image, forKey: "profilePicture") else { return }
-           guard let url = URL(string: "http://172.27.32.1:3000/users/"+UserDefaults.standard.string(forKey: "_id")!) else { return }
+           guard let url = URL(string: "http://192.168.1.13:3000/users/"+UserDefaults.standard.string(forKey: "_id")!) else { return }
            var request = URLRequest(url: url)
            request.httpMethod = "PUT"
            //create boundary
@@ -45,18 +45,10 @@ class test {
                      if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]{
                         print("json",json)
                          if let reponse = json["message"] as? String{
-//                             print(json)
-//                             print("blablabla")
                              if (reponse.contains("user modified !")){
-                                 
-//                                 if let validPhoto = json["profilePicture"] as? String{
-//                                     print("aaaaaa",validPhoto)
-//                                     UserDefaults.standard.string(forKey: "profilePicture")
-//                                 }
                                  if let validUser = json["user"] as? [String:Any]{
                                      for (key,value) in validUser{
                                          UserDefaults.standard.setValue(value, forKey: key)
-                                         //print("cc")
                                      }
                                  }
                                  callback(true,"user modified !")

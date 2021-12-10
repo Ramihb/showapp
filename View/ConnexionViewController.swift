@@ -45,7 +45,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
 
     }
     func LoginUser(email: String, password: String) {
-        guard let url = URL(string: "http://172.27.32.1:3000/users/login") else {
+        guard let url = URL(string: "http://192.168.1.13:3000/users/login") else {
             fatalError("Error getting the url")
         }
         let params: Parameters = [
@@ -88,7 +88,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
     
     func LoginCompany(email: String, password: String) {
-        guard let url = URL(string: "http://172.27.32.1:3000/company/login") else {
+        guard let url = URL(string: "http://192.168.1.13:3000/company/login") else {
             fatalError("Error getting the url")
         }
         let params: Parameters = [
@@ -176,7 +176,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
             // print(userG)
               //  print(userG?.profile?.imageURL(withDimension: 512))
                 //test
-                let user = User(id: "", email: (userG?.profile!.email)!, password: "", profilePicture: "", firstName: (userG?.profile?.familyName)!, lastName: (userG?.profile?.givenName)!,isVerified: false,__v: 0)
+                let user = User(id: "", email: (userG?.profile!.email)!, password: "", phoneNumber: "", profilePicture: "", firstName: (userG?.profile?.familyName)!, lastName: (userG?.profile?.givenName)!,isVerified: false,__v: 0)
 
                 if let dataPhoto = try? Data(contentsOf: (userG?.profile?.imageURL(withDimension: 512))!) {
                     self.faza = UIImage(data: dataPhoto)
@@ -279,31 +279,31 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
     
     
-    func fetchData() {
-        guard let url = URL(string: "http://172.27.32.1:3000/users") else { return}
-        let session = URLSession.shared.dataTask(with: url) {
-            data, response, error in
-            if let error = error {
-                print("There was an error: \(error.localizedDescription)")
-            } else {
-                let jsonRes = try? JSONSerialization.jsonObject(with: data!, options: [])
-                print("the response: \(jsonRes)")
-            }
-        }.resume()
-        }
-
-    func fetchCompanyData() {
-        guard let url = URL(string: "http://172.27.32.1:3000/company") else { return}
-        let session = URLSession.shared.dataTask(with: url) {
-            data, response, error in
-            if let error = error {
-                print("There was an error: \(error.localizedDescription)")
-            } else {
-                let jsonRes = try? JSONSerialization.jsonObject(with: data!, options: [])
-                print("the response: \(jsonRes)")
-            }
-        }.resume()
-        }
+//    func fetchData() {
+//        guard let url = URL(string: "http://192.168.1.13:3000/users") else { return}
+//        let session = URLSession.shared.dataTask(with: url) {
+//            data, response, error in
+//            if let error = error {
+//                print("There was an error: \(error.localizedDescription)")
+//            } else {
+//                let jsonRes = try? JSONSerialization.jsonObject(with: data!, options: [])
+//                print("the response: \(jsonRes)")
+//            }
+//        }.resume()
+//        }
+//
+//    func fetchCompanyData() {
+//        guard let url = URL(string: "http://192.168.1.13:3000/company") else { return}
+//        let session = URLSession.shared.dataTask(with: url) {
+//            data, response, error in
+//            if let error = error {
+//                print("There was an error: \(error.localizedDescription)")
+//            } else {
+//                let jsonRes = try? JSONSerialization.jsonObject(with: data!, options: [])
+//                print("the response: \(jsonRes)")
+//            }
+//        }.resume()
+//        }
 
     func prompt(title:String, message:String){
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -311,4 +311,9 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
             alert.addAction(action)
             present(alert, animated: true, completion: nil)
         }
+    
+    
+    @IBAction func ForgetPassword(_ sender: Any) {
+        performSegue(withIdentifier: "forgetPasswordSegue", sender: "yes")
+    }
 }

@@ -11,6 +11,7 @@ struct User: Codable {
     var _id:String
     var email: String
     var password: String
+    var phoneNumber: String
     var profilePicture:String
     var firstName: String
     let lastName: String
@@ -18,10 +19,11 @@ struct User: Codable {
     var __v:Int
     
     
-    init(id:String, email:String,password:String,profilePicture:String,firstName:String,lastName:String,isVerified:Bool,__v:Int) {
+    init(id:String, email:String,password:String,phoneNumber:String, profilePicture:String,firstName:String,lastName:String,isVerified:Bool,__v:Int) {
             self._id = id
             self.email = email
             self.password=password
+            self.phoneNumber=phoneNumber
             self.profilePicture=profilePicture
             self.firstName=firstName
             self.lastName=lastName

@@ -28,7 +28,7 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
                 //widgets
                 let imageView = contentView.viewWithTag(1) as! UIImageView
                 let nameLabel = contentView.viewWithTag(2) as! UILabel
-                
+                //let priceLAbel = contentView.viewWithTag(3) as! UILabel
                 //widgets setting value
                 imageView.image = UIImage(named: articleImage[indexPath.row])
                 nameLabel.text = articleName[indexPath.row]

@@ -25,7 +25,7 @@ class articleService {
     static func addArticleToServer(image: UIImage,parameters:[String:Any]) {
        
        guard let mediaImage = Media(withImage: image, forKey: "articlePicture") else { return }
-       guard let url = URL(string: "http://172.27.32.1:3000/articles") else { return }
+       guard let url = URL(string: "http://192.168.1.13:3000/articles") else { return }
        var request = URLRequest(url: url)
        request.httpMethod = "POST"
        //create boundary
@@ -86,7 +86,7 @@ class articleService {
     
     func getArticleByType(ArticleType:String ,callback: @escaping (Bool,Articles?)->Void){
            
-        guard let url = URL(string: "http://172.27.32.1:3000/articles/type/"+ArticleType) else{
+        guard let url = URL(string: "http://192.168.1.13:3000/articles/type/"+ArticleType) else{
                 return
             }
             var request = URLRequest(url: url)
@@ -119,7 +119,7 @@ class articleService {
     
     func getArticle( callback: @escaping (Bool,Articles?)->Void){
            
-            guard let url = URL(string: "http://172.27.32.1:3000/articles") else{
+            guard let url = URL(string: "http://192.168.1.13:3000/articles") else{
                 return
             }
             var request = URLRequest(url: url)
@@ -151,7 +151,7 @@ class articleService {
     
     func getCompanyArticle( callback: @escaping (Bool,Articles?)->Void){
            
-            guard let url = URL(string: "http://172.27.32.1:3000/articles/company/" + UserDefaults.standard.string(forKey: "_id")!) else{
+            guard let url = URL(string: "http://192.168.1.13:3000/articles/company/" + UserDefaults.standard.string(forKey: "_id")!) else{
                 return
             }
             var request = URLRequest(url: url)
@@ -179,6 +179,47 @@ class articleService {
                 }
             }.resume()
         }
+    
+    
+    
+    
+    
+    
+    static func addArticleToFavourit(image: UIImage,parameters:[String:Any]) {
+       
+       guard let mediaImage = Media(withImage: image, forKey: "favPicture") else { return }
+       guard let url = URL(string: "http://192.168.1.13:3000/favorites/add") else { return }
+       var request = URLRequest(url: url)
+       request.httpMethod = "POST"
+       //create boundary
+       let boundary = generateBoundary()
+       //set content type
+       request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+       //call createDataBody method
+       let dataBody = createDataBody(withParameters: parameters, media: [mediaImage], boundary: boundary)
+       request.httpBody = dataBody
+       let session = URLSession.shared
+       session.dataTask(with: request) { (data, response, error) in
+          if let response = response {
+             print(response)
+          }
+          if let data = data {
+             do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+             } catch {
+                print(error)
+             }
+          }
+       }.resume()
+    }
+    
+    
+    
+    
+    
+    
+
 }
 
 

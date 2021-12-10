@@ -10,6 +10,7 @@
 		3330AF7B10DDDBD352BDBA48 /* Pods_showapp_showappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F1B8420A2304CD2B0D32B8 /* Pods_showapp_showappUITests.framework */; };
 		3EE43FDAE5CE9B9CCCBB9B82 /* Pods_showappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8D45FC9689EBCA839EAAB0 /* Pods_showappTests.framework */; };
 		47040F11274C74140004E99D /* ServiceUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47040F10274C74130004E99D /* ServiceUser.swift */; };
+		476338B227627AC0009DDD1D /* ForgetPassword1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476338B127627AC0009DDD1D /* ForgetPassword1ViewController.swift */; };
 		4767B2D3275050BE00819AE5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4767B2D2275050BE00819AE5 /* Alamofire */; };
 		4767EA212752FAC400993309 /* CompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767EA202752FAC400993309 /* CompanyService.swift */; };
 		4767EA2327530C6000993309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767EA2227530C6000993309 /* Company.swift */; };
@@ -51,6 +52,7 @@
 		47CA57D027382018005E3096 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA57CF27382018005E3096 /* CartViewController.swift */; };
 		47CA57D427385F15005E3096 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA57D327385F15005E3096 /* SearchViewController.swift */; };
 		47CE020B275A437F004F8B92 /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CE020A275A437F004F8B92 /* Company.storyboard */; };
+		47ED06B22763B15B003BC0F3 /* Favourit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED06B12763B15B003BC0F3 /* Favourit.swift */; };
 		638686B1122F88D0C290951F /* Pods_showapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADCBF86011BDC23632C3470 /* Pods_showapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,7 @@
 		2C8D45FC9689EBCA839EAAB0 /* Pods_showappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_showappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADCBF86011BDC23632C3470 /* Pods_showapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_showapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47040F10274C74130004E99D /* ServiceUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceUser.swift; sourceTree = "<group>"; };
+		476338B127627AC0009DDD1D /* ForgetPassword1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword1ViewController.swift; sourceTree = "<group>"; };
 		4767EA202752FAC400993309 /* CompanyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyService.swift; sourceTree = "<group>"; };
 		4767EA2227530C6000993309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		476858A4273A00F300680CCA /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 		47CA57CF27382018005E3096 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		47CA57D327385F15005E3096 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		47CE020A275A437F004F8B92 /* Company.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Company.storyboard; sourceTree = "<group>"; };
+		47ED06B12763B15B003BC0F3 /* Favourit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourit.swift; sourceTree = "<group>"; };
 		7540897CF77771ED63FDEC7B /* Pods-showapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showapp.release.xcconfig"; path = "Target Support Files/Pods-showapp/Pods-showapp.release.xcconfig"; sourceTree = "<group>"; };
 		9BCC5FE246AEE1652F6F97F4 /* Pods-showappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showappTests.debug.xcconfig"; path = "Target Support Files/Pods-showappTests/Pods-showappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC2D1B7EA30C4B27BEA925F0 /* Pods-showapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showapp.debug.xcconfig"; path = "Target Support Files/Pods-showapp/Pods-showapp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +180,14 @@
 			path = service;
 			sourceTree = "<group>";
 		};
+		476338B027627A8F009DDD1D /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				476338B127627AC0009DDD1D /* ForgetPassword1ViewController.swift */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
 		476871572742C81900D225DF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +195,7 @@
 				4767EA2227530C6000993309 /* Company.swift */,
 				479C253B2755558C0082BF8F /* Article.swift */,
 				4785C7B4275E5A3F006BCF93 /* News.swift */,
+				47ED06B12763B15B003BC0F3 /* Favourit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +203,7 @@
 		476871582742C82700D225DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				476338B027627A8F009DDD1D /* ForgetPassword */,
 				47894F1C275AA6B600AF65E0 /* User */,
 				4795CD362752045C00CA792B /* Company */,
 				47CA57AA27380A69005E3096 /* LaunchScreen.storyboard */,
@@ -566,6 +580,7 @@
 				476F1F40274EFF02000AAA17 /* User.swift in Sources */,
 				47750A86275CFC2F00EEDFCA /* test.swift in Sources */,
 				4785C7B5275E5A3F006BCF93 /* News.swift in Sources */,
+				476338B227627AC0009DDD1D /* ForgetPassword1ViewController.swift in Sources */,
 				4768715A2742CBDE00D225DF /* CategorieViewController.swift in Sources */,
 				47040F11274C74140004E99D /* ServiceUser.swift in Sources */,
 				476D8083274308B50068053D /* FavouriteViewController.swift in Sources */,
@@ -591,6 +606,7 @@
 				47CA579F27380A68005E3096 /* SceneDelegate.swift in Sources */,
 				476D8087274309100068053D /* BrandsViewController.swift in Sources */,
 				476D809127430BE10068053D /* PromotionViewController.swift in Sources */,
+				47ED06B22763B15B003BC0F3 /* Favourit.swift in Sources */,
 				476D808D27430B090068053D /* UserSignInViewController.swift in Sources */,
 				4785C7B7275E797B006BCF93 /* CategoryClothesViewController.swift in Sources */,
 			);

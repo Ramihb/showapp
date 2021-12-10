@@ -103,6 +103,8 @@ class CategorieModelViewController: UIViewController, UITableViewDataSource, UIT
 
 }
 
+
+
 extension UITableView {
 
     func reloadWithAnimation() {
@@ -121,5 +123,5 @@ extension UITableView {
         }
     }
     
-    
 }
+    

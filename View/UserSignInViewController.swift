@@ -75,8 +75,8 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
         self.dismiss(animated: true)
     }
     
-    func AddUser(firstName: String, lastName: String, email: String, password: String, phoneNumber: String) {
-            let url = "http://172.27.32.1:3000/users/signup"
+   /* func AddUser(firstName: String, lastName: String, email: String, password: String, phoneNumber: String) {
+            let url = "http://192.168.1.13:3000/users/signup"
         let params: Parameters = [
             "email": emailAdressTextField.text!,
             "password": passwordTextField.text!,
@@ -97,7 +97,7 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
                             print(error)
                     }
                 }
-    }
+    }*/
     
     
     

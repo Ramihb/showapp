@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class CategoryClothesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
         var sousCategorieName:String?
@@ -32,11 +32,10 @@ class CategoryClothesViewController: UIViewController, UICollectionViewDelegate,
                         let labelName = contentView.viewWithTag(2) as! UILabel
                         let labelPrice = contentView.viewWithTag(3) as! UILabel
                 
-                //if scName.text == "pants" {
+                
                     image.imageFromServerURL(urlString: tableauArticle[indexPath.row].articlePicture!)
                     labelName.text = tableauArticle[indexPath.row].name
                     labelPrice.text = tableauArticle[indexPath.row].price
-                //}
                         
 
                         return cell
@@ -70,4 +69,59 @@ class CategoryClothesViewController: UIViewController, UICollectionViewDelegate,
             func viewDidAppear() {
                 collectionArticle.reloadData()
             }
+    
+    //test red button
+    
+    
+    var isActive:Bool = false
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(tableauArticle[indexPath.row].name!)
+        print(tableauArticle[indexPath.row].price!)
+        print(tableauArticle[indexPath.row]._id)
+        print(tableauArticle[indexPath.row].articlePicture!)
+        print(UserDefaults.standard.string(forKey: "_id")!)
+        
+        performSegue(withIdentifier: "detailArticle", sender: indexPath)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailArticle" {
+                    let index = sender as! IndexPath
+                    let destination = segue.destination as! DetailArticleViewController
+//                    destination.ArticleTitle = tableauArticle[index.row].name!
+//                    destination.ArticleImage = tableauArticle[index.row].articlePicture!
+//                    destination.ArticlePrice = tableauArticle[index.row].price!
+//                    destination.idArticle = tableauArticle[index.row]._id
+                    destination.idUser = UserDefaults.standard.string(forKey: "_id")!
+                    destination.article = tableauArticle[index.row]
+                }
+    }
+    
+    @IBAction func addToFavourite(_ sender: UIButton) {
+       
+//        if isActive {
+//            isActive = false
+        
+        
+        
+        
+        
+        
+                
+//            sender.setImage(UIImage(named: "whiteHeart"), for: .normal)
+//        } else {
+//            isActive = true
+//            sender.setImage(UIImage(named: "redHeart"), for: .normal)
+//        }
+        
+        
+        }
+    
+    
+    
+       
+    
+    
 }
