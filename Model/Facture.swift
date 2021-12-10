@@ -17,6 +17,7 @@ struct Facture: Codable {
     var price:String?
     var refArticle:String?
     var refuser:String?
-    var quantit:String?
+    var qte:String?
+    var cartPicture:String?
     var __v:Int
 }

@@ -118,7 +118,7 @@ class DetailArticleViewController: UIViewController {
                             "price": article!.price!,
                             "refArticle": article!._id,
                             "refuser": UserDefaults.standard.string(forKey: "_id")!,
-                            "favPicture": article!.articlePicture!,
+                            "cartPicture": article!.articlePicture!,
                             "qte": quantiteLabel.text!
                         ]
 

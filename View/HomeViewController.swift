@@ -55,4 +55,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
            tableNews.reloadData()
               }
 
+    @IBAction func cartButton(_ sender: Any) {
+        performSegue(withIdentifier: "homeToCartSegue", sender: "yes")
+    }
 }
