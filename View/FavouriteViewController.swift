@@ -6,19 +6,34 @@
 //
 
 import UIKit
-import CoreData
 
 class FavouriteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var articleName = [String]()
-    var articleImage = [String]()
-    var articlePrice = [String]()
+    var tableauFav = [Favorite]()
     
     
+    @IBOutlet weak var tableFav: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articleName.count
+        return tableauFav.count
     }
+    
+    
+    func loadArticleToTableFav (tableau:UITableView){
+        articleService().getUserFavourites { succes, reponse in
+                            if succes {
+                                for fav in reponse!.favorites!{
+                                    self.tableauFav.append(fav)
+                                    DispatchQueue.main.async {
+                                        tableau.reloadData()
+                                                }
+                                }
+                            }
+                            else{
+                                print("pas de favourit a afficher")
+                            }
+                        }
+                    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavouriteCell", for: indexPath)
@@ -30,8 +45,8 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
                 let nameLabel = contentView.viewWithTag(2) as! UILabel
                 //let priceLAbel = contentView.viewWithTag(3) as! UILabel
                 //widgets setting value
-                imageView.image = UIImage(named: articleImage[indexPath.row])
-                nameLabel.text = articleName[indexPath.row]
+        imageView.imageFromServerURL(urlString: tableauFav[indexPath.row].favPicture!)
+        nameLabel.text = tableauFav[indexPath.row].name!
                 
                 return cell
     }
@@ -39,51 +54,14 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        retreiveData()
+        loadArticleToTableFav(tableau: self.tableFav)
         // Do any additional setup after loading the view.
     }
     
-    func retreiveData() {
-            
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let persistentContainer = appDelegate.persistentContainer
-            let managedContext = persistentContainer.viewContext
-            
-            
-            let request = NSFetchRequest<NSManagedObject>(entityName: "Favourite")
-            
-            do {
-                
-                let data = try managedContext.fetch(request)
-                for item in data {
-                    
-                    articleName.append(item.value(forKey: "nameFavourite") as! String)
-                    articleImage.append(item.value(forKey: "imageFavourite") as! String)
-                    //articlePrice.append(item.value(forKey: "priceFavourite") as! String)
-                    
-                }
-                
-            } catch  {
-                
-                print("Fetching error !")
-            }
-            
-        }
-    
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
+    func viewWillAppear() {
+        tableFav.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            tableView.beginUpdates()
-            articleName.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            
-            tableView.endUpdates()
-        }
-    }
-
     
 
 }

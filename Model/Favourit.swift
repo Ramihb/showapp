@@ -7,7 +7,7 @@
 
 import Foundation
 struct Favorites: Codable {
-    var favourite: [Favorite]?
+    var favorites: [Favorite]?
 }
 
 struct Favorite: Codable {

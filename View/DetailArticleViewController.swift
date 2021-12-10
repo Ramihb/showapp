@@ -22,7 +22,7 @@ class DetailArticleViewController: UIViewController {
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var label: UILabel! //nom de l'article
-    
+    @IBOutlet weak var prix: UILabel!
     
     
     override func viewDidLoad() {
@@ -30,6 +30,7 @@ class DetailArticleViewController: UIViewController {
 
         image.imageFromServerURL(urlString: article!.articlePicture!)
         label.text = article!.name!
+        prix.text = article!.price! + " TND"
         
     }
     
@@ -99,4 +100,38 @@ class DetailArticleViewController: UIViewController {
             }
 
 }
+    
+    
+    @IBOutlet weak var quantiteLabel: UILabel!
+    @IBAction func stepper(_ sender: UIStepper) {
+        quantiteLabel.text = String(sender.value)
+    }
+    
+    @IBAction func addToCart(_ sender: Any) {
+        
+        guard let url = URL(string: "http://192.168.1.13:3000/factures/add") else {
+                    fatalError("Error getting the url")
+                }
+
+                let params: Parameters = [
+                            "name": article!.name!,
+                            "price": article!.price!,
+                            "refArticle": article!._id,
+                            "refuser": UserDefaults.standard.string(forKey: "_id")!,
+                            "favPicture": article!.articlePicture!,
+                            "qte": quantiteLabel.text!
+                        ]
+
+        AF.request(url, method: .post,parameters: params)
+                   .validate()
+                   .responseJSON { response in
+                       switch response.result {
+                           case .success:
+                               print("Article added to cart")
+                           case .failure(let error):
+                               print(error)
+                       }
+                   }
+    }
+    
 }

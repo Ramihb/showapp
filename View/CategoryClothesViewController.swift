@@ -99,29 +99,19 @@ class CategoryClothesViewController: UIViewController, UICollectionViewDelegate,
                 }
     }
     
-    @IBAction func addToFavourite(_ sender: UIButton) {
-       
-//        if isActive {
-//            isActive = false
+
+        
+        
+    @IBAction func addToCart(_ sender: Any) {
         
         
         
-        
-        
-        
-                
-//            sender.setImage(UIImage(named: "whiteHeart"), for: .normal)
-//        } else {
-//            isActive = true
-//            sender.setImage(UIImage(named: "redHeart"), for: .normal)
-//        }
-        
-        
+    }
+    
+    
         }
     
     
     
-       
     
-    
-}
+

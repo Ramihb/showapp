@@ -393,6 +393,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="8tk-Hy-xk3"/>
+                    <connections>
+                        <outlet property="tableFav" destination="p0x-9R-FFZ" id="kpI-xY-HPB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zg-Xs-jej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1628,9 +1631,6 @@
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="whiteHeart"/>
-                                                    <connections>
-                                                        <action selector="addToFav:" destination="ZNh-Za-TUn" eventType="touchUpInside" id="bpj-xa-Agw"/>
-                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBX-qx-hH8">
                                                     <rect key="frame" x="10" y="300" width="132" height="40"/>
@@ -1853,27 +1853,89 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="backButton:" destination="psJ-BA-W9R" eventType="touchUpInside" id="Zkh-Pg-JWy"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWD-WN-fLK">
+                                <rect key="frame" x="142" y="812" width="130" height="30"/>
+                                <color key="backgroundColor" red="0.89947205779999995" green="0.65115249159999999" blue="0.7920641303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="TH2-mG-7Ow"/>
+                                    <constraint firstAttribute="height" constant="30" id="wXD-21-nyY"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add to Cart"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addToCart:" destination="psJ-BA-W9R" eventType="touchUpInside" id="Jvo-Wd-jAv"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="BIL-5N-OTt">
+                                <rect key="frame" x="160" y="769" width="94" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="bNY-uc-bgI"/>
+                                    <constraint firstAttribute="width" constant="94" id="ljY-27-be0"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="stepper:" destination="psJ-BA-W9R" eventType="valueChanged" id="Egl-4T-4Uj"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcY-26-vi7">
+                                <rect key="frame" x="157" y="724" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="W8g-0D-VOM"/>
+                                    <constraint firstAttribute="height" constant="35" id="eGc-hq-5e6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klp-Np-5bK">
+                                <rect key="frame" x="20" y="669" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="aYt-u7-68b"/>
+                                    <constraint firstAttribute="height" constant="50" id="o8a-Ai-FfM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1FV-yX-AaN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1FV-yX-AaN" firstAttribute="bottom" secondItem="ZWD-WN-fLK" secondAttribute="bottom" constant="20" id="3hE-TB-byl"/>
                             <constraint firstItem="1FV-yX-AaN" firstAttribute="trailing" secondItem="zrX-rr-GPM" secondAttribute="trailing" constant="20" id="7Tv-j7-2xc"/>
                             <constraint firstItem="6Ds-7R-hod" firstAttribute="top" secondItem="1FV-yX-AaN" secondAttribute="top" id="Alb-XJ-WlB"/>
                             <constraint firstItem="zrX-rr-GPM" firstAttribute="leading" secondItem="1FV-yX-AaN" secondAttribute="leading" constant="20" id="D0U-nd-CJG"/>
                             <constraint firstItem="1FV-yX-AaN" firstAttribute="trailing" secondItem="hwb-MJ-V2g" secondAttribute="trailing" id="F9w-8Q-4cJ"/>
+                            <constraint firstItem="Klp-Np-5bK" firstAttribute="top" secondItem="DEa-nI-Eme" secondAttribute="bottom" constant="5" id="HDe-Rn-v5D"/>
                             <constraint firstItem="zrX-rr-GPM" firstAttribute="top" secondItem="hwb-MJ-V2g" secondAttribute="bottom" id="Iae-fF-CLu"/>
+                            <constraint firstItem="ZWD-WN-fLK" firstAttribute="centerX" secondItem="1FV-yX-AaN" secondAttribute="centerX" id="KjS-qr-NvB"/>
+                            <constraint firstItem="WcY-26-vi7" firstAttribute="centerX" secondItem="1FV-yX-AaN" secondAttribute="centerX" id="N6g-Yt-kXk"/>
+                            <constraint firstItem="BIL-5N-OTt" firstAttribute="top" secondItem="WcY-26-vi7" secondAttribute="bottom" constant="10" id="OLZ-wU-iJZ"/>
                             <constraint firstItem="1FV-yX-AaN" firstAttribute="trailing" secondItem="DEa-nI-Eme" secondAttribute="trailing" constant="20" id="Zdo-0a-O96"/>
                             <constraint firstItem="6Ds-7R-hod" firstAttribute="leading" secondItem="1FV-yX-AaN" secondAttribute="leading" id="cfe-Lj-bvz"/>
+                            <constraint firstItem="WcY-26-vi7" firstAttribute="top" secondItem="Klp-Np-5bK" secondAttribute="bottom" constant="5" id="jdY-BL-0mD"/>
+                            <constraint firstItem="BIL-5N-OTt" firstAttribute="centerX" secondItem="1FV-yX-AaN" secondAttribute="centerX" id="jxF-ZN-UFz"/>
                             <constraint firstItem="DEa-nI-Eme" firstAttribute="leading" secondItem="1FV-yX-AaN" secondAttribute="leading" constant="20" id="mFn-bL-XS9"/>
                             <constraint firstItem="hwb-MJ-V2g" firstAttribute="top" secondItem="1FV-yX-AaN" secondAttribute="top" id="nGd-5V-ofA"/>
                             <constraint firstItem="DEa-nI-Eme" firstAttribute="top" secondItem="zrX-rr-GPM" secondAttribute="bottom" constant="20" id="nXm-Ye-2cJ"/>
+                            <constraint firstItem="Klp-Np-5bK" firstAttribute="centerX" secondItem="1FV-yX-AaN" secondAttribute="centerX" id="sJj-Us-Sg9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gw9-hw-uRI"/>
                     <connections>
                         <outlet property="image" destination="zrX-rr-GPM" id="dal-Ry-ONi"/>
                         <outlet property="label" destination="DEa-nI-Eme" id="5Xg-2j-qsL"/>
+                        <outlet property="prix" destination="Klp-Np-5bK" id="W8d-wD-Ugo"/>
+                        <outlet property="quantiteLabel" destination="WcY-26-vi7" id="jGc-yx-Vct"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kp0-sL-Npq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
