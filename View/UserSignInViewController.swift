@@ -27,16 +27,32 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
     
     @IBAction func continueClick(_ sender: Any) {
         if(emailAdressTextField.text != "" && passwordTextField.text != "" && phoneNumberTextField.text != "" && firstNameTextField.text != "" && lastNameTextField.text != ""){
+            if(passwordTextField.text! == confirmPasswordTextField.text!){
+                if isValidEmail(emailAdressTextField.text!){
+                    if(phoneNumberTextField.text!.count == 8) {
+                        let params: Parameters = [
+                                    "email": emailAdressTextField.text!,
+                                    "password": passwordTextField.text!,
+                                    "phoneNumber": phoneNumberTextField.text!,
+                                    "firstName": firstNameTextField.text!,
+                                    "lastName": lastNameTextField.text!,
+                                ]
+                        ApiMouchService.uploadImageToServer(image: imageView.image!, parameters: params)
+                    }else{
+                        print("invalid phone number")
+                        self.alert(title: "Warning", message: "invlaid phone number")
+                    }
+                    
+                }
+                else{
+                    print("mail existant")
+                }
+                
+                
+            } else{
+                self.alert(title: "Warning", message: "mismatch password")
+            }
 
-            let params: Parameters = [
-                        "email": emailAdressTextField.text!,
-                        "password": passwordTextField.text!,
-                        "phoneNumber": phoneNumberTextField.text!,
-                        "firstName": firstNameTextField.text!,
-                        "lastName": lastNameTextField.text!,
-                    ]
-            ApiMouchService.uploadImageToServer(image: imageView.image!, parameters: params)
-            
         }
     }
     struct Response: Decodable {
@@ -65,7 +81,12 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
         // Do any additional setup after loading the view.
     }
     
-
+    func isValidEmail(_ email: String) -> Bool {
+            let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+            
+            let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+            return emailPred.evaluate(with: email)
+        }
     
     
     
@@ -75,29 +96,7 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
         self.dismiss(animated: true)
     }
     
-   /* func AddUser(firstName: String, lastName: String, email: String, password: String, phoneNumber: String) {
-            let url = "http://172.18.16.1:3000/users/signup"
-        let params: Parameters = [
-            "email": emailAdressTextField.text!,
-            "password": passwordTextField.text!,
-            "phoneNumber": phoneNumberTextField.text!,
-            "firstName": firstNameTextField.text!,
-            "lastName": lastNameTextField.text!
-            
-        ]
-            
-            
-            AF.request(url, method: .post,parameters: params)
-                .validate()
-                .responseJSON { response in
-                    switch response.result {
-                        case .success:
-                            print("Validation Successful")
-                        case .failure(let error):
-                            print(error)
-                    }
-                }
-    }*/
+  
     
     
     
@@ -148,4 +147,15 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
         }
         picker.dismiss(animated: true, completion: nil)
 }
+    
+    
+    
+    
+    
+    func alert(title:String, message:String){
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .destructive , handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
 }

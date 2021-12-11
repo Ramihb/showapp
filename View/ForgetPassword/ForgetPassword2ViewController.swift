@@ -43,7 +43,7 @@ class ForgetPassword2ViewController: UIViewController {
         }
         //alert mismatch password
         else{
-            self.alert(title: "Echec", message: "mismatch password")
+            self.alert(title: "Warning", message: "mismatch password")
         }
 }
 
