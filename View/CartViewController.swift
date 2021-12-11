@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBAction func backButton(_ sender: Any) {
                 self.dismiss(animated: true, completion: nil)
@@ -74,6 +74,26 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             tableCart.reloadData()
         }
 
-   
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableauCart.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            guard let url = URL(string: "http://172.18.16.1:3000/factures/"+tableauCart[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
+                        fatalError("Error getting the url")
+                    }
+
+            AF.request(url, method: .delete,parameters: nil)
+                       .validate()
+                       .responseJSON { response in
+                           switch response.result {
+                               case .success:
+                                   print("Article deleted from cart")
+                               case .failure(let error):
+                                   print(error)
+                           }
+                       }
+        }
+    }
 
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import DropDown
 
 class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -17,33 +18,22 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
     @IBOutlet weak var ContactNumberTextField: UITextField!
     @IBOutlet weak var emailCompanyTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var categoryTextField: UITextField!
+    @IBOutlet weak var categoryTextField: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
     
-    
+    let categoryDropDown = DropDown()
+        let categoryValue = ["mode", "high tech", "beauty", "baby", "jewerly", "art deco"]
+    @IBAction func showCategoryOptions(_ sender: Any) {
+        categoryDropDown.show()
+        }
     
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true)
     }
     @IBAction func registerBusiness(_ sender: Any) {
         if(firstNameTextField.text != "" && lastNameTextField.text != "" && businessNameTextField.text != "" && ContactNumberTextField.text != "" && emailCompanyTextField.text != "" && passwordTextField.text != "" && categoryTextField.text != ""){
-//            AddCompany(firstNameCompany: firstNameTextField.text!, lastNameCompany: lastNameTextField.text!, emailCompany: emailCompanyTextField.text!, passwordCompany: passwordTextField.text!, phoneNumberCompany: ContactNumberTextField.text!, categoryCompany: categoryTextField.text!, businessNameCompany: businessNameTextField.text!)
-//                   self.navigationController?.popViewController(animated: true)
-//                   NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-//
-//
-//
-//
-//
-//
-//               }else{
-//                   let alert = UIAlertController(title: "Warning", message: "You must fill all the fields", preferredStyle: .alert)
-//                   let action = UIAlertAction(title: "OK", style: .cancel)
-//                   alert.addAction(action)
-//                   self.present(alert, animated: true)
-//               }
-            //let url = URL(string: "http://172.18.16.1:3000/company/signup")
+
             
             let params: Parameters = [
                 "emailCompany": emailCompanyTextField.text!,
@@ -88,8 +78,7 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
             "firstNameCompany": firstNameTextField.text!,
             "lastNameCompany": lastNameTextField.text!,
             "businessNameCompany": businessNameTextField.text!,
-            "categoryCompany": categoryTextField.text!,
-            "brandPicCompany": "gggggg"
+            "categoryCompany": categoryTextField.text!
         ]
             
             
@@ -106,13 +95,22 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
         
     }
     
-    
+    @IBOutlet weak var vwDropDown:UIView!
     
       
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        categoryTextField.text = "Select a category"
+                categoryDropDown.anchorView = vwDropDown
+                categoryDropDown.dataSource = categoryValue
+                categoryDropDown.bottomOffset = CGPoint(x: 0, y:(categoryDropDown.anchorView?.plainView.bounds.height)!)
+                categoryDropDown.topOffset = CGPoint(x: 0, y:-(categoryDropDown.anchorView?.plainView.bounds.height)!)
+                categoryDropDown.direction = .bottom
+                categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                  print("Selected item: \(item) at index: \(index)")
+                    self.categoryTextField.text = categoryValue[index]
+                }
 
         
     }

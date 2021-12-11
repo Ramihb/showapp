@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class FavouriteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var tableauFav = [Favorite]()
@@ -62,6 +62,26 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
         tableFav.reloadData()
     }
     
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableauFav.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            guard let url = URL(string: "http://172.18.16.1:3000/favorites/"+tableauFav[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
+                        fatalError("Error getting the url")
+                    }
+
+            AF.request(url, method: .delete,parameters: nil)
+                       .validate()
+                       .responseJSON { response in
+                           switch response.result {
+                               case .success:
+                                   print("Article deleted from favourit")
+                               case .failure(let error):
+                                   print(error)
+                           }
+                       }
+        }
+    }
 
 }
