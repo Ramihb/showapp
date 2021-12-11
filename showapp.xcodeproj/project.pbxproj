@@ -54,6 +54,7 @@
 		47CE020B275A437F004F8B92 /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CE020A275A437F004F8B92 /* Company.storyboard */; };
 		47ED06B22763B15B003BC0F3 /* Favourit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED06B12763B15B003BC0F3 /* Favourit.swift */; };
 		47ED06B42763DD72003BC0F3 /* Facture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED06B32763DD72003BC0F3 /* Facture.swift */; };
+		47ED06B62764126B003BC0F3 /* ForgetPassword2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED06B52764126B003BC0F3 /* ForgetPassword2ViewController.swift */; };
 		638686B1122F88D0C290951F /* Pods_showapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADCBF86011BDC23632C3470 /* Pods_showapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,7 @@
 		47CE020A275A437F004F8B92 /* Company.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Company.storyboard; sourceTree = "<group>"; };
 		47ED06B12763B15B003BC0F3 /* Favourit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourit.swift; sourceTree = "<group>"; };
 		47ED06B32763DD72003BC0F3 /* Facture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facture.swift; sourceTree = "<group>"; };
+		47ED06B52764126B003BC0F3 /* ForgetPassword2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword2ViewController.swift; sourceTree = "<group>"; };
 		7540897CF77771ED63FDEC7B /* Pods-showapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showapp.release.xcconfig"; path = "Target Support Files/Pods-showapp/Pods-showapp.release.xcconfig"; sourceTree = "<group>"; };
 		9BCC5FE246AEE1652F6F97F4 /* Pods-showappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showappTests.debug.xcconfig"; path = "Target Support Files/Pods-showappTests/Pods-showappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC2D1B7EA30C4B27BEA925F0 /* Pods-showapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showapp.debug.xcconfig"; path = "Target Support Files/Pods-showapp/Pods-showapp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				476338B127627AC0009DDD1D /* ForgetPassword1ViewController.swift */,
+				47ED06B52764126B003BC0F3 /* ForgetPassword2ViewController.swift */,
 			);
 			path = ForgetPassword;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				476D8085274308DB0068053D /* ConnexionViewController.swift in Sources */,
 				47894F1E275AA6EA00AF65E0 /* ModifierProfileViewController.swift in Sources */,
 				476D80812743086D0068053D /* HomeViewController.swift in Sources */,
+				47ED06B62764126B003BC0F3 /* ForgetPassword2ViewController.swift in Sources */,
 				47ED06B42763DD72003BC0F3 /* Facture.swift in Sources */,
 				477935E02752454300D22A40 /* Login.swift in Sources */,
 				476D809527430C610068053D /* ArticleListeViewController.swift in Sources */,

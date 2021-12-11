@@ -76,7 +76,7 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
     }
     
    /* func AddUser(firstName: String, lastName: String, email: String, password: String, phoneNumber: String) {
-            let url = "http://192.168.1.13:3000/users/signup"
+            let url = "http://172.18.16.1:3000/users/signup"
         let params: Parameters = [
             "email": emailAdressTextField.text!,
             "password": passwordTextField.text!,

@@ -43,7 +43,7 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
 //                   alert.addAction(action)
 //                   self.present(alert, animated: true)
 //               }
-            //let url = URL(string: "http://192.168.1.13:3000/company/signup")
+            //let url = URL(string: "http://172.18.16.1:3000/company/signup")
             
             let params: Parameters = [
                 "emailCompany": emailCompanyTextField.text!,
@@ -80,7 +80,7 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
     
     
     func AddCompany(firstNameCompany: String, lastNameCompany: String, emailCompany: String, passwordCompany: String, phoneNumberCompany: String, categoryCompany: String, businessNameCompany: String) {
-            let url = "http://192.168.1.13:3000/company/signup"
+            let url = "http://172.18.16.1:3000/company/signup"
         let params: Parameters = [
             "emailCompany": emailCompanyTextField.text!,
             "passwordCompany": passwordTextField.text!,

@@ -27,7 +27,16 @@ class ForgetPassword1ViewController: UIViewController {
                     }
 
                 }
+        performSegue(withIdentifier: "emailToCodeSegue", sender: "yes")
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "emailToCodeSegue" {
+            
+            let destination = segue.destination as! ForgetPassword2ViewController
+            
+            destination.email = emailTextField.text!
+        }
+    }
 
 }
