@@ -42,7 +42,13 @@
 		<string>fb-messenger-share-api</string>
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
 	</array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Show your location on the map</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Show your location on the map2</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -60,12 +66,11 @@
 					<string>Main</string>
 				</dict>
 			</array>
-            <key>NSAppTransportSecurity</key>
-                <dict>
-                  <!--Include to allow all connections (DANGER)-->
-                  <key>NSAllowsArbitraryLoads</key>
-                      <true/>
-                </dict>
+			<key>NSAppTransportSecurity</key>
+			<dict>
+				<key>NSAllowsArbitraryLoads</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 </dict>

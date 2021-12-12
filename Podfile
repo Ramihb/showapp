@@ -10,6 +10,8 @@ target 'showapp' do
 pod 'FBSDKLoginKit'
 pod 'GoogleSignIn'
 pod 'DropDown'
+pod 'GoogleMaps'
+pod 'GooglePlaces'
 
   target 'showappTests' do
     inherit! :search_paths

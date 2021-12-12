@@ -12,6 +12,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.dismiss(animated: true, completion: nil)
             }
     var tableauCart = [Facture]()
+    var gpsLocation = [Double]()
     @IBOutlet weak var tableCart: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,9 +31,9 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         let quantiterLAbel = contentView.viewWithTag(4) as! UILabel
         
                         imageView.imageFromServerURL(urlString: tableauCart[indexPath.row].cartPicture!)
-                        nameLabel.text = tableauCart[indexPath.row].name!
-                        priceLAbel.text = tableauCart[indexPath.row].price!
-                        quantiterLAbel.text = tableauCart[indexPath.row].qte!
+                        nameLabel.text = "Article: " +  tableauCart[indexPath.row].name!
+                        priceLAbel.text = "Price: " + tableauCart[indexPath.row].price!
+                        quantiterLAbel.text = "Quantite: " + tableauCart[indexPath.row].qte!
                         return cell
     }
     
@@ -70,8 +71,11 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         loadArticleToTableCart(tableau: self.tableCart)
     }
+
+    
     func viewWillAppear() {
             tableCart.reloadData()
+        
         }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -95,5 +99,12 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
                        }
         }
     }
-
+    
+   
+    @IBAction func purchase(_ sender: Any) {
+            performSegue(withIdentifier: "gpsSegue", sender: nil)
+    }
+    
+    
+    
 }
