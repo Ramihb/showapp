@@ -688,8 +688,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f1Z-kC-O8k">
-                                                <rect key="frame" x="10" y="623.5" width="120" height="120"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f1Z-kC-O8k">
+                                                <rect key="frame" x="10" y="624.5" width="120" height="117.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="Hja-gW-TRw"/>
                                                     <constraint firstAttribute="height" constant="120" id="Oa9-uF-au1"/>
@@ -2321,6 +2321,7 @@
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="plus.message" catalog="system" width="128" height="113"/>
         <image name="search" width="32" height="32"/>
         <image name="showapp.tn" width="177" height="39"/>

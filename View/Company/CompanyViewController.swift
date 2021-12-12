@@ -32,20 +32,33 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
         self.dismiss(animated: true)
     }
     @IBAction func registerBusiness(_ sender: Any) {
-        if(firstNameTextField.text != "" && lastNameTextField.text != "" && businessNameTextField.text != "" && ContactNumberTextField.text != "" && emailCompanyTextField.text != "" && passwordTextField.text != "" && categoryTextField.text != ""){
-
+        if(firstNameTextField.text != "" && lastNameTextField.text != "" && businessNameTextField.text != "" && ContactNumberTextField.text != "" && emailCompanyTextField.text != "" && passwordTextField.text != "" && categoryTextField.text != "Select a category"){
+            if isValidEmail(emailCompanyTextField.text!){
+                if(ContactNumberTextField.text!.count == 8){
+                    let params: Parameters = [
+                        "emailCompany": emailCompanyTextField.text!,
+                        "passwordCompany": passwordTextField.text!,
+                        "phoneNumberCompany": ContactNumberTextField.text!,
+                        "firstNameCompany": firstNameTextField.text!,
+                        "lastNameCompany": lastNameTextField.text!,
+                        "businessNameCompany": businessNameTextField.text!,
+                        "categoryCompany": categoryTextField.text!
+                    ]
+                    ApiCompanyService.uploadImageToServer(image: imageView.image!, parameters: params)
+                }
+                else {
+                    print("invalid phone number")
+                                            self.alert(title: "Warning", message: "invlaid phone number")
+                }
+                
+            } else {
+                print("invalid mail")
+            }
             
-            let params: Parameters = [
-                "emailCompany": emailCompanyTextField.text!,
-                "passwordCompany": passwordTextField.text!,
-                "phoneNumberCompany": ContactNumberTextField.text!,
-                "firstNameCompany": firstNameTextField.text!,
-                "lastNameCompany": lastNameTextField.text!,
-                "businessNameCompany": businessNameTextField.text!,
-                "categoryCompany": categoryTextField.text!
-            ]
-            ApiCompanyService.uploadImageToServer(image: imageView.image!, parameters: params)
-            //ApiService.callPost(url: url!, params: params, finish: finishPost)
+            
+            
+        } else {
+            self.alert(title: "Warning", message: "please fill all the fields")
         }
         
     }
@@ -67,33 +80,38 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
                 print("Parse Error: \(error)")
             }
         }
+    func isValidEmail(_ email: String) -> Bool {
+                let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+                
+                let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+                return emailPred.evaluate(with: email)
+            }
     
-    
-    func AddCompany(firstNameCompany: String, lastNameCompany: String, emailCompany: String, passwordCompany: String, phoneNumberCompany: String, categoryCompany: String, businessNameCompany: String) {
-            let url = "http://172.18.16.1:3000/company/signup"
-        let params: Parameters = [
-            "emailCompany": emailCompanyTextField.text!,
-            "passwordCompany": passwordTextField.text!,
-            "phoneNumberCompany": ContactNumberTextField.text!,
-            "firstNameCompany": firstNameTextField.text!,
-            "lastNameCompany": lastNameTextField.text!,
-            "businessNameCompany": businessNameTextField.text!,
-            "categoryCompany": categoryTextField.text!
-        ]
-            
-            
-            AF.request(url, method: .post,parameters: params)
-                .validate()
-                .responseJSON { response in
-                    switch response.result {
-                        case .success:
-                            print("Validation Successful")
-                        case .failure(let error):
-                            print(error)
-                    }
-                }
-        
-    }
+//    func AddCompany(firstNameCompany: String, lastNameCompany: String, emailCompany: String, passwordCompany: String, phoneNumberCompany: String, categoryCompany: String, businessNameCompany: String) {
+//            let url = "http://172.18.16.1:3000/company/signup"
+//        let params: Parameters = [
+//            "emailCompany": emailCompanyTextField.text!,
+//            "passwordCompany": passwordTextField.text!,
+//            "phoneNumberCompany": ContactNumberTextField.text!,
+//            "firstNameCompany": firstNameTextField.text!,
+//            "lastNameCompany": lastNameTextField.text!,
+//            "businessNameCompany": businessNameTextField.text!,
+//            "categoryCompany": categoryTextField.text!
+//        ]
+//
+//
+//            AF.request(url, method: .post,parameters: params)
+//                .validate()
+//                .responseJSON { response in
+//                    switch response.result {
+//                        case .success:
+//                            print("Validation Successful")
+//                        case .failure(let error):
+//                            print(error)
+//                    }
+//                }
+//
+//    }
     
     @IBOutlet weak var vwDropDown:UIView!
     
@@ -156,7 +174,12 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
     }
     
     
-    
+    func alert(title:String, message:String){
+                let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .destructive , handler: nil)
+                alert.addAction(action)
+                present(alert, animated: true, completion: nil)
+            }
     
 
 }
