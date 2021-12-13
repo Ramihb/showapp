@@ -18,7 +18,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func loadNewsToTableview (tableau:UITableView){
-        ApiCompanyService().getCompanyNews { succes, reponse in
+        ApiCompanyService().getAllCompanyNews { succes, reponse in
                         if succes {
                             for new in reponse!.news!{
                                 self.tableauNews.append(new)

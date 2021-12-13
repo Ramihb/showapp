@@ -7,11 +7,15 @@
 
 import Foundation
 
+struct Companys: Codable {
+    var companys: [Company]?
+}
+
 struct Company: Codable {
     var _id: String?
     var emailCompany: String?
     var passwordCompany: String?
-    var phoneNumberCompany: String?
+    var phoneNumberCompany: Int
     var lastNameCompany: String?
     var firstNameCompany: String?
     var categoryCompany: String?

@@ -8,7 +8,9 @@
 import UIKit
 import Alamofire
 class CompanyListNewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    @IBAction func backButton(_ sender: Any) {
+                self.dismiss(animated: true, completion: nil)
+            }
     var tableauNews = [New]()
     
     @IBAction func addNews(_ sender: Any) {
