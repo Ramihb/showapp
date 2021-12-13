@@ -54,5 +54,21 @@ class BrandsViewController: UIViewController, UITableViewDelegate, UITableViewDa
            func viewWillAppear() {
                tableBrands.reloadData()
                   }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "segueBrandsToDetails", sender: indexPath)
+    }
+        
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueBrandsToDetails" {
+                    let index = sender as! IndexPath
+                   let destination = segue.destination as! BrandDetailsViewController
+            destination.sousCategorieName = tableauCompany[index.row]._id
+            
+        }
 
+}
+    
+    
 }
