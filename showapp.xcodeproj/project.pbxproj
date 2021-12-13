@@ -15,7 +15,6 @@
 		4767EA212752FAC400993309 /* CompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767EA202752FAC400993309 /* CompanyService.swift */; };
 		4767EA2327530C6000993309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767EA2227530C6000993309 /* Company.swift */; };
 		476858A5273A00F300680CCA /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476858A4273A00F300680CCA /* CompanyViewController.swift */; };
-		4768715A2742CBDE00D225DF /* CategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476871592742CBDE00D225DF /* CategorieViewController.swift */; };
 		47696D582767C23700F5F957 /* CompanyListNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */; };
 		4769FCBB2747039E007EED85 /* CategorieModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769FCBA2747039E007EED85 /* CategorieModelViewController.swift */; };
 		4769FCBD274738C4007EED85 /* DetailArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */; };
@@ -87,7 +86,6 @@
 		4767EA202752FAC400993309 /* CompanyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyService.swift; sourceTree = "<group>"; };
 		4767EA2227530C6000993309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		476858A4273A00F300680CCA /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
-		476871592742CBDE00D225DF /* CategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieViewController.swift; sourceTree = "<group>"; };
 		47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListNewsViewController.swift; sourceTree = "<group>"; };
 		4769FCBA2747039E007EED85 /* CategorieModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieModelViewController.swift; sourceTree = "<group>"; };
 		4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleViewController.swift; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 				47CA57A027380A68005E3096 /* ViewController.swift */,
 				47CA57CF27382018005E3096 /* CartViewController.swift */,
 				47CA57D327385F15005E3096 /* SearchViewController.swift */,
-				476871592742CBDE00D225DF /* CategorieViewController.swift */,
 				476D80802743086D0068053D /* HomeViewController.swift */,
 				476D8082274308B50068053D /* FavouriteViewController.swift */,
 				476D8084274308DB0068053D /* ConnexionViewController.swift */,
@@ -651,7 +648,6 @@
 				47750A86275CFC2F00EEDFCA /* test.swift in Sources */,
 				4785C7B5275E5A3F006BCF93 /* News.swift in Sources */,
 				476338B227627AC0009DDD1D /* ForgetPassword1ViewController.swift in Sources */,
-				4768715A2742CBDE00D225DF /* CategorieViewController.swift in Sources */,
 				47040F11274C74140004E99D /* ServiceUser.swift in Sources */,
 				476D8083274308B50068053D /* FavouriteViewController.swift in Sources */,
 				47CA57A127380A68005E3096 /* ViewController.swift in Sources */,

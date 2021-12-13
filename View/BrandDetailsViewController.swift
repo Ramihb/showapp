@@ -10,6 +10,7 @@ import Alamofire
 
 class BrandDetailsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+
     
  
     @IBOutlet weak var scName: UILabel!
@@ -74,37 +75,10 @@ class BrandDetailsViewController: UIViewController, UICollectionViewDelegate, UI
                     collectionArticle.reloadData()
                 }
         
-        //test red button
         
-        
-        var isActive:Bool = false
-        
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            print(tableauArticle[indexPath.row].name!)
-            print(tableauArticle[indexPath.row].price!)
-            print(tableauArticle[indexPath.row]._id)
-            print(tableauArticle[indexPath.row].articlePicture!)
-            print(UserDefaults.standard.string(forKey: "_id")!)
-            
-            performSegue(withIdentifier: "detailArticle", sender: indexPath)
-        }
-        
-        
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "detailArticle" {
-                        let index = sender as! IndexPath
-                        let destination = segue.destination as! DetailArticleViewController
-    //                    destination.ArticleTitle = tableauArticle[index.row].name!
-    //                    destination.ArticleImage = tableauArticle[index.row].articlePicture!
-    //                    destination.ArticlePrice = tableauArticle[index.row].price!
-    //                    destination.idArticle = tableauArticle[index.row]._id
-                        destination.idUser = UserDefaults.standard.string(forKey: "_id")!
-                        destination.article = tableauArticle[index.row]
-                    }
-        }
         
 
-            
+    
    
         
         
