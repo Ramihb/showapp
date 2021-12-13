@@ -268,6 +268,51 @@
             </objects>
             <point key="canvasLocation" x="2215.9420289855075" y="1358.7053571428571"/>
         </scene>
+        <!--Qr Code View Controller-->
+        <scene sceneID="efF-xG-JqE">
+            <objects>
+                <viewController id="VAN-Y2-j5G" customClass="QrCodeViewController" customModule="showapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sXI-FW-e3T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O7g-Y3-Ei0">
+                                <rect key="frame" x="57" y="303" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="QR3-YZ-UHC"/>
+                                    <constraint firstAttribute="height" constant="300" id="nPh-nQ-TJH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtX-oW-drG">
+                                <rect key="frame" x="0.0" y="44" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MAb-xw-x0b"/>
+                                    <constraint firstAttribute="width" constant="50" id="d7I-4N-jdr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="back:" destination="VAN-Y2-j5G" eventType="touchUpInside" id="cXc-Lj-bj9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vuz-Dj-XAb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WtX-oW-drG" firstAttribute="leading" secondItem="vuz-Dj-XAb" secondAttribute="leading" id="D6Q-zc-d9p"/>
+                            <constraint firstItem="WtX-oW-drG" firstAttribute="top" secondItem="vuz-Dj-XAb" secondAttribute="top" id="KbI-ZN-Je3"/>
+                            <constraint firstItem="O7g-Y3-Ei0" firstAttribute="centerX" secondItem="vuz-Dj-XAb" secondAttribute="centerX" id="iNL-Ke-HHa"/>
+                            <constraint firstItem="O7g-Y3-Ei0" firstAttribute="centerY" secondItem="vuz-Dj-XAb" secondAttribute="centerY" id="kEW-uj-9GJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="qrImageView" destination="O7g-Y3-Ei0" id="Qeb-uX-yWP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7NO-SL-jqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3329" y="2103"/>
+        </scene>
         <!--Location View Controller-->
         <scene sceneID="aju-iW-PBw">
             <objects>
@@ -1634,6 +1679,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" image="arrow.right.circle" catalog="system"/>
+                                        <connections>
+                                            <segue destination="VAN-Y2-j5G" kind="presentation" modalPresentationStyle="fullScreen" id="QMm-qP-3TB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -2315,7 +2363,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CQc-dh-lYr"/>
-        <segue reference="zlm-2g-rDi"/>
+        <segue reference="Kza-w1-WLq"/>
         <segue reference="FdU-sM-cdB"/>
         <segue reference="6ei-Hb-nWL"/>
     </inferredMetricsTieBreakers>

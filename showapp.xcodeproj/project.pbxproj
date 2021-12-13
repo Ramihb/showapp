@@ -16,6 +16,7 @@
 		4767EA2327530C6000993309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767EA2227530C6000993309 /* Company.swift */; };
 		476858A5273A00F300680CCA /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476858A4273A00F300680CCA /* CompanyViewController.swift */; };
 		47696D582767C23700F5F957 /* CompanyListNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */; };
+		47696D5F27680BA000F5F957 /* QrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47696D5E27680BA000F5F957 /* QrCodeViewController.swift */; };
 		4769FCBD274738C4007EED85 /* DetailArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */; };
 		476D80812743086D0068053D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D80802743086D0068053D /* HomeViewController.swift */; };
 		476D8083274308B50068053D /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D8082274308B50068053D /* FavouriteViewController.swift */; };
@@ -86,6 +87,7 @@
 		4767EA2227530C6000993309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		476858A4273A00F300680CCA /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListNewsViewController.swift; sourceTree = "<group>"; };
+		47696D5E27680BA000F5F957 /* QrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeViewController.swift; sourceTree = "<group>"; };
 		4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleViewController.swift; sourceTree = "<group>"; };
 		476D80802743086D0068053D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		476D8082274308B50068053D /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		476871582742C82700D225DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				47696D59276808F400F5F957 /* QrCode */,
 				478361532766BC4800BAE92A /* payment */,
 				47748C5B2766588000A72C27 /* Location */,
 				476338B027627A8F009DDD1D /* ForgetPassword */,
@@ -237,6 +240,14 @@
 				4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		47696D59276808F400F5F957 /* QrCode */ = {
+			isa = PBXGroup;
+			children = (
+				47696D5E27680BA000F5F957 /* QrCodeViewController.swift */,
+			);
+			path = QrCode;
 			sourceTree = "<group>";
 		};
 		47748C5B2766588000A72C27 /* Location */ = {
@@ -646,6 +657,7 @@
 				476338B227627AC0009DDD1D /* ForgetPassword1ViewController.swift in Sources */,
 				47040F11274C74140004E99D /* ServiceUser.swift in Sources */,
 				476D8083274308B50068053D /* FavouriteViewController.swift in Sources */,
+				47696D5F27680BA000F5F957 /* QrCodeViewController.swift in Sources */,
 				47CA57A127380A68005E3096 /* ViewController.swift in Sources */,
 				47748C5F27665F2300A72C27 /* PlacesViewController.swift in Sources */,
 				4769FCBD274738C4007EED85 /* DetailArticleViewController.swift in Sources */,
