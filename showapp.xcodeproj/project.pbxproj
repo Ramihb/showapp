@@ -16,6 +16,7 @@
 		4767EA2327530C6000993309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767EA2227530C6000993309 /* Company.swift */; };
 		476858A5273A00F300680CCA /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476858A4273A00F300680CCA /* CompanyViewController.swift */; };
 		4768715A2742CBDE00D225DF /* CategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476871592742CBDE00D225DF /* CategorieViewController.swift */; };
+		47696D582767C23700F5F957 /* CompanyListNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */; };
 		4769FCBB2747039E007EED85 /* CategorieModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769FCBA2747039E007EED85 /* CategorieModelViewController.swift */; };
 		4769FCBD274738C4007EED85 /* DetailArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */; };
 		476D80812743086D0068053D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D80802743086D0068053D /* HomeViewController.swift */; };
@@ -87,6 +88,7 @@
 		4767EA2227530C6000993309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		476858A4273A00F300680CCA /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		476871592742CBDE00D225DF /* CategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieViewController.swift; sourceTree = "<group>"; };
+		47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListNewsViewController.swift; sourceTree = "<group>"; };
 		4769FCBA2747039E007EED85 /* CategorieModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieModelViewController.swift; sourceTree = "<group>"; };
 		4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleViewController.swift; sourceTree = "<group>"; };
 		476D80802743086D0068053D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				476D808A27430AD80068053D /* CompanyProfileViewController.swift */,
 				476D808E27430B4A0068053D /* CompanyNewsViewController.swift */,
 				47CE020A275A437F004F8B92 /* Company.storyboard */,
+				47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */,
 			);
 			path = Company;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				47ED06B42763DD72003BC0F3 /* Facture.swift in Sources */,
 				477935E02752454300D22A40 /* Login.swift in Sources */,
 				476D809527430C610068053D /* ArticleListeViewController.swift in Sources */,
+				47696D582767C23700F5F957 /* CompanyListNewsViewController.swift in Sources */,
 				476D809327430C1F0068053D /* AddArticleViewController.swift in Sources */,
 				476858A5273A00F300680CCA /* CompanyViewController.swift in Sources */,
 				47CA57D027382018005E3096 /* CartViewController.swift in Sources */,

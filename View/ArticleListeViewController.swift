@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class ArticleListeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func back(_ sender: Any) {
@@ -73,5 +73,25 @@ class ArticleListeViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                tableauArticle.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                
+                guard let url = URL(string: "http://172.18.16.1:3000/articles/"+tableauArticle[indexPath.row]._id) else {
+                            fatalError("Error getting the url")
+                        }
+
+                AF.request(url, method: .delete,parameters: nil)
+                           .validate()
+                           .responseJSON { response in
+                               switch response.result {
+                                   case .success:
+                                       print("Article deleted from company")
+                                   case .failure(let error):
+                                       print(error)
+                               }
+                           }
+            }
+        }
 }

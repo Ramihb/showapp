@@ -25,7 +25,7 @@ class articleService {
     static func addArticleToServer(image: UIImage,parameters:[String:Any]) {
        
        guard let mediaImage = Media(withImage: image, forKey: "articlePicture") else { return }
-       guard let url = URL(string: "http://172.18.16.1:3000/articles") else { return }
+       guard let url = URL(string: "http://192.168.1.15:3000/articles") else { return }
        var request = URLRequest(url: url)
        request.httpMethod = "POST"
        //create boundary
@@ -86,7 +86,7 @@ class articleService {
     
     func getArticleByType(ArticleType:String ,callback: @escaping (Bool,Articles?)->Void){
            
-        guard let url = URL(string: "http://172.18.16.1:3000/articles/type/"+ArticleType) else{
+        guard let url = URL(string: "http://192.168.1.15:3000/articles/type/"+ArticleType) else{
                 return
             }
             var request = URLRequest(url: url)
@@ -119,7 +119,7 @@ class articleService {
     
     func getArticle( callback: @escaping (Bool,Articles?)->Void){
            
-            guard let url = URL(string: "http://172.18.16.1:3000/articles") else{
+            guard let url = URL(string: "http://192.168.1.15:3000/articles") else{
                 return
             }
             var request = URLRequest(url: url)
@@ -151,7 +151,7 @@ class articleService {
     
     func getCompanyArticle( callback: @escaping (Bool,Articles?)->Void){
            
-            guard let url = URL(string: "http://172.18.16.1:3000/articles/company/" + UserDefaults.standard.string(forKey: "_id")!) else{
+            guard let url = URL(string: "http://192.168.1.15:3000/articles/company/" + UserDefaults.standard.string(forKey: "_id")!) else{
                 return
             }
             var request = URLRequest(url: url)
@@ -188,7 +188,7 @@ class articleService {
     static func addArticleToFavourit(image: UIImage,parameters:[String:Any]) {
        
        guard let mediaImage = Media(withImage: image, forKey: "favPicture") else { return }
-       guard let url = URL(string: "http://172.18.16.1:3000/favorites/add") else { return }
+       guard let url = URL(string: "http://192.168.1.15:3000/favorites/add") else { return }
        var request = URLRequest(url: url)
        request.httpMethod = "POST"
        //create boundary
@@ -217,7 +217,7 @@ class articleService {
     
     func getUserFavourites( callback: @escaping (Bool,Favorites?)->Void){
                
-        guard let url = URL(string: "http://172.18.16.1:3000/favorites/refuser/"+UserDefaults.standard.string(forKey: "_id")!) else{
+        guard let url = URL(string: "http://192.168.1.15:3000/favorites/refuser/"+UserDefaults.standard.string(forKey: "_id")!) else{
                     return
                 }
                 var request = URLRequest(url: url)
@@ -248,7 +248,7 @@ class articleService {
     
     func getUserCarts( callback: @escaping (Bool,Factures?)->Void){
                
-        guard let url = URL(string: "http://172.18.16.1:3000/factures/refuser/"+UserDefaults.standard.string(forKey: "_id")!) else{
+        guard let url = URL(string: "http://192.168.1.15:3000/factures/refuser/"+UserDefaults.standard.string(forKey: "_id")!) else{
                     return
                 }
                 var request = URLRequest(url: url)

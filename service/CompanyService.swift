@@ -71,7 +71,7 @@ class ApiCompanyService {
     static func uploadImageToServer(image: UIImage,parameters:[String:Any]) {
        
        guard let mediaImage = Media(withImage: image, forKey: "brandPicCompany") else { return }
-       guard let url = URL(string: "http://172.18.16.1:3000/company/signup") else { return }
+       guard let url = URL(string: "http://192.168.1.15:3000/company/signup") else { return }
        var request = URLRequest(url: url)
        request.httpMethod = "POST"
        //create boundary
@@ -132,7 +132,7 @@ class ApiCompanyService {
     static func addNewsToServer(image: UIImage,parameters:[String:Any]) {
            
            guard let mediaImage = Media(withImage: image, forKey: "newsPicture") else { return }
-           guard let url = URL(string: "http://172.18.16.1:3000/news") else { return }
+           guard let url = URL(string: "http://192.168.1.15:3000/news") else { return }
            var request = URLRequest(url: url)
            request.httpMethod = "POST"
            //create boundary
@@ -160,7 +160,7 @@ class ApiCompanyService {
     
     func getCompanyNews( callback: @escaping (Bool,News?)->Void){
                
-                guard let url = URL(string: "http://172.18.16.1:3000/news") else{
+                guard let url = URL(string: "http://192.168.1.15:3000/news") else{
                     return
                 }
                 var request = URLRequest(url: url)

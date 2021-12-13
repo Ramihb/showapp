@@ -19,7 +19,7 @@ class CompanyProfileViewController: UIViewController {
     
     
     @IBAction func News(_ sender: Any) {
-        performSegue(withIdentifier: "addNewsSegue", sender: "yes")
+        performSegue(withIdentifier: "listNewsSegue", sender: "yes")
     }
     
     
