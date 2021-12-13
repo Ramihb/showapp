@@ -16,7 +16,6 @@
 		4767EA2327530C6000993309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767EA2227530C6000993309 /* Company.swift */; };
 		476858A5273A00F300680CCA /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476858A4273A00F300680CCA /* CompanyViewController.swift */; };
 		47696D582767C23700F5F957 /* CompanyListNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */; };
-		4769FCBB2747039E007EED85 /* CategorieModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769FCBA2747039E007EED85 /* CategorieModelViewController.swift */; };
 		4769FCBD274738C4007EED85 /* DetailArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */; };
 		476D80812743086D0068053D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D80802743086D0068053D /* HomeViewController.swift */; };
 		476D8083274308B50068053D /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D8082274308B50068053D /* FavouriteViewController.swift */; };
@@ -87,7 +86,6 @@
 		4767EA2227530C6000993309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		476858A4273A00F300680CCA /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListNewsViewController.swift; sourceTree = "<group>"; };
-		4769FCBA2747039E007EED85 /* CategorieModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieModelViewController.swift; sourceTree = "<group>"; };
 		4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleViewController.swift; sourceTree = "<group>"; };
 		476D80802743086D0068053D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		476D8082274308B50068053D /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 				476D809227430C1F0068053D /* AddArticleViewController.swift */,
 				476D809427430C610068053D /* ArticleListeViewController.swift */,
 				476D809627430CD10068053D /* UpdateArticleViewController.swift */,
-				4769FCBA2747039E007EED85 /* CategorieModelViewController.swift */,
 				4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */,
 				4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */,
 			);
@@ -643,7 +640,6 @@
 				476D808927430AA80068053D /* BrandDetailsViewController.swift in Sources */,
 				479C253A275546E70082BF8F /* ArticleService.swift in Sources */,
 				47B1B1712739A43900650C1D /* ProfileViewController.swift in Sources */,
-				4769FCBB2747039E007EED85 /* CategorieModelViewController.swift in Sources */,
 				476F1F40274EFF02000AAA17 /* User.swift in Sources */,
 				47750A86275CFC2F00EEDFCA /* test.swift in Sources */,
 				4785C7B5275E5A3F006BCF93 /* News.swift in Sources */,

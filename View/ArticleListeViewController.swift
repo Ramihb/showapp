@@ -39,7 +39,7 @@ class ArticleListeViewController: UIViewController, UITableViewDelegate, UITable
             }
             
             override func viewDidAppear(_ animated: Bool) {
-                tableArticle.reloadWithAnimation()
+                tableArticle.reloadData()
             }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableauArticle.count
