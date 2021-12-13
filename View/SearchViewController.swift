@@ -15,12 +15,13 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewData = [cellData(opened: false, data: "Home", insidedata: []),
-                         cellData(opened: false, data: "Mode", insidedata: ["Sweaters", "Outlet", "Pants", "Shoes", "Jackets", "Dress"]),
-                         cellData(opened: false, data: "Hi-tech", insidedata: ["haja1", "haja2", "haja3", "haja4"]),
-                         cellData(opened: false, data: "Make up", insidedata: ["haja1", "haja2", "haja3", "haja4"]),
-                         cellData(opened: false, data: "Jewellery", insidedata: ["haja1", "haja2", "haja3", "haja4"]),
-                         cellData(opened: false, data: "Art deco", insidedata: ["haja1", "haja2", "haja3", "haja4"]),
-                         cellData(opened: false, data: "Shoes", insidedata: ["haja1", "haja2", "haja3", "haja4"])
+                         cellData(opened: false, data: "Mode", insidedata: ["Sweaters", "Outlet", "Pants", "Shoes", "Jackets", "Dress", "Other"]),
+                         cellData(opened: false, data: "High tech", insidedata: ["Pc", "Tv", "Computers accessories", "Other"]),
+                         cellData(opened: false, data: "Beauty", insidedata: ["make-up", "Art Supplies", "Other"]),
+                         cellData(opened: false, data: "Baby", insidedata: []),
+                         cellData(opened: false, data: "Jewellery", insidedata: ["earrings", "rings", "bracelets"]),
+                         cellData(opened: false, data: "Art deco", insidedata: ["art deco", "Other"])
+                         
         ]
       
 
@@ -91,10 +92,11 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
                 
             }
             
-        
+        //Home
         if tableViewData[indexPath.section].data == "Home" {
         performSegue(withIdentifier: "segueSearchToHome", sender: indexPath)
         }
+        //Mode
         if tableViewData[indexPath.section].data == "Mode" && indexPath.row == 1 {
         performSegue(withIdentifier: "segueSearchToModeSweaters", sender: indexPath)
         }
@@ -113,8 +115,61 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
         if tableViewData[indexPath.section].data == "Mode" && indexPath.row == 6 {
         performSegue(withIdentifier: "segueSearchToModeDress", sender: indexPath)
         }
+        if tableViewData[indexPath.section].data == "Mode" && indexPath.row == 7 {
+        performSegue(withIdentifier: "segueSearchToModeOther", sender: indexPath)
+        }
+        //High tech
+        if tableViewData[indexPath.section].data == "High tech" && indexPath.row == 1 {
+        performSegue(withIdentifier: "segueSearchToPc", sender: indexPath)
+        }
+        if tableViewData[indexPath.section].data == "High tech" && indexPath.row == 2 {
+        performSegue(withIdentifier: "segueSearchToTv", sender: indexPath)
+        }
+        if tableViewData[indexPath.section].data == "High tech" && indexPath.row == 3 {
+        performSegue(withIdentifier: "segueSearchToComputersAccessories", sender: indexPath)
+        }
+        if tableViewData[indexPath.section].data == "High tech" && indexPath.row == 4 {
+        performSegue(withIdentifier: "segueSearchToHighTechOther", sender: indexPath)
+        }
+        //Beauty
+        if tableViewData[indexPath.section].data == "Beauty" && indexPath.row == 1 {
+        performSegue(withIdentifier: "segueSearchToMakeUp", sender: indexPath)
+        }
+        if tableViewData[indexPath.section].data == "Beauty" && indexPath.row == 2 {
+        performSegue(withIdentifier: "segueSearchToArtSupplies", sender: indexPath)
+        }
+        if tableViewData[indexPath.section].data == "Beauty" && indexPath.row == 3 {
+        performSegue(withIdentifier: "segueSearchToBeautyOther", sender: indexPath)
+        }
+        //Baby
+        if tableViewData[indexPath.section].data == "Baby" {
+        performSegue(withIdentifier: "segueSearchToBaby", sender: indexPath)
+        }
+        //Jewellery
+        if tableViewData[indexPath.section].data == "Jewellery" && indexPath.row == 1 {
+        performSegue(withIdentifier: "segueSearchToEarrings", sender: indexPath)
+        }
+        if tableViewData[indexPath.section].data == "Jewellery" && indexPath.row == 2 {
+        performSegue(withIdentifier: "segueSearchToRings", sender: indexPath)
+        }
+        if tableViewData[indexPath.section].data == "Jewellery" && indexPath.row == 3 {
+        performSegue(withIdentifier: "segueSearchToBracelets", sender: indexPath)
+        }
+        if tableViewData[indexPath.section].data == "Jewellery" && indexPath.row == 4 {
+        performSegue(withIdentifier: "segueSearchToJewelleryOther", sender: indexPath)
+        }
+        //Art deco
+        if tableViewData[indexPath.section].data == "Art deco" && indexPath.row == 1 {
+        performSegue(withIdentifier: "segueSearchToArtDeco", sender: indexPath)
+        }
+        if tableViewData[indexPath.section].data == "Art deco" && indexPath.row == 2 {
+        performSegue(withIdentifier: "segueSearchToArtDecoOther", sender: indexPath)
+        }
+        
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Mode
         if segue.identifier == "segueSearchToModeSweaters" {
             
             let destination = segue.destination as! CategoryClothesViewController
@@ -139,8 +194,86 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
             
             let destination = segue.destination as! CategoryClothesViewController
             destination.sousCategorieName = "Dress"
+        }else if segue.identifier == "segueSearchToModeOther" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "Other"
         }
-        
+        //High tech
+        else if segue.identifier == "segueSearchToPc" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "Pc"
+        }
+        else if segue.identifier == "segueSearchToTv" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "Tv"
+        }
+        else if segue.identifier == "segueSearchToComputersAccessories" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "Computers accessories"
+        }
+        else if segue.identifier == "segueSearchToHighTechOther" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "Other"
+        }
+        //Beauty
+        else if segue.identifier == "segueSearchToMakeUp" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "make up"
+        }
+        else if segue.identifier == "segueSearchToArtSupplies" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "Art Supplies"
+        }
+        else if segue.identifier == "segueSearchToBeautyOther" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "Other"
+        }
+        //Baby
+        else if segue.identifier == "segueSearchToBaby" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "Baby"
+        }
+        //Jewellery
+        else if segue.identifier == "segueSearchToEarrings" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "earrings"
+        }
+        else if segue.identifier == "segueSearchToRings" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "rings"
+        }
+        else if segue.identifier == "segueSearchToBracelets" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "bracelets"
+        }
+        else if segue.identifier == "segueSearchToJewelleryOther" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "Other"
+        }
+        //Art deco
+        else if segue.identifier == "segueSearchToArtDeco" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "art deco"
+        }
+        else if segue.identifier == "segueSearchToArtDecoOther" {
+            
+            let destination = segue.destination as! CategoryClothesViewController
+            destination.sousCategorieName = "Other"
+        }
     }
 }
 

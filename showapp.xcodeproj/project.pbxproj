@@ -35,6 +35,7 @@
 		47748C5F27665F2300A72C27 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47748C5E27665F2300A72C27 /* PlacesViewController.swift */; };
 		47750A86275CFC2F00EEDFCA /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47750A85275CFC2F00EEDFCA /* test.swift */; };
 		477935E02752454300D22A40 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477935DF2752454300D22A40 /* Login.swift */; };
+		478361552766BC5D00BAE92A /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478361542766BC5D00BAE92A /* PaymentViewController.swift */; };
 		4785C7B5275E5A3F006BCF93 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785C7B4275E5A3F006BCF93 /* News.swift */; };
 		4785C7B7275E797B006BCF93 /* CategoryClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */; };
 		47894F1E275AA6EA00AF65E0 /* ModifierProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47894F1D275AA6EA00AF65E0 /* ModifierProfileViewController.swift */; };
@@ -105,6 +106,7 @@
 		47748C5E27665F2300A72C27 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		47750A85275CFC2F00EEDFCA /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		477935DF2752454300D22A40 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		478361542766BC5D00BAE92A /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		4785C7B4275E5A3F006BCF93 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryClothesViewController.swift; sourceTree = "<group>"; };
 		47894F1D275AA6EA00AF65E0 /* ModifierProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierProfileViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		476871582742C82700D225DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				478361532766BC4800BAE92A /* payment */,
 				47748C5B2766588000A72C27 /* Location */,
 				476338B027627A8F009DDD1D /* ForgetPassword */,
 				47894F1C275AA6B600AF65E0 /* User */,
@@ -247,6 +250,14 @@
 				47748C5E27665F2300A72C27 /* PlacesViewController.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		478361532766BC4800BAE92A /* payment */ = {
+			isa = PBXGroup;
+			children = (
+				478361542766BC5D00BAE92A /* PaymentViewController.swift */,
+			);
+			path = payment;
 			sourceTree = "<group>";
 		};
 		47894F1C275AA6B600AF65E0 /* User */ = {
@@ -648,6 +659,7 @@
 				4767EA2327530C6000993309 /* Company.swift in Sources */,
 				47CA57D427385F15005E3096 /* SearchViewController.swift in Sources */,
 				479C253C2755558C0082BF8F /* Article.swift in Sources */,
+				478361552766BC5D00BAE92A /* PaymentViewController.swift in Sources */,
 				47CA579D27380A68005E3096 /* AppDelegate.swift in Sources */,
 				4767EA212752FAC400993309 /* CompanyService.swift in Sources */,
 				476D8085274308DB0068053D /* ConnexionViewController.swift in Sources */,

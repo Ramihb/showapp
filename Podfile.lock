@@ -27,6 +27,7 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.0)
+  - PayPalCheckout (0.79.0)
 
 DEPENDENCIES:
   - DropDown
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - GoogleSignIn
+  - PayPalCheckout
 
 SPEC REPOS:
   trunk:
@@ -48,6 +50,7 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - PayPalCheckout
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
@@ -61,7 +64,8 @@ SPEC CHECKSUMS:
   GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  PayPalCheckout: f6c076f95734804ff5247abb1f27032386c78d22
 
-PODFILE CHECKSUM: d643009fc1390d507ae108c2e1b963e4618516de
+PODFILE CHECKSUM: cca816421a9103037d9ab282558db4ed01be5b62
 
 COCOAPODS: 1.11.2

@@ -12,6 +12,7 @@ pod 'GoogleSignIn'
 pod 'DropDown'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'PayPalCheckout'
 
   target 'showappTests' do
     inherit! :search_paths
