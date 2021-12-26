@@ -148,7 +148,7 @@ class AddArticleViewController: UIViewController,UIImagePickerControllerDelegate
     
 
     func AddArticle(firstName: String, lastName: String, email: String, password: String, phoneNumber: String) {
-            let url = "http://192.168.1.15:3000/articles"
+            let url = "http://172.31.32.1:3000/articles"
         let params: Parameters = [
             "name": NameAdd.text!,
             "category": Category.text!,

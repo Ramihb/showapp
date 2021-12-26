@@ -78,7 +78,7 @@ class ArticleListeViewController: UIViewController, UITableViewDelegate, UITable
                 tableauArticle.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
                 
-                guard let url = URL(string: "http://172.18.16.1:3000/articles/"+tableauArticle[indexPath.row]._id) else {
+                guard let url = URL(string: "http://172.31.32.1:3000/articles/"+tableauArticle[indexPath.row]._id) else {
                             fatalError("Error getting the url")
                         }
 

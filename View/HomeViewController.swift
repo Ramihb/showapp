@@ -45,8 +45,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 
                     
-                            
-
                             return cell
         }
     

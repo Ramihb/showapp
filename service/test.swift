@@ -24,7 +24,7 @@ class test {
         static func uploadImageToServer(image: UIImage,parameters:[String:Any], callback: @escaping (Bool,String?)->Void) {
            
            guard let mediaImage = Media(withImage: image, forKey: "profilePicture") else { return }
-           guard let url = URL(string: "http://192.168.1.15:3000/users/"+UserDefaults.standard.string(forKey: "_id")!) else { return }
+           guard let url = URL(string: "http://172.31.32.1:3000/users/"+UserDefaults.standard.string(forKey: "_id")!) else { return }
            var request = URLRequest(url: url)
            request.httpMethod = "PUT"
            //create boundary

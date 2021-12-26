@@ -11,6 +11,8 @@ import Alamofire
 import SwiftUI
 
 class ProfileViewController: UIViewController {
+    var languages = [("English","en"),("French","fr")]
+    
     @IBOutlet var darkmodeSwitch: UISwitch!
 
     @IBOutlet weak var profileImage: UIImageView!
@@ -22,6 +24,7 @@ class ProfileViewController: UIViewController {
         updateProfile()
         let name = Notification.Name("updateProfil")
                NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: name, object: nil)
+        //self.setupPicker()
         
     }
     
@@ -62,8 +65,23 @@ class ProfileViewController: UIViewController {
     }
     
     
+    @IBAction func btnChangeLanguage(_ sender: Any) {
+        let currentLang = Locale.current.languageCode
+        print("currentLang: \(currentLang ?? "")")
+        let newLanguage = currentLang == "en" ? "fr" : "en"
+        UserDefaults.standard.setValue([newLanguage], forKey: "AppleLanguages")
+        exit(0)
+    }
     
-    
+    //test language picker
+   /* var picker = UIPickerView()
+    func setupPicker() {
+        self.picker.backgroundColor = .gray
+        self.picker = UIPickerView(frame: CGRect(x: 0, y:200, width: self.view.frame.width, height: 150))
+        self.picker.delegate = self
+        self.picker.dataSource = self
+        //self.languageField.inputView = self.picker
+    }*/
     
     
     
@@ -79,7 +97,24 @@ class ProfileViewController: UIViewController {
     
 }
 
-
+/*extension ProfileViewController : UIPickerViewDelegate,UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.languages.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.languages[row].0
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.languageField.text = self.languages[row]
+    }
+    
+    
+}*/
 
 
 extension UIImageView {

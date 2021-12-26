@@ -11,9 +11,11 @@
 		3EE43FDAE5CE9B9CCCBB9B82 /* Pods_showappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8D45FC9689EBCA839EAAB0 /* Pods_showappTests.framework */; };
 		47040F11274C74140004E99D /* ServiceUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47040F10274C74130004E99D /* ServiceUser.swift */; };
 		476338B227627AC0009DDD1D /* ForgetPassword1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476338B127627AC0009DDD1D /* ForgetPassword1ViewController.swift */; };
+		47672C062778D94200C7FF47 /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47672C082778D94200C7FF47 /* Company.storyboard */; };
 		4767B2D3275050BE00819AE5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4767B2D2275050BE00819AE5 /* Alamofire */; };
 		4767EA212752FAC400993309 /* CompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767EA202752FAC400993309 /* CompanyService.swift */; };
 		4767EA2327530C6000993309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767EA2227530C6000993309 /* Company.swift */; };
+		476804C727779578009BDCFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476804C627779578009BDCFB /* ContentView.swift */; };
 		476858A5273A00F300680CCA /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476858A4273A00F300680CCA /* CompanyViewController.swift */; };
 		47696D582767C23700F5F957 /* CompanyListNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */; };
 		47696D5F27680BA000F5F957 /* QrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47696D5E27680BA000F5F957 /* QrCodeViewController.swift */; };
@@ -30,6 +32,7 @@
 		476D809327430C1F0068053D /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D809227430C1F0068053D /* AddArticleViewController.swift */; };
 		476D809527430C610068053D /* ArticleListeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D809427430C610068053D /* ArticleListeViewController.swift */; };
 		476D809727430CD10068053D /* UpdateArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D809627430CD10068053D /* UpdateArticleViewController.swift */; };
+		476E1C192773C1AC00277A8B /* ChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476E1C182773C1AC00277A8B /* ChannelListView.swift */; };
 		476F1F40274EFF02000AAA17 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476F1F3F274EFF02000AAA17 /* User.swift */; };
 		47748C5D2766589600A72C27 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47748C5C2766589600A72C27 /* LocationViewController.swift */; };
 		47748C5F27665F2300A72C27 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47748C5E27665F2300A72C27 /* PlacesViewController.swift */; };
@@ -54,7 +57,6 @@
 		47CA57C327380A69005E3096 /* showappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA57C227380A69005E3096 /* showappUITestsLaunchTests.swift */; };
 		47CA57D027382018005E3096 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA57CF27382018005E3096 /* CartViewController.swift */; };
 		47CA57D427385F15005E3096 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA57D327385F15005E3096 /* SearchViewController.swift */; };
-		47CE020B275A437F004F8B92 /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CE020A275A437F004F8B92 /* Company.storyboard */; };
 		47ED06B22763B15B003BC0F3 /* Favourit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED06B12763B15B003BC0F3 /* Favourit.swift */; };
 		47ED06B42763DD72003BC0F3 /* Facture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED06B32763DD72003BC0F3 /* Facture.swift */; };
 		47ED06B62764126B003BC0F3 /* ForgetPassword2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED06B52764126B003BC0F3 /* ForgetPassword2ViewController.swift */; };
@@ -83,8 +85,12 @@
 		3ADCBF86011BDC23632C3470 /* Pods_showapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_showapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47040F10274C74130004E99D /* ServiceUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceUser.swift; sourceTree = "<group>"; };
 		476338B127627AC0009DDD1D /* ForgetPassword1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword1ViewController.swift; sourceTree = "<group>"; };
+		47672C072778D94200C7FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Company.storyboard; sourceTree = "<group>"; };
+		47672C0A2778D94600C7FF47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Company.strings; sourceTree = "<group>"; };
+		47672C0C2778D97700C7FF47 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Company.strings; sourceTree = "<group>"; };
 		4767EA202752FAC400993309 /* CompanyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyService.swift; sourceTree = "<group>"; };
 		4767EA2227530C6000993309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		476804C627779578009BDCFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		476858A4273A00F300680CCA /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListNewsViewController.swift; sourceTree = "<group>"; };
 		47696D5E27680BA000F5F957 /* QrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeViewController.swift; sourceTree = "<group>"; };
@@ -101,11 +107,15 @@
 		476D809227430C1F0068053D /* AddArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
 		476D809427430C610068053D /* ArticleListeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListeViewController.swift; sourceTree = "<group>"; };
 		476D809627430CD10068053D /* UpdateArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateArticleViewController.swift; sourceTree = "<group>"; };
+		476E1C182773C1AC00277A8B /* ChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListView.swift; sourceTree = "<group>"; };
 		476F1F3F274EFF02000AAA17 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		47748C5C2766589600A72C27 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		47748C5E27665F2300A72C27 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		47750A85275CFC2F00EEDFCA /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		477935DF2752454300D22A40 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		4779550E2778C29900A4B052 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		4779550F2778C2ED00A4B052 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		477955102778C2ED00A4B052 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		478361542766BC5D00BAE92A /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		4785C7B4275E5A3F006BCF93 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryClothesViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +139,6 @@
 		47CA57C227380A69005E3096 /* showappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		47CA57CF27382018005E3096 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		47CA57D327385F15005E3096 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		47CE020A275A437F004F8B92 /* Company.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Company.storyboard; sourceTree = "<group>"; };
 		47ED06B12763B15B003BC0F3 /* Favourit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourit.swift; sourceTree = "<group>"; };
 		47ED06B32763DD72003BC0F3 /* Facture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facture.swift; sourceTree = "<group>"; };
 		47ED06B52764126B003BC0F3 /* ForgetPassword2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword2ViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +217,7 @@
 				4785C7B4275E5A3F006BCF93 /* News.swift */,
 				47ED06B12763B15B003BC0F3 /* Favourit.swift */,
 				47ED06B32763DD72003BC0F3 /* Facture.swift */,
+				476804C627779578009BDCFB /* ContentView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +248,7 @@
 				476D809627430CD10068053D /* UpdateArticleViewController.swift */,
 				4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */,
 				4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */,
+				476E1C182773C1AC00277A8B /* ChannelListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,7 +293,7 @@
 				476858A4273A00F300680CCA /* CompanyViewController.swift */,
 				476D808A27430AD80068053D /* CompanyProfileViewController.swift */,
 				476D808E27430B4A0068053D /* CompanyNewsViewController.swift */,
-				47CE020A275A437F004F8B92 /* Company.storyboard */,
+				47672C082778D94200C7FF47 /* Company.storyboard */,
 				47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */,
 			);
 			path = Company;
@@ -462,6 +473,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 47CA579027380A68005E3096;
 			packageReferences = (
@@ -483,7 +495,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47CE020B275A437F004F8B92 /* Company.storyboard in Resources */,
+				47672C062778D94200C7FF47 /* Company.storyboard in Resources */,
 				47CA57AC27380A69005E3096 /* LaunchScreen.storyboard in Resources */,
 				47CA57A927380A69005E3096 /* Assets.xcassets in Resources */,
 				47CA57A427380A68005E3096 /* Main.storyboard in Resources */,
@@ -650,6 +662,7 @@
 			files = (
 				476D808927430AA80068053D /* BrandDetailsViewController.swift in Sources */,
 				479C253A275546E70082BF8F /* ArticleService.swift in Sources */,
+				476E1C192773C1AC00277A8B /* ChannelListView.swift in Sources */,
 				47B1B1712739A43900650C1D /* ProfileViewController.swift in Sources */,
 				476F1F40274EFF02000AAA17 /* User.swift in Sources */,
 				47750A86275CFC2F00EEDFCA /* test.swift in Sources */,
@@ -674,6 +687,7 @@
 				476D80812743086D0068053D /* HomeViewController.swift in Sources */,
 				47ED06B62764126B003BC0F3 /* ForgetPassword2ViewController.swift in Sources */,
 				47ED06B42763DD72003BC0F3 /* Facture.swift in Sources */,
+				476804C727779578009BDCFB /* ContentView.swift in Sources */,
 				477935E02752454300D22A40 /* Login.swift in Sources */,
 				476D809527430C610068053D /* ArticleListeViewController.swift in Sources */,
 				47696D582767C23700F5F957 /* CompanyListNewsViewController.swift in Sources */,
@@ -725,10 +739,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		47672C082778D94200C7FF47 /* Company.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47672C072778D94200C7FF47 /* Base */,
+				47672C0A2778D94600C7FF47 /* en */,
+				47672C0C2778D97700C7FF47 /* fr */,
+			);
+			name = Company.storyboard;
+			sourceTree = "<group>";
+		};
 		47CA57A227380A68005E3096 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				47CA57A327380A68005E3096 /* Base */,
+				4779550E2778C29900A4B052 /* en */,
+				477955102778C2ED00A4B052 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -737,6 +763,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				47CA57AB27380A69005E3096 /* Base */,
+				4779550F2778C2ED00A4B052 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -748,6 +775,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -809,6 +837,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

@@ -1,0 +1,141 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2gy-Mt-Jke"; */
+"2gy-Mt-Jke.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Add articles"; ObjectID = "3X8-xJ-zhi"; */
+"3X8-xJ-zhi.configuration.title" = "Ajouter des articles";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3X8-xJ-zhi"; */
+"3X8-xJ-zhi.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Reference"; ObjectID = "5Lv-Fh-hdh"; */
+"5Lv-Fh-hdh.text" = "Référence";
+
+/* Class = "UILabel"; text = "Add Articles"; ObjectID = "5oK-Q0-O6M"; */
+"5oK-Q0-O6M.text" = "Ajouter des articles";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "8RU-RF-LJq"; */
+"8RU-RF-LJq.text" = "Prix";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "9HB-p6-Ksf"; */
+"9HB-p6-Ksf.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "9ey-Mr-OOh"; */
+"9ey-Mr-OOh.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Delete article"; ObjectID = "DdC-hJ-5mM"; */
+"DdC-hJ-5mM.configuration.title" = "Supprimer l'article";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "DdC-hJ-5mM"; */
+"DdC-hJ-5mM.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ddu-0R-9Fh"; */
+"Ddu-0R-9Fh.text" = "Label";
+
+/* Class = "UILabel"; text = "Rate Our App"; ObjectID = "Fyk-eP-vCV"; */
+"Fyk-eP-vCV.text" = "Evaluez notre application";
+
+/* Class = "UILabel"; text = "Category*"; ObjectID = "Kx5-X0-zvJ"; */
+"Kx5-X0-zvJ.text" = "Catégorie*";
+
+/* Class = "UILabel"; text = "Type*"; ObjectID = "LhE-KT-r7o"; */
+"LhE-KT-r7o.text" = "Type*";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Mfx-eu-NTd"; */
+"Mfx-eu-NTd.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Mwc-Qm-zdS"; */
+"Mwc-Qm-zdS.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "News Title:"; ObjectID = "ODn-4z-Hqm"; */
+"ODn-4z-Hqm.text" = "Titre de l'actualité:";
+
+/* Class = "UILabel"; text = "Articles 'list"; ObjectID = "OZD-yV-cXo"; */
+"OZD-yV-cXo.text" = "Liste des articles";
+
+/* Class = "UILabel"; text = "News 'list"; ObjectID = "V4c-Se-uPt"; */
+"V4c-Se-uPt.text" = "Liste des actualités";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "VHD-Dw-QDj"; */
+"VHD-Dw-QDj.text" = "Nom";
+
+/* Class = "UILabel"; text = "Name*"; ObjectID = "Wid-ij-6Ag"; */
+"Wid-ij-6Ag.text" = "Nom*";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ZmF-ro-J7j"; */
+"ZmF-ro-J7j.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Price*"; ObjectID = "bNA-ja-s3Z"; */
+"bNA-ja-s3Z.text" = "Prix*";
+
+/* Class = "UIButton"; configuration.title = "Logout"; ObjectID = "cJA-bM-r06"; */
+"cJA-bM-r06.configuration.title" = "Déconnexion";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cJA-bM-r06"; */
+"cJA-bM-r06.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Quantity*"; ObjectID = "eDD-iv-TBb"; */
+"eDD-iv-TBb.text" = "Quantité*";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "eyP-ey-IGi"; */
+"eyP-ey-IGi.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fJg-Fl-4rE"; */
+"fJg-Fl-4rE.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gX8-iz-Tq7"; */
+"gX8-iz-Tq7.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Articles 'List"; ObjectID = "grk-vg-LqV"; */
+"grk-vg-LqV.text" = "Liste des articles";
+
+/* Class = "UIButton"; configuration.title = "Add News"; ObjectID = "iJB-4K-bFa"; */
+"iJB-4K-bFa.configuration.title" = "Ajouter une nouvelle";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "iJB-4K-bFa"; */
+"iJB-4K-bFa.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "jZa-vW-LEb"; */
+"jZa-vW-LEb.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Add article"; ObjectID = "m1R-3d-U1P"; */
+"m1R-3d-U1P.configuration.title" = "Ajouter un article";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "m1R-3d-U1P"; */
+"m1R-3d-U1P.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Delete News"; ObjectID = "oTD-BJ-eA0"; */
+"oTD-BJ-eA0.configuration.title" = "Suppression de l'actualité";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oTD-BJ-eA0"; */
+"oTD-BJ-eA0.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "p5z-Yb-R7k"; */
+"p5z-Yb-R7k.title" = "Profil";
+
+/* Class = "UILabel"; text = "News"; ObjectID = "roA-KU-cZC"; */
+"roA-KU-cZC.text" = "Actualité";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tLa-H8-hZm"; */
+"tLa-H8-hZm.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tmL-ca-A9P"; */
+"tmL-ca-A9P.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Add Photo"; ObjectID = "z0P-1q-Scn"; */
+"z0P-1q-Scn.configuration.title" = "Ajouter Photo";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "z0P-1q-Scn"; */
+"z0P-1q-Scn.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Add News"; ObjectID = "zCR-0X-2dw"; */
+"zCR-0X-2dw.configuration.title" = "Ajouter une nouvelle";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zCR-0X-2dw"; */
+"zCR-0X-2dw.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Update article"; ObjectID = "zNq-Mh-4XS"; */
+"zNq-Mh-4XS.configuration.title" = "Mise à jour de l'article";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zNq-Mh-4XS"; */
+"zNq-Mh-4XS.normalTitle" = "Button";
