@@ -26,7 +26,7 @@ ShowApp
 >
 >- ❌ XCode 13
 >
->- ✅ Node js 
+>- 
 >
 
 
@@ -45,4 +45,5 @@ ShowApp
 >
 >5. Run the app on your Iphone or iOS simulator.
 >
->
+>>For more information contach mallek.ghassen@esprit.tn
+>                             rami.hbaieb@esprit.tn
