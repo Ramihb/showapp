@@ -83,7 +83,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             tableauCart.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
-            guard let url = URL(string: "http://172.31.32.1:3000/factures/"+tableauCart[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
+            guard let url = URL(string: "http://192.168.1.23:3000/factures/"+tableauCart[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
                         fatalError("Error getting the url")
                     }
 

@@ -173,7 +173,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
             
             GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { userG, error in
               guard error == nil else { return }
-            // print(userG)
+                print(userG?.profile?.imageURL(withDimension: 512))
               //  print(userG?.profile?.imageURL(withDimension: 512))
                 //test
                 let user = User(id: "", email: (userG?.profile!.email)!, password: "", phoneNumber: "", profilePicture: "", firstName: (userG?.profile?.familyName)!, lastName: (userG?.profile?.givenName)!,isVerified: false,__v: 0)
@@ -192,7 +192,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
                                 }
                                 
                                 else{
-                                    
+                                    print(userG?.profile?.imageURL(withDimension: 512))
                                     ServiceUser().CreationCompteFacebookOrGoogle(user: user, image: self.faza! ) { succes, reponse in
                                         if succes, let json = reponse{
                                             if (json == "ok"){

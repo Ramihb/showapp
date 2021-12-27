@@ -41,6 +41,7 @@
 		478361552766BC5D00BAE92A /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478361542766BC5D00BAE92A /* PaymentViewController.swift */; };
 		4785C7B5275E5A3F006BCF93 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785C7B4275E5A3F006BCF93 /* News.swift */; };
 		4785C7B7275E797B006BCF93 /* CategoryClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */; };
+		4787101F27793A7700BE3FE7 /* SendBird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4787101E27793A7700BE3FE7 /* SendBird.swift */; };
 		47894F1E275AA6EA00AF65E0 /* ModifierProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47894F1D275AA6EA00AF65E0 /* ModifierProfileViewController.swift */; };
 		479C253A275546E70082BF8F /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C2539275546E70082BF8F /* ArticleService.swift */; };
 		479C253C2755558C0082BF8F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479C253B2755558C0082BF8F /* Article.swift */; };
@@ -119,6 +120,7 @@
 		478361542766BC5D00BAE92A /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		4785C7B4275E5A3F006BCF93 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryClothesViewController.swift; sourceTree = "<group>"; };
+		4787101E27793A7700BE3FE7 /* SendBird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendBird.swift; sourceTree = "<group>"; };
 		47894F1D275AA6EA00AF65E0 /* ModifierProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierProfileViewController.swift; sourceTree = "<group>"; };
 		479C2539275546E70082BF8F /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		479C253B2755558C0082BF8F /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				4767EA202752FAC400993309 /* CompanyService.swift */,
 				479C2539275546E70082BF8F /* ArticleService.swift */,
 				47750A85275CFC2F00EEDFCA /* test.swift */,
+				4787101E27793A7700BE3FE7 /* SendBird.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -684,6 +687,7 @@
 				4767EA212752FAC400993309 /* CompanyService.swift in Sources */,
 				476D8085274308DB0068053D /* ConnexionViewController.swift in Sources */,
 				47894F1E275AA6EA00AF65E0 /* ModifierProfileViewController.swift in Sources */,
+				4787101F27793A7700BE3FE7 /* SendBird.swift in Sources */,
 				476D80812743086D0068053D /* HomeViewController.swift in Sources */,
 				47ED06B62764126B003BC0F3 /* ForgetPassword2ViewController.swift in Sources */,
 				47ED06B42763DD72003BC0F3 /* Facture.swift in Sources */,
@@ -897,6 +901,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WKYB3N5G3S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = showapp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Camera";
@@ -927,6 +932,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WKYB3N5G3S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = showapp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Camera";
