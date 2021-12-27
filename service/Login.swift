@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SendBirdUIKit
 
 class ApiMouchService {
     struct Media {
@@ -25,7 +26,7 @@ class ApiMouchService {
     static func uploadImageToServer(image: UIImage,parameters:[String:Any]) {
        
        guard let mediaImage = Media(withImage: image, forKey: "profilePicture") else { return }
-       guard let url = URL(string: "http://192.168.1.23:3000/users/signup") else { return }
+       guard let url = URL(string: "http://192.168.1.14:3000/users/signup") else { return }
        var request = URLRequest(url: url)
        request.httpMethod = "POST"
        //create boundary
@@ -42,8 +43,22 @@ class ApiMouchService {
           }
           if let data = data {
              do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
+                 if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]{
+                     print("aaaa:",json)
+                     
+                     if let validUser = json["user"] as? [String:Any]{
+                         for (key,value) in validUser{
+                             UserDefaults.standard.setValue(value, forKey: key)
+                             
+                         }
+                         print(UserDefaults.standard.string(forKey: "_id")!)
+                         SBUGlobals.CurrentUser = SBUUser(userId: UserDefaults.standard.string(forKey: "_id")!)                     }
+                     SendBirdApi().SendBirdCreateAccount(user_id: UserDefaults.standard.string(forKey: "_id")!, nickname:  UserDefaults.standard.string(forKey: "firstName")!, profile_url:  UserDefaults.standard.string(forKey: "profilePicture")!)
+//                 let json = try JSONSerialization.jsonObject(with: data, options: [])
+//                     print(json)
+                 }
+                
+                 
              } catch {
                 print(error)
              }
@@ -80,6 +95,7 @@ class ApiMouchService {
     static func generateBoundary() -> String {
        return "Boundary-\(NSUUID().uuidString)"
     }
+    
     
     
 }

@@ -38,6 +38,7 @@
 		47748C5F27665F2300A72C27 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47748C5E27665F2300A72C27 /* PlacesViewController.swift */; };
 		47750A86275CFC2F00EEDFCA /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47750A85275CFC2F00EEDFCA /* test.swift */; };
 		477935E02752454300D22A40 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477935DF2752454300D22A40 /* Login.swift */; };
+		4779DCC8277A202A003CCEE0 /* MessagerieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4779DCC7277A202A003CCEE0 /* MessagerieController.swift */; };
 		478361552766BC5D00BAE92A /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478361542766BC5D00BAE92A /* PaymentViewController.swift */; };
 		4785C7B5275E5A3F006BCF93 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785C7B4275E5A3F006BCF93 /* News.swift */; };
 		4785C7B7275E797B006BCF93 /* CategoryClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */; };
@@ -117,6 +118,7 @@
 		4779550E2778C29900A4B052 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		4779550F2778C2ED00A4B052 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		477955102778C2ED00A4B052 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		4779DCC7277A202A003CCEE0 /* MessagerieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagerieController.swift; sourceTree = "<group>"; };
 		478361542766BC5D00BAE92A /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		4785C7B4275E5A3F006BCF93 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryClothesViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			children = (
 				47B1B1702739A43900650C1D /* ProfileViewController.swift */,
 				47894F1D275AA6EA00AF65E0 /* ModifierProfileViewController.swift */,
+				4779DCC7277A202A003CCEE0 /* MessagerieController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 				476D809327430C1F0068053D /* AddArticleViewController.swift in Sources */,
 				476858A5273A00F300680CCA /* CompanyViewController.swift in Sources */,
 				47CA57D027382018005E3096 /* CartViewController.swift in Sources */,
+				4779DCC8277A202A003CCEE0 /* MessagerieController.swift in Sources */,
 				47CA57A727380A68005E3096 /* showapp.xcdatamodeld in Sources */,
 				476D808B27430AD80068053D /* CompanyProfileViewController.swift in Sources */,
 				47CA579F27380A68005E3096 /* SceneDelegate.swift in Sources */,

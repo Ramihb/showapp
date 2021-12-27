@@ -9,6 +9,7 @@ import UIKit
 import FBSDKLoginKit
 import Alamofire
 import SwiftUI
+import SendBirdUIKit
 
 class ProfileViewController: UIViewController {
     var languages = [("English","en"),("French","fr")]
@@ -24,6 +25,8 @@ class ProfileViewController: UIViewController {
         updateProfile()
         let name = Notification.Name("updateProfil")
                NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: name, object: nil)
+        user1 = SBUUser(userId: "61ca18c42e2609ccdeb2341b", nickname: "showapp", profileUrl: "http://192.168.1.14:3000/images/imagefile.jpg1640634563943.jpg")
+                user2 = SBUUser(userId: UserDefaults.standard.string(forKey: "_id")!, nickname: UserDefaults.standard.string(forKey: "firstName")!, profileUrl: UserDefaults.standard.string(forKey: "profilePicture")!)
         //self.setupPicker()
         
     }
@@ -72,16 +75,42 @@ class ProfileViewController: UIViewController {
         UserDefaults.standard.setValue([newLanguage], forKey: "AppleLanguages")
         exit(0)
     }
+    var params = SBDUserMessageParams(message: "text")
+
+        var channelURL = ""
+        var user:User?
+        var usersSB:[SBUUser]?
+        var user1,user2,userMod: SBUUser?
     
-    //test language picker
-   /* var picker = UIPickerView()
-    func setupPicker() {
-        self.picker.backgroundColor = .gray
-        self.picker = UIPickerView(frame: CGRect(x: 0, y:200, width: self.view.frame.width, height: 150))
-        self.picker.delegate = self
-        self.picker.dataSource = self
-        //self.languageField.inputView = self.picker
-    }*/
+    @IBAction func envoyerMessage(_ sender: Any) {
+            SBDMain.connect(withUserId: UserDefaults.standard.string(forKey: "_id")!, completionHandler: { (user, error) in
+                guard error == nil else {
+                    print("erreur function : ",error)
+                    return
+                }
+                            
+            })
+           
+                SBDGroupChannel.createChannel(withUserIds: Array(arrayLiteral: self.user2!.userId,self.user1!.userId), isDistinct: true) { data, error in
+                    
+                    self.channelURL = data!.channelUrl
+                    print("Created channel url : ",self.channelURL)
+                }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                
+                SBDGroupChannel.getWithUrl(self.channelURL) { openChannel, error in
+                    print("Entering channel url",self.channelURL)
+                    print("open channel : ",openChannel,"erreur : ", error)
+                    guard let openChannel = openChannel, error == nil else {
+                        return // Handle error.
+                    }
+                    openChannel.sendUserMessage("Hello") { reponse, error in
+                    }
+      
+            }
+            }
+    }
     
     
     
@@ -97,24 +126,7 @@ class ProfileViewController: UIViewController {
     
 }
 
-/*extension ProfileViewController : UIPickerViewDelegate,UIPickerViewDataSource {
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.languages.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.languages[row].0
-    }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.languageField.text = self.languages[row]
-    }
-    
-    
-}*/
+
 
 
 extension UIImageView {

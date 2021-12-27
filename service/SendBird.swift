@@ -45,4 +45,64 @@ class SendBirdApi  {
             
         }.resume()
     }
+    func createChannel (name:String , callback: @escaping (Bool,Any?)->Void){
+            
+            let params = [
+                "name": name
+            ]
+            guard let url = URL(string: "https://api-57E64C12-D528-4AC6-AE11-47E5C8ABB26E.sendbird.com/v3/open_channels") else{
+                return
+            }
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue( "07bfd3d7be8af5132da886ef0d6c8823abb3a1d6", forHTTPHeaderField: "Api-Token")
+            request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+            let session = URLSession.shared.dataTask(with: request){
+                data, response, error in
+                DispatchQueue.main.async {
+                    if error != nil{
+                        print("error")
+                    }else {
+                        if let jsonRes  = try? JSONSerialization.jsonObject(with: data!, options:[] ) as? [String: Any]{
+                            print(jsonRes["channel_url"])
+                            callback(true,jsonRes["channel_url"])
+                                
+                            }
+                        else{
+                            callback(false,"jsonRes")
+                        }
+                            
+                        }
+                    }
+                
+                
+            }.resume()
+        }
+        func deleteUser (id:String){
+            
+            guard let url = URL(string: "https://api-57E64C12-D528-4AC6-AE11-47E5C8ABB26E.sendbird.com/v3/users/"+id) else{
+                return
+            }
+            var request = URLRequest(url: url)
+            request.httpMethod = "DELETE"
+            request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue( "07bfd3d7be8af5132da886ef0d6c8823abb3a1d6", forHTTPHeaderField: "Api-Token")
+            let session = URLSession.shared.dataTask(with: request){
+                data, response, error in
+                DispatchQueue.main.async {
+                    if error != nil{
+                        print("error")
+                    }else {
+                        if let jsonRes  = try? JSONSerialization.jsonObject(with: data!, options:[] ) as? [String: Any]{
+                            print(jsonRes)
+                                
+                            }
+                            
+                        }
+                    }
+                
+                
+            }.resume()
+        }
 }

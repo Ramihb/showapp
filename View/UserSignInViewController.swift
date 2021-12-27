@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SendBirdUIKit
 
 class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -27,33 +28,36 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
     
     @IBAction func continueClick(_ sender: Any) {
         if(emailAdressTextField.text != "" && passwordTextField.text != "" && phoneNumberTextField.text != "" && firstNameTextField.text != "" && lastNameTextField.text != ""){
-            if(passwordTextField.text! == confirmPasswordTextField.text!){
-                if isValidEmail(emailAdressTextField.text!){
-                    if(phoneNumberTextField.text!.count == 8) {
-                        let params: Parameters = [
-                                    "email": emailAdressTextField.text!,
-                                    "password": passwordTextField.text!,
-                                    "phoneNumber": phoneNumberTextField.text!,
-                                    "firstName": firstNameTextField.text!,
-                                    "lastName": lastNameTextField.text!,
-                                ]
-                        ApiMouchService.uploadImageToServer(image: imageView.image!, parameters: params)
-                    }else{
-                        print("invalid phone number")
-                        self.alert(title: "Warning", message: "invlaid phone number")
+                    if(passwordTextField.text! == confirmPasswordTextField.text!){
+                        if isValidEmail(emailAdressTextField.text!){
+                            if(phoneNumberTextField.text!.count == 8) {
+                                let params: Parameters = [
+                                            "email": emailAdressTextField.text!,
+                                            "password": passwordTextField.text!,
+                                            "phoneNumber": phoneNumberTextField.text!,
+                                            "firstName": firstNameTextField.text!,
+                                            "lastName": lastNameTextField.text!,
+                                        ]
+                                ApiMouchService.uploadImageToServer(image: imageView.image!, parameters: params)
+                                //print("id:", UserDefaults.standard.string(forKey: "_id")!)
+                               /* SendBirdApi().SendBirdCreateAccount(user_id: UserDefaults.standard.string(forKey: "_id")!, nickname:  UserDefaults.standard.string(forKey: "firstName")!, profile_url:  UserDefaults.standard.string(forKey: "profilePicture")!)*/
+                                                                                        self.performSegue(withIdentifier: "connexion", sender: "yes")
+                            }else{
+                                print("invalid phone number")
+                                self.alert(title: "Warning", message: "invlaid phone number")
+                            }
+                            
+                        }
+                        else{
+                            print("mail existant")
+                        }
+                        
+                        
+                    } else{
+                        self.alert(title: "Warning", message: "mismatch password")
                     }
-                    
+            
                 }
-                else{
-                    print("mail existant")
-                }
-                
-                
-            } else{
-                self.alert(title: "Warning", message: "mismatch password")
-            }
-
-        }
     }
     struct Response: Decodable {
         let message: String
@@ -158,4 +162,6 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
             alert.addAction(action)
             present(alert, animated: true, completion: nil)
         }
+    
+    
 }

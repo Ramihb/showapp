@@ -68,6 +68,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
                             }
 
                         }
+                        
                         let token = response["token"]
                         
                         UserDefaults.standard.setValue(response["token"]!, forKey: "token")

@@ -12,10 +12,18 @@ import FBSDKCoreKit
 import GoogleMaps
 import GooglePlaces
 import PayPalCheckout
+import SendBirdUIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let APP_ID = "57E64C12-D528-4AC6-AE11-47E5C8ABB26E"  // Specify your Sendbird application ID.
+                SBUMain.initialize(applicationId: APP_ID) {
+                    // DB migration has started.
+                } completionHandler: { error in
+                    // If DB migration is successful, proceed to the next step.
+                    // If DB migration fails, an error exists.
+                }
         let config = CheckoutConfig(
                 clientID: "AUzaqIll1vQKlX9mGQnOH5K2ufR8Hjtb1oKCd60NhZmVpgSCeWHEN_3_1uNSEHvzRwSCz0Lp3sCQGG3r",
                 returnUrl: "showapp.application@gmail.com",
