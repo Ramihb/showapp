@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct Users: Codable {
+    var users: [User]?
+}
+
 struct User: Codable {
     var _id:String
     var email: String
@@ -15,11 +19,11 @@ struct User: Codable {
     var profilePicture:String
     var firstName: String
     let lastName: String
-    var isVerified:Bool
+    var verified:Bool
     var __v:Int
     
     
-    init(id:String, email:String,password:String,phoneNumber:String, profilePicture:String,firstName:String,lastName:String,isVerified:Bool,__v:Int) {
+    init(id:String, email:String,password:String,phoneNumber:String, profilePicture:String,firstName:String,lastName:String,verified:Bool,__v:Int) {
             self._id = id
             self.email = email
             self.password=password
@@ -27,7 +31,7 @@ struct User: Codable {
             self.profilePicture=profilePicture
             self.firstName=firstName
             self.lastName=lastName
-            self.isVerified = isVerified
+            self.verified = verified
             self.__v = 0
         }
     

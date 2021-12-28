@@ -20,6 +20,10 @@
 		47696D582767C23700F5F957 /* CompanyListNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */; };
 		47696D5F27680BA000F5F957 /* QrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47696D5E27680BA000F5F957 /* QrCodeViewController.swift */; };
 		4769FCBD274738C4007EED85 /* DetailArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */; };
+		476CAEF6277BACE600C44042 /* admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476CAEF5277BACE600C44042 /* admin.storyboard */; };
+		476CAEF8277BAF1100C44042 /* LoginAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476CAEF7277BAF1100C44042 /* LoginAdminViewController.swift */; };
+		476CAEFA277BBA1400C44042 /* AdminListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476CAEF9277BBA1400C44042 /* AdminListViewController.swift */; };
+		476CAEFC277BC54D00C44042 /* AdminUserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476CAEFB277BC54D00C44042 /* AdminUserListViewController.swift */; };
 		476D80812743086D0068053D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D80802743086D0068053D /* HomeViewController.swift */; };
 		476D8083274308B50068053D /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D8082274308B50068053D /* FavouriteViewController.swift */; };
 		476D8085274308DB0068053D /* ConnexionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D8084274308DB0068053D /* ConnexionViewController.swift */; };
@@ -97,6 +101,10 @@
 		47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListNewsViewController.swift; sourceTree = "<group>"; };
 		47696D5E27680BA000F5F957 /* QrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeViewController.swift; sourceTree = "<group>"; };
 		4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleViewController.swift; sourceTree = "<group>"; };
+		476CAEF5277BACE600C44042 /* admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = admin.storyboard; sourceTree = "<group>"; };
+		476CAEF7277BAF1100C44042 /* LoginAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAdminViewController.swift; sourceTree = "<group>"; };
+		476CAEF9277BBA1400C44042 /* AdminListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminListViewController.swift; sourceTree = "<group>"; };
+		476CAEFB277BC54D00C44042 /* AdminUserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminUserListViewController.swift; sourceTree = "<group>"; };
 		476D80802743086D0068053D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		476D8082274308B50068053D /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		476D8084274308DB0068053D /* ConnexionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnexionViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +274,17 @@
 			path = QrCode;
 			sourceTree = "<group>";
 		};
+		476CAEF4277BACD600C44042 /* admin */ = {
+			isa = PBXGroup;
+			children = (
+				476CAEF5277BACE600C44042 /* admin.storyboard */,
+				476CAEF7277BAF1100C44042 /* LoginAdminViewController.swift */,
+				476CAEF9277BBA1400C44042 /* AdminListViewController.swift */,
+				476CAEFB277BC54D00C44042 /* AdminUserListViewController.swift */,
+			);
+			path = admin;
+			sourceTree = "<group>";
+		};
 		47748C5B2766588000A72C27 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +327,7 @@
 		47CA579027380A68005E3096 = {
 			isa = PBXGroup;
 			children = (
+				476CAEF4277BACD600C44042 /* admin */,
 				47040F0D274C73B10004E99D /* service */,
 				476871582742C82700D225DF /* View */,
 				476871572742C81900D225DF /* Model */,
@@ -502,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47672C062778D94200C7FF47 /* Company.storyboard in Resources */,
+				476CAEF6277BACE600C44042 /* admin.storyboard in Resources */,
 				47CA57AC27380A69005E3096 /* LaunchScreen.storyboard in Resources */,
 				47CA57A927380A69005E3096 /* Assets.xcassets in Resources */,
 				47CA57A427380A68005E3096 /* Main.storyboard in Resources */,
@@ -679,6 +700,7 @@
 				47696D5F27680BA000F5F957 /* QrCodeViewController.swift in Sources */,
 				47CA57A127380A68005E3096 /* ViewController.swift in Sources */,
 				47748C5F27665F2300A72C27 /* PlacesViewController.swift in Sources */,
+				476CAEFA277BBA1400C44042 /* AdminListViewController.swift in Sources */,
 				4769FCBD274738C4007EED85 /* DetailArticleViewController.swift in Sources */,
 				476D809727430CD10068053D /* UpdateArticleViewController.swift in Sources */,
 				476D808F27430B4A0068053D /* CompanyNewsViewController.swift in Sources */,
@@ -694,8 +716,10 @@
 				476D80812743086D0068053D /* HomeViewController.swift in Sources */,
 				47ED06B62764126B003BC0F3 /* ForgetPassword2ViewController.swift in Sources */,
 				47ED06B42763DD72003BC0F3 /* Facture.swift in Sources */,
+				476CAEFC277BC54D00C44042 /* AdminUserListViewController.swift in Sources */,
 				476804C727779578009BDCFB /* ContentView.swift in Sources */,
 				477935E02752454300D22A40 /* Login.swift in Sources */,
+				476CAEF8277BAF1100C44042 /* LoginAdminViewController.swift in Sources */,
 				476D809527430C610068053D /* ArticleListeViewController.swift in Sources */,
 				47696D582767C23700F5F957 /* CompanyListNewsViewController.swift in Sources */,
 				476D809327430C1F0068053D /* AddArticleViewController.swift in Sources */,
@@ -908,8 +932,13 @@
 				DEVELOPMENT_TEAM = WKYB3N5G3S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = showapp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Camera";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow Photos";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) would like to use your camera";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow to continue with face id.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Show your location on the map2";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show your location on the map";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRODUCT_NAME) would like to use your microphone (for videos)";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "$(PRODUCT_NAME) would like to save photos to your photo library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) would like access to your photo  Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -939,8 +968,13 @@
 				DEVELOPMENT_TEAM = WKYB3N5G3S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = showapp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Camera";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow Photos";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) would like to use your camera";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow to continue with face id.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Show your location on the map2";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show your location on the map";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRODUCT_NAME) would like to use your microphone (for videos)";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "$(PRODUCT_NAME) would like to save photos to your photo library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) would like access to your photo  Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

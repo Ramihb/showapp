@@ -1374,6 +1374,14 @@
                                                     <action selector="didTapButton:" destination="6Ep-DF-EGL" eventType="touchUpInside" id="rei-e5-zi6"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-tT-15z">
+                                                <rect key="frame" x="281" y="210" width="64" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="admin"/>
+                                                <connections>
+                                                    <segue destination="H2d-fg-Poh" kind="presentation" modalPresentationStyle="fullScreen" id="lFR-qY-M8Z"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -1382,10 +1390,14 @@
                                             <constraint firstItem="CAi-M9-gbd" firstAttribute="top" secondItem="WuQ-w3-jw9" secondAttribute="bottom" constant="8" id="7AG-ZF-sIh"/>
                                             <constraint firstItem="I4u-fg-MNo" firstAttribute="centerX" secondItem="Cdw-Wf-kLA" secondAttribute="centerX" id="9Xl-iN-cT2"/>
                                             <constraint firstItem="iST-2J-sYc" firstAttribute="top" secondItem="3hz-ZJ-jGM" secondAttribute="bottom" constant="10" id="Br1-1g-Tig"/>
+                                            <constraint firstAttribute="trailing" secondItem="aO7-tT-15z" secondAttribute="trailing" constant="49" id="EF7-Ds-79V"/>
+                                            <constraint firstItem="aO7-tT-15z" firstAttribute="top" secondItem="iST-2J-sYc" secondAttribute="bottom" constant="100" id="EvX-TX-NXq"/>
                                             <constraint firstItem="WuQ-w3-jw9" firstAttribute="centerX" secondItem="Cdw-Wf-kLA" secondAttribute="centerX" id="FpO-V1-HNj"/>
                                             <constraint firstItem="LUZ-1R-Ryo" firstAttribute="top" secondItem="iST-2J-sYc" secondAttribute="bottom" constant="30" id="NsG-XL-VsC"/>
                                             <constraint firstAttribute="trailing" secondItem="CAi-M9-gbd" secondAttribute="trailing" constant="20" id="XSC-fo-aV8"/>
+                                            <constraint firstItem="WuQ-w3-jw9" firstAttribute="top" secondItem="aO7-tT-15z" secondAttribute="bottom" constant="8.5" id="XYf-Rd-kOG"/>
                                             <constraint firstAttribute="bottom" secondItem="CAi-M9-gbd" secondAttribute="bottom" constant="20" id="Ztq-it-jiV"/>
+                                            <constraint firstItem="aO7-tT-15z" firstAttribute="leading" secondItem="I4u-fg-MNo" secondAttribute="trailing" constant="34" id="cFP-6X-tXa"/>
                                             <constraint firstAttribute="trailing" secondItem="3hz-ZJ-jGM" secondAttribute="trailing" constant="10" id="h5n-qU-PeD"/>
                                             <constraint firstItem="3hz-ZJ-jGM" firstAttribute="top" secondItem="Cdw-Wf-kLA" secondAttribute="top" id="ha9-zh-Gfo"/>
                                             <constraint firstItem="LUZ-1R-Ryo" firstAttribute="leading" secondItem="Cdw-Wf-kLA" secondAttribute="leading" constant="175" id="mny-R4-J43"/>
@@ -1456,6 +1468,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKW-UR-LlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="669.56521739130437" y="-117.1875"/>
+        </scene>
+        <!--admin-->
+        <scene sceneID="z75-FD-Jxm">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AdminStoryBoard" storyboardName="admin" id="H2d-fg-Poh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4u1-1f-6fC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="-657"/>
         </scene>
         <!--Company-->
         <scene sceneID="9ZA-ap-Cmu">
@@ -2433,7 +2453,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gDw-LR-me7"/>
         <segue reference="CQc-dh-lYr"/>
         <segue reference="Kza-w1-WLq"/>
         <segue reference="3zH-gj-nru"/>

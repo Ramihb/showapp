@@ -178,7 +178,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
                 print(userG?.profile?.imageURL(withDimension: 512))
               //  print(userG?.profile?.imageURL(withDimension: 512))
                 //test
-                let user = User(id: "", email: (userG?.profile!.email)!, password: "", phoneNumber: "", profilePicture: "", firstName: (userG?.profile?.familyName)!, lastName: (userG?.profile?.givenName)!,isVerified: false,__v: 0)
+                let user = User(id: "", email: (userG?.profile!.email)!, password: "", phoneNumber: "", profilePicture: "", firstName: (userG?.profile?.familyName)!, lastName: (userG?.profile?.givenName)!,verified: false,__v: 0)
 
                 if let dataPhoto = try? Data(contentsOf: (userG?.profile?.imageURL(withDimension: 512))!) {
                     self.faza = UIImage(data: dataPhoto)

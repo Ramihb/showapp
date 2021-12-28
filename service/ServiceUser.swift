@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-
 class ServiceUser {
     
     
@@ -320,9 +319,40 @@ class ServiceUser {
             }.resume()
     }
     
+    func getAllUsers( callback: @escaping (Bool,Users?)->Void){
+                   print("bdina")
+            guard let url = URL(string: "http://192.168.1.14:3000/users") else{
+                        return
+                    }
+                    var request = URLRequest(url: url)
+                    request.httpMethod = "GET"
+                    request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
+                    let session = URLSession.shared.dataTask(with: request){
+                        data, response, error in
+                        DispatchQueue.main.async {
+                        if error == nil && data != nil{
+                            
+                            let decoder = JSONDecoder()
+                            do {
+                                
+                                let test = try decoder.decode(Users.self, from: data!)
+                                print("kamalna")
+                                callback(true,test)
+                            } catch  {
+                                print(error)
+                                callback(false,nil)
+                            }
+                        }else{
+                            callback(false,nil)}
+                        
+                     
+                        
+                        }
+                    }.resume()
+                }
     
     
-    
+
     
     
     
