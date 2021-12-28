@@ -7,9 +7,16 @@
 
 import UIKit
 import Alamofire
-
+import Foundation
 class AdminUserListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBAction func LogOutAdmin(_ sender: Any) {
+       
+                UserDefaults.standard.removeObject(forKey: "_id")
+                UserDefaults.standard.removeObject(forKey: "email")
+                UserDefaults.standard.removeObject(forKey: "password")
+                performSegue(withIdentifier: "logOutAdmin", sender: "yes")
+    }
     var userName: String?
     var tableauUser = [User]()
     
