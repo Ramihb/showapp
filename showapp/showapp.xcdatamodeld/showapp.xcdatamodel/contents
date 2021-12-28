@@ -12,8 +12,13 @@
         <attribute name="nameFavourite" optional="YES" attributeType="String"/>
         <attribute name="priceFavourite" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="userMail" optional="YES" attributeType="String"/>
+        <attribute name="userMdp" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="AddArticle" positionX="-63" positionY="-18" width="128" height="104"/>
         <element name="Favourite" positionX="-63" positionY="18" width="128" height="74"/>
+        <element name="UserInfo" positionX="-63" positionY="27" width="128" height="59"/>
     </elements>
 </model>

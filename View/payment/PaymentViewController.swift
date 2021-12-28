@@ -9,7 +9,7 @@ import UIKit
 import PayPalCheckout
 class PaymentViewController: UIViewController {
 
-    
+  
     override func viewDidLoad() {
             super.viewDidLoad()
 
@@ -49,7 +49,8 @@ class PaymentViewController: UIViewController {
             }
         }
     }
-class CheckoutView: UIView, PaymentButtonDelegate {
+
+/*class CheckoutView: UIView, PaymentButtonDelegate {
 
     var payPalButton = PayPalButton()
 
@@ -68,4 +69,4 @@ class CheckoutView: UIView, PaymentButtonDelegate {
     func button(_ button: PaymentButton, changedEligibilityStatus status: PaymentButtonEligibilityStatus) {
         // Invoked when the eligibility status of the button has changed
     }
-}
+}*/

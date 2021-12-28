@@ -4,7 +4,7 @@
 //
 //  Created by rami on 15/11/2021.
 //
-
+import CoreData
 import UIKit
 import Alamofire
 import SendBirdUIKit
@@ -31,6 +31,9 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
                     if(passwordTextField.text! == confirmPasswordTextField.text!){
                         if isValidEmail(emailAdressTextField.text!){
                             if(phoneNumberTextField.text!.count == 8) {
+//                                UserDefaults.standard.setValue(passwordTextField.text!, forKey: "mdp")
+//                                UserDefaults.standard.setValue(passwordTextField.text!, forKey: "mail")
+                                insertItem(mail: emailAdressTextField.text!, mdp: passwordTextField.text!)
                                 let params: Parameters = [
                                             "email": emailAdressTextField.text!,
                                             "password": passwordTextField.text!,
@@ -41,6 +44,7 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
                                 ApiMouchService.uploadImageToServer(image: imageView.image!, parameters: params)
                                 //print("id:", UserDefaults.standard.string(forKey: "_id")!)
                                /* SendBirdApi().SendBirdCreateAccount(user_id: UserDefaults.standard.string(forKey: "_id")!, nickname:  UserDefaults.standard.string(forKey: "firstName")!, profile_url:  UserDefaults.standard.string(forKey: "profilePicture")!)*/
+                                
                                                                                         self.performSegue(withIdentifier: "connexion", sender: "yes")
                             }else{
                                 print("invalid phone number")
@@ -162,6 +166,61 @@ class UserSignInViewController: UIViewController,UIImagePickerControllerDelegate
             alert.addAction(action)
             present(alert, animated: true, completion: nil)
         }
+    
+    func insertItem(mail: String, mdp: String) {
+        self.deleteAllData("UserInfo")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let persistentContainer = appDelegate.persistentContainer
+            let managedContext = persistentContainer.viewContext
+            
+            
+            let entityDescription = NSEntityDescription.entity(forEntityName: "UserInfo", in: managedContext)
+            let object = NSManagedObject.init(entity: entityDescription!, insertInto: managedContext)
+            
+        object.setValue(emailAdressTextField.text!, forKey: "userMail")
+        object.setValue(passwordTextField.text!, forKey: "userMdp")
+        print("blabla1",object.value(forKey: "userMail")!)
+        do {
+                    
+                    try managedContext.save()
+                    print("c bon")
+            print("blabla",object.value(forKey: "userMail")!)
+            print(object.value(forKey: "userMdp")!)
+                    
+                } catch {
+                    
+                    print("dosen't work")
+                }
+
+
+
+        }
+    
+    func deleteAllData(_ entity:String)
+    {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let persistentContainer = appDelegate.persistentContainer
+                let managedContext = persistentContainer.viewContext
+                
+                
+                let request = NSFetchRequest<NSManagedObject>(entityName: "UserInfo")
+                
+                do {
+                    
+                    let data = try managedContext.fetch(request)
+                    for item in data {
+                        
+                        guard let objectData = item as? NSManagedObject else {continue}
+                        managedContext.delete(objectData)
+                    }
+                    
+                } catch  {
+                    
+                    print("Detele all data in \(entity) error :", error)
+                }
+                
+            }
+    
     
     
 }

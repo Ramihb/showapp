@@ -4,7 +4,8 @@
 //
 //  Created by rami on 15/11/2021.
 //
-
+import CoreData
+import LocalAuthentication
 import UIKit
 import GoogleSignIn
 import FBSDKLoginKit
@@ -317,4 +318,88 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     @IBAction func ForgetPassword(_ sender: Any) {
         performSegue(withIdentifier: "forgetPasswordSegue", sender: "yes")
     }
+    
+    
+    
+    @IBAction func didTapButton(_ sender: Any) {
+        if(emailAdressTextField.text == "" && passwordTextField.text == "" ) {
+            retreiveData()
+            //var mail = UserDefaults.standard.string(forKey: "mail")!
+            //var mdp = UserDefaults.standard.string(forKey: "mdp")!
+            
+            let context = LAContext()
+                    var error: NSError? = nil
+                    if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error:  &error) {
+                        
+                        let reason = "Please authorize with touch id!"
+                        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { [weak self] success, error in
+                            
+                            DispatchQueue.main.async { [self] in
+                                guard success, error == nil else {
+                                    //failed
+                                    let alert = UIAlertController(title: "Failed to Authenticate", message: "Please try again", preferredStyle: .alert)
+                                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                                    self?.present(alert, animated: true)
+                                    return
+                                }
+                                //show other screen
+                                //success
+                                /*let vc = UIViewController()
+                                vc.title = "Welcome!"
+                                vc.view.backgroundColor = .systemBlue
+                                self?.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)*/
+                                self?.emailAdressTextField.text! = self!.mail
+                                self?.passwordTextField.text! = self!.mdp
+                                
+                                self?.LoginUser(email: self!.mail, password: self!.mdp)
+                                self?.navigationController?.popViewController(animated: true)
+                                                   NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+                            }
+                        }
+                                               
+                }
+                    else {
+                        //can not use
+                        let alert = UIAlertController(title: "unavailable", message: "you cant use this feature", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                        present(alert, animated: true)
+                    }
+        }
+        
+            }
+    var mail = ""
+    var mdp = ""
+    func retreiveData() {
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let persistentContainer = appDelegate.persistentContainer
+            let managedContext = persistentContainer.viewContext
+            
+            
+            let request = NSFetchRequest<NSManagedObject>(entityName: "UserInfo")
+            
+            do {
+                
+                let data = try managedContext.fetch(request)
+                
+                
+                    for item in data  {
+                        
+                        mail.append(item.value(forKey: "userMail") as! String)
+                        mdp.append(item.value(forKey: "userMdp") as! String)
+                        print("*******************************")
+                        print("mail",mail)
+                        print("mdp",mdp)
+                        print("*******************************")
+                        break
+                    }
+                
+                
+            } catch  {
+                
+                print("Fetching error !")
+            }
+            
+        }
+    
 }
