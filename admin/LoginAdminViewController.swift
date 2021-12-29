@@ -14,9 +14,17 @@ class LoginAdminViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+          //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+          //tap.cancelsTouchesInView = false
+          view.addGestureRecognizer(tap)
     }
     
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
 
    
     @IBAction func LoginAdminButton(_ sender: Any) {
@@ -25,7 +33,7 @@ class LoginAdminViewController: UIViewController {
         }
     }
     func LoginAdmin(email: String, password: String) {
-            guard let url = URL(string: "http://192.168.1.14:3000/admins/login") else {
+            guard let url = URL(string: "http://192.168.1.23:3000/admins/login") else {
                 fatalError("Error getting the url")
             }
             let params: Parameters = [

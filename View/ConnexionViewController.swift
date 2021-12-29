@@ -46,7 +46,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
 
     }
     func LoginUser(email: String, password: String) {
-        guard let url = URL(string: "http://172.31.32.1:3000/users/login") else {
+        guard let url = URL(string: "http://192.168.1.23:3000/users/login") else {
             fatalError("Error getting the url")
         }
         let params: Parameters = [
@@ -90,7 +90,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
     
     func LoginCompany(email: String, password: String) {
-        guard let url = URL(string: "http://172.31.32.1:3000/company/login") else {
+        guard let url = URL(string: "http://192.168.1.23:3000/company/login") else {
             fatalError("Error getting the url")
         }
         let params: Parameters = [
@@ -153,9 +153,16 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
         super.viewDidLoad()
         facebookLoginButton.delegate = self
                 facebookLoginButton.isHidden = true
-        // Do any additional setup after loading the view.
-        //fetchData()
-        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+          //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+          //tap.cancelsTouchesInView = false
+          view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
    
@@ -282,7 +289,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
     
 //    func fetchData() {
-//        guard let url = URL(string: "http://172.31.32.1:3000/users") else { return}
+//        guard let url = URL(string: "http://192.168.1.23:3000/users") else { return}
 //        let session = URLSession.shared.dataTask(with: url) {
 //            data, response, error in
 //            if let error = error {
@@ -295,7 +302,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
 //        }
 //
 //    func fetchCompanyData() {
-//        guard let url = URL(string: "http://172.31.32.1:3000/company") else { return}
+//        guard let url = URL(string: "http://192.168.1.23:3000/company") else { return}
 //        let session = URLSession.shared.dataTask(with: url) {
 //            data, response, error in
 //            if let error = error {
