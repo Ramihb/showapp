@@ -16,15 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="aNH-D8-leK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="aNH-D8-leK">
                                 <rect key="frame" x="87" y="389" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="af1-fG-cXA"/>
+                                    <constraint firstAttribute="width" constant="240" id="tdf-zt-dl3"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aNH-D8-leK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dFD-5h-PLd"/>
-                            <constraint firstItem="aNH-D8-leK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hMk-XW-SyZ"/>
+                            <constraint firstItem="aNH-D8-leK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cXQ-17-he9"/>
+                            <constraint firstItem="aNH-D8-leK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gQp-Qd-DHg"/>
                         </constraints>
                     </view>
                 </viewController>

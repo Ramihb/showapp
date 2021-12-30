@@ -31,6 +31,7 @@ PODS:
   - SendBirdSDK (3.1.1)
   - SendBirdUIKit (2.2.1):
     - SendBirdSDK (~> 3.1.1)
+  - ViewAnimator (3.1.0)
 
 DEPENDENCIES:
   - DropDown
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - PayPalCheckout
   - SendBirdUIKit
+  - ViewAnimator
 
 SPEC REPOS:
   trunk:
@@ -57,6 +59,7 @@ SPEC REPOS:
     - PayPalCheckout
     - SendBirdSDK
     - SendBirdUIKit
+    - ViewAnimator
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
@@ -73,7 +76,8 @@ SPEC CHECKSUMS:
   PayPalCheckout: f6c076f95734804ff5247abb1f27032386c78d22
   SendBirdSDK: f698cf686d732889d79854756aba6bbc20062a00
   SendBirdUIKit: 19f911839f10908e58db91900d33b6758ad47744
+  ViewAnimator: a9ceed80266e00fd435ec4fb99b2df64d580d0e4
 
-PODFILE CHECKSUM: bd86ebe11dd4b0715ae8e2e11870ef289b72d54d
+PODFILE CHECKSUM: 6994eee8849c032c0528f53f59a14615582d0520
 
 COCOAPODS: 1.11.2

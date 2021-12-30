@@ -20,7 +20,7 @@ class ModifierProfileViewController: UIViewController,UIImagePickerControllerDel
         super.viewDidLoad()
        
         name.text = UserDefaults.standard.string(forKey: "firstName")
-        email.text = UserDefaults.standard.string(forKey: "email")
+        email.text = UserDefaults.standard.string(forKey: "phoneNumber")
         profilePicture.imageFromServerURL(urlString: UserDefaults.standard.string(forKey: "profilePicture")!)
     }
     
@@ -33,10 +33,11 @@ class ModifierProfileViewController: UIViewController,UIImagePickerControllerDel
         
         let params: Parameters = [
                                 "_id": UserDefaults.standard.string(forKey: "_id")!,
-                                "email":    email.text!,
+                                "email":    UserDefaults.standard.string(forKey: "email")!,
                                 "password": UserDefaults.standard.string(forKey: "password")!,
                                 "firstName": name.text!,
                                 "lastName": UserDefaults.standard.string(forKey: "lastName")!,
+                                "phoneNumber": email.text!
                             ]
         test.uploadImageToServer(image: profilePicture.image!, parameters: params){ succes, reponse in
             if succes, let json = reponse{

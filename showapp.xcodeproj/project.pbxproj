@@ -92,8 +92,6 @@
 		47040F10274C74130004E99D /* ServiceUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceUser.swift; sourceTree = "<group>"; };
 		476338B127627AC0009DDD1D /* ForgetPassword1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword1ViewController.swift; sourceTree = "<group>"; };
 		47672C072778D94200C7FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Company.storyboard; sourceTree = "<group>"; };
-		47672C0A2778D94600C7FF47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Company.strings; sourceTree = "<group>"; };
-		47672C0C2778D97700C7FF47 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Company.strings; sourceTree = "<group>"; };
 		4767EA202752FAC400993309 /* CompanyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyService.swift; sourceTree = "<group>"; };
 		4767EA2227530C6000993309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		476804C627779578009BDCFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,9 +121,6 @@
 		47748C5E27665F2300A72C27 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		47750A85275CFC2F00EEDFCA /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		477935DF2752454300D22A40 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		4779550E2778C29900A4B052 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		4779550F2778C2ED00A4B052 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		477955102778C2ED00A4B052 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		4779DCC7277A202A003CCEE0 /* MessagerieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagerieController.swift; sourceTree = "<group>"; };
 		478361542766BC5D00BAE92A /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		4785C7B4275E5A3F006BCF93 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -499,7 +494,6 @@
 			knownRegions = (
 				en,
 				Base,
-				fr,
 			);
 			mainGroup = 47CA579027380A68005E3096;
 			packageReferences = (
@@ -775,8 +769,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				47672C072778D94200C7FF47 /* Base */,
-				47672C0A2778D94600C7FF47 /* en */,
-				47672C0C2778D97700C7FF47 /* fr */,
 			);
 			name = Company.storyboard;
 			sourceTree = "<group>";
@@ -785,8 +777,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				47CA57A327380A68005E3096 /* Base */,
-				4779550E2778C29900A4B052 /* en */,
-				477955102778C2ED00A4B052 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -795,7 +785,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				47CA57AB27380A69005E3096 /* Base */,
-				4779550F2778C2ED00A4B052 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -932,13 +921,13 @@
 				DEVELOPMENT_TEAM = WKYB3N5G3S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = showapp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) would like to use your camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "showapp would like to use your camera";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow to continue with face id.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Show your location on the map2";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show your location on the map";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRODUCT_NAME) would like to use your microphone (for videos)";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "$(PRODUCT_NAME) would like to save photos to your photo library";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) would like access to your photo  Library";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "showapp would like to use your microphone (for videos)";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "showapp would like to save photos to your photo library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "showapp would like access to your photo  Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -968,13 +957,13 @@
 				DEVELOPMENT_TEAM = WKYB3N5G3S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = showapp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) would like to use your camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "showapp would like to use your camera";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow to continue with face id.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Show your location on the map2";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show your location on the map";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRODUCT_NAME) would like to use your microphone (for videos)";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "$(PRODUCT_NAME) would like to save photos to your photo library";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) would like access to your photo  Library";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "showapp would like to use your microphone (for videos)";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "showapp would like to save photos to your photo library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "showapp would like access to your photo  Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
