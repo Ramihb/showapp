@@ -30,10 +30,20 @@ class LoginAdminViewController: UIViewController {
     @IBAction func LoginAdminButton(_ sender: Any) {
         if(emailTextField.text != "" && passwordTextField.text != ""){
             LoginAdmin(email: emailTextField.text!, password: passwordTextField.text!)
+            self.navigationController?.popViewController(animated: true)
+                               NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+        }else{
+            let alert = UIAlertController(title: "Warning", message: "You must fill all the fields", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+     
+
+
         }
     }
     func LoginAdmin(email: String, password: String) {
-            guard let url = URL(string: "http://192.168.1.23:3000/admins/login") else {
+            guard let url = URL(string: "http://192.168.1.14:3000/admin/login") else {
                 fatalError("Error getting the url")
             }
             let params: Parameters = [
@@ -53,16 +63,17 @@ class LoginAdminViewController: UIViewController {
                             if let faza = response["user"] as? [String: Any]{
                                 for(key, value) in faza{
                                     UserDefaults.standard.setValue(value, forKey: key)
+                                    print("test:",UserDefaults.standard.string(forKey: "_id"))
                                 }
-
+                                print("Validation Successful")
+                            self.performSegue(withIdentifier: "loginToAdmin", sender: "yes")
                             }
                             
                             /*let token = response["token"]
                             
                             UserDefaults.standard.setValue(response["token"]!, forKey: "token")*/
     //                        UserDefaults.standard.setValue(response["userId"]!, forKey: "userId")
-                                print("Validation Successful")
-                            self.performSegue(withIdentifier: "loginToAdmin", sender: "yes")
+                                
                             case .failure(let error):
                             self.prompt(title: "Echec", message: "Email ou mot de passe incorrect")
                             if let data = response.data {

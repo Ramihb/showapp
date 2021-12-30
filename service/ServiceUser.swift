@@ -17,7 +17,7 @@ class ServiceUser {
             let params = [
                 "email": email
             ]
-            guard let url = URL(string: "http://192.168.1.23:3000/users/loginSocial") else{
+            guard let url = URL(string: "http://192.168.1.14:3000/users/loginSocial") else{
                 return
             }
             var request = URLRequest(url: url)
@@ -74,7 +74,7 @@ class ServiceUser {
     func CreationCompteFacebookOrGoogle(user:User, image :UIImage, callback: @escaping (Bool,String?)->Void){
             
             guard let mediaImage = Media(withImage: image, forKey: "profilePicture") else { return }
-            guard let url = URL(string: "http://192.168.1.23:3000/users/signupMedia") else { return }
+            guard let url = URL(string: "http://192.168.1.14:3000/users/signupMedia") else { return }
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             //create boundary
@@ -167,7 +167,7 @@ class ServiceUser {
     
     func UpdateProfil(user:User, image :UIImage, callback: @escaping (Bool,String?)->Void){
             guard let mediaImage = Media(withImage: image, forKey: "profilePicture") else { return }
-            guard let url = URL(string: "http://192.168.1.23:3000/users/"+UserDefaults.standard.string(forKey: "_id")!) else { return }
+            guard let url = URL(string: "http://192.168.1.14:3000/users/"+UserDefaults.standard.string(forKey: "_id")!) else { return }
             var request = URLRequest(url: url)
             request.httpMethod = "PUT"
             //create boundary
@@ -268,7 +268,7 @@ class ServiceUser {
     
     func forgotPassword (email:String, callback: @escaping (Bool,Any?)->Void){
             
-            guard let url = URL(string: "http://192.168.1.23:3000/users/reset") else {return}
+            guard let url = URL(string: "http://192.168.1.14:3000/users/reset") else {return}
             var request = URLRequest(url: url)
             let params = [
                 "email": email
@@ -293,7 +293,7 @@ class ServiceUser {
         
         func resetPass(password : String, email:String, code:String , callback: @escaping (Bool,Any?)->Void){
             
-            guard let url = URL(string: "http://192.168.1.23:3000/users/reset") else {return}
+            guard let url = URL(string: "http://192.168.1.14:3000/users/reset") else {return}
             var request = URLRequest(url: url)
             let params = [
                 "email": email,
@@ -321,7 +321,7 @@ class ServiceUser {
     
     func getAllUsers( callback: @escaping (Bool,Users?)->Void){
                    print("bdina")
-            guard let url = URL(string: "http://192.168.1.23:3000/users") else{
+            guard let url = URL(string: "http://192.168.1.14:3000/users") else{
                         return
                     }
                     var request = URLRequest(url: url)

@@ -70,7 +70,7 @@ class CompanyListNewsViewController: UIViewController, UITableViewDelegate, UITa
                 tableauNews.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
                 
-                guard let url = URL(string: "http://192.168.1.23:3000/news/"+tableauNews[indexPath.row]._id) else {
+                guard let url = URL(string: "http://192.168.1.14:3000/news/"+tableauNews[indexPath.row]._id) else {
                             fatalError("Error getting the url")
                         }
 
