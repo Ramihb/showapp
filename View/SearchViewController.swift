@@ -10,7 +10,6 @@ import UIKit
 
 class SearchViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

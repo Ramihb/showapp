@@ -11,6 +11,9 @@ import SendBirdUIKit
 import UIKit
 
 class MessagerieController: SBUChannelListViewController {
+    @IBAction func back(_ sender: Any) {
+            self.dismiss(animated: true)
+        }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.rightBarButton = nil
