@@ -10,6 +10,7 @@ import FBSDKLoginKit
 import Alamofire
 import SwiftUI
 import SendBirdUIKit
+import StoreKit
 
 class ProfileViewController: UIViewController {
     var languages = [("English","en"),("French","fr")]
@@ -115,6 +116,18 @@ class ProfileViewController: UIViewController {
     
     
     
+    @IBAction func rateButton(_ sender: Any) {
+        guard let scene = view.window?.windowScene else {
+            print("no scene")
+            return
+        }
+        SKStoreReviewController.requestReview(in: scene)
+        //XXXX is the application id
+        //https://apps.apple.com/app/idXXXXXXXXXX?action=write-review
+        /*guard let writeReviewURL = URL(string: "https://www.google.com/")
+                   else { fatalError("Expected a valid URL") }
+        UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)*/
+    }
     
     
 

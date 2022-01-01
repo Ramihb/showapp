@@ -91,7 +91,7 @@ class AdminUserListViewController: UIViewController, UITableViewDelegate, UITabl
                                         }
                                     }
                                     else{
-                                        print("pas de news a afficher")
+                                        print("pas de user a afficher")
                                     }
                                 }
                             }
