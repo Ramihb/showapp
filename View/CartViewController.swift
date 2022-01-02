@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBAction func backButton(_ sender: Any) {
                 self.dismiss(animated: true, completion: nil)
             }
@@ -70,12 +71,12 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
 
         loadArticleToTableCart(tableau: self.tableCart)
+        
     }
 
     
     func viewWillAppear() {
             tableCart.reloadData()
-        
         }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

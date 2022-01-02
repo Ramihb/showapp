@@ -77,27 +77,26 @@ class CompanyListNewsViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == .delete {
+                deleteNewsFromCompany(i: tableauNews[indexPath.row]._id)
                 tableauNews.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
-                
-                guard let url = URL(string: "http://192.168.1.14:3000/news/"+tableauNews[indexPath.row]._id) else {
-                            fatalError("Error getting the url")
-                        }
-
-                AF.request(url, method: .delete,parameters: nil)
-                           .validate()
-                           .responseJSON { response in
-                               switch response.result {
-                                   case .success:
-                                       print("News deleted from company")
-                                   case .failure(let error):
-                                       print(error)
-                               }
-                           }
             }
         }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-        print(tableauNews[indexPath.row]._id)
+
+    func deleteNewsFromCompany(i:String) {
+        guard let url = URL(string: "http://192.168.1.14:3000/news/"+i) else {
+                    fatalError("Error getting the url")
+                }
+
+        AF.request(url, method: .delete,parameters: nil)
+                   .validate()
+                   .responseJSON { response in
+                       switch response.result {
+                           case .success:
+                               print("News deleted from company")
+                           case .failure(let error):
+                               print(error)
+                       }
+                   }
     }
 }

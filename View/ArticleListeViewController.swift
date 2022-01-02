@@ -72,26 +72,40 @@ class ArticleListeViewController: UIViewController, UITableViewDelegate, UITable
         performSegue(withIdentifier: "articleListToAddArticleSegue", sender: "yes")
     }
     
-    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == .delete {
+                print("Article deleted")
+                deleteArticleFromCompany(i: tableauArticle[indexPath.row]._id)
                 tableauArticle.remove(at: indexPath.row)
+                tableView.beginUpdates()
                 tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.endUpdates()
+                //tableView.reloadData()
+               // deleteArticleFromCompany(i: tableauArticle[indexPath.row]._id)
                 
-                guard let url = URL(string: "http://192.168.1.14:3000/articles/"+tableauArticle[indexPath.row]._id) else {
-                            fatalError("Error getting the url")
-                        }
-
-                AF.request(url, method: .delete,parameters: nil)
-                           .validate()
-                           .responseJSON { response in
-                               switch response.result {
-                                   case .success:
-                                       print("Article deleted from company")
-                                   case .failure(let error):
-                                       print(error)
-                               }
-                           }
             }
+        
         }
+    
+    
+    func deleteArticleFromCompany(i: String) {
+        guard let url = URL(string: "http://192.168.1.14:3000/articles/"+i) else {
+                    fatalError("Error getting the url")
+                }
+
+        AF.request(url, method: .delete,parameters: nil)
+                   .validate()
+                   .responseJSON { response in
+                       switch response.result {
+                           case .success:
+                               print("Article deleted from company")
+                           case .failure(let error):
+                               print(error)
+                       }
+                   }
+        
+    }
 }

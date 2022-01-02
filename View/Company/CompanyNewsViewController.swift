@@ -83,5 +83,6 @@ class CompanyNewsViewController: UIViewController,UIImagePickerControllerDelegat
             ApiCompanyService.addNewsToServer(image: newsImage.image!, parameters: params)
                     
                 }
+        self.dismiss(animated: true, completion: nil)
     }
 }

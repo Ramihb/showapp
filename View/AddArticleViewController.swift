@@ -27,7 +27,7 @@ class AddArticleViewController: UIViewController,UIImagePickerControllerDelegate
     
     let categoryDropDown = DropDown()
     let typeDropDown = DropDown()
-    let categoryValue = ["mode", "high tech", "beauty", "baby", "jewerly", "art deco"]
+    let categoryValue = ["mode", "high tech", "beauty", "baby", "Jewellery", "art deco"]
     @IBAction func showCategoryOptions(_ sender: Any) {
         categoryDropDown.show()
     }
@@ -36,7 +36,7 @@ class AddArticleViewController: UIViewController,UIImagePickerControllerDelegate
     @IBOutlet weak var vwDropDownType:UIView!
     @IBOutlet weak var Typee:UILabel!
     let typeValue = ["sweaters", "pants", "outlet", "jacket", "shoes",
-                     "Dress", "Pc", "Tv", "Computers' accessories", "make-up", "Art Supplies", "jewerly", "art deco", "Other"
+                     "Dress", "Pc", "Tv", "Computers' accessories", "make-up", "Baby", "Art Supplies", "earrings", "rings", "bracelets", "art deco", "Other"
                  ]
     let typeMode = ["sweaters", "pants", "outlet", "jacket", "shoes",
                      "Dress"]
@@ -124,6 +124,7 @@ class AddArticleViewController: UIViewController,UIImagePickerControllerDelegate
                 
             ]
             articleService.addArticleToServer(image: LogoAdd.image!, parameters: params)
+            self.dismiss(animated: true)
             
         }
     }

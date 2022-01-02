@@ -92,14 +92,13 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate,GMSMap
     }
     
     @IBAction func addGPSLocationButton(_ sender: Any) {
-        
         if let gpsLoc = presentingViewController as? CartViewController{
             gpsLoc.gpsLocation = positionGPSSaved
         }
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+  
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
       // Clear the map.
       mapView.clear()
@@ -130,13 +129,13 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate,GMSMap
 
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//       if segue.identifier == "gpsValide" {
-//         if let nextViewController = segue.destination as? AjouterArticleController {
-//           nextViewController.gpsLocation = positionGPSSaved
-//         }
-//       }
-//     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if segue.identifier == "gpsValide" {
+         if let nextViewController = segue.destination as? CartViewController {
+           nextViewController.gpsLocation = positionGPSSaved
+         }
+       }
+     }
     let geocoder = GMSGeocoder()
 
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
