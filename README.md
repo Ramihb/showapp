@@ -63,7 +63,7 @@
 <!-- GETTING STARTED -->
 ## **Getting Started**
 >
->launcher screen, 
+>launch screen, 
 >
 >
 >![Class Diagram](https://github.com/Ramihb/showapp/blob/frontEndRami/capture%20showapp/Capture%20d%E2%80%99%C3%A9cran%202022-01-02%20200621.png)
