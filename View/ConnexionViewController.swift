@@ -338,7 +338,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
                     var error: NSError? = nil
                     if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error:  &error) {
                         
-                        let reason = "Please authorize with touch id!"
+                        let reason = "Please authorize with FaceId!"
                         context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { [weak self] success, error in
                             
                             DispatchQueue.main.async { [self] in

@@ -20,8 +20,17 @@ class CompanyNewsViewController: UIViewController,UIImagePickerControllerDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
 
-    }
+                  //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+                  //tap.cancelsTouchesInView = false
+                  view.addGestureRecognizer(tap)
+            }
+            
+            @objc func dismissKeyboard() {
+                //Causes the view (or one of its embedded text fields) to resign the first responder status.
+                view.endEditing(true)
+            }
     
 
     @IBAction func imageNewsButton(_ sender: Any) {

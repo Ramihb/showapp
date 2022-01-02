@@ -22,8 +22,17 @@ class ModifierProfileViewController: UIViewController,UIImagePickerControllerDel
         name.text = UserDefaults.standard.string(forKey: "firstName")
         email.text = UserDefaults.standard.string(forKey: "phoneNumber")
         profilePicture.imageFromServerURL(urlString: UserDefaults.standard.string(forKey: "profilePicture")!)
-    }
-    
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+                  //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+                  //tap.cancelsTouchesInView = false
+                  view.addGestureRecognizer(tap)
+            }
+            
+            @objc func dismissKeyboard() {
+                //Causes the view (or one of its embedded text fields) to resign the first responder status.
+                view.endEditing(true)
+            }
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true)
     }

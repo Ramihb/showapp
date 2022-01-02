@@ -13,10 +13,17 @@ import GoogleMaps
 import GooglePlaces
 import PayPalCheckout
 import SendBirdUIKit
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        AppCenter.start(withAppSecret: "e97d1e95-960d-4878-9fb4-0e807a151460", services:[
+          Analytics.self,
+          Crashes.self
+        ])
         let APP_ID = "57E64C12-D528-4AC6-AE11-47E5C8ABB26E"  // Specify your Sendbird application ID.
                 SBUMain.initialize(applicationId: APP_ID) {
                     // DB migration has started.

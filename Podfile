@@ -15,6 +15,7 @@ pod 'GooglePlaces'
 pod 'PayPalCheckout'
 pod 'SendBirdUIKit'
 pod 'ViewAnimator'
+pod 'AppCenter'
   target 'showappTests' do
     inherit! :search_paths
     # Pods for testing

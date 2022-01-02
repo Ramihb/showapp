@@ -922,6 +922,7 @@
 				DEVELOPMENT_TEAM = WKYB3N5G3S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = showapp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = showapp;
 				INFOPLIST_KEY_NSCameraUsageDescription = "showapp would like to use your camera";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow to continue with face id.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Show your location on the map2";
@@ -959,6 +960,7 @@
 				DEVELOPMENT_TEAM = WKYB3N5G3S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = showapp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = showapp;
 				INFOPLIST_KEY_NSCameraUsageDescription = "showapp would like to use your camera";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow to continue with face id.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Show your location on the map2";

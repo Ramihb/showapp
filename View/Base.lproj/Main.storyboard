@@ -1505,7 +1505,7 @@
                                     <constraint firstAttribute="height" constant="35" id="2gH-hf-E8M"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAm-O2-7Ge">
                                 <rect key="frame" x="40" y="459" width="334" height="40"/>
@@ -1571,7 +1571,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avj-Fy-q0S">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="avj-Fy-q0S">
                                 <rect key="frame" x="325" y="634" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="Met-HR-hTb"/>
@@ -2750,6 +2750,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="FV7-WE-ndV"/>
         <segue reference="CQc-dh-lYr"/>
         <segue reference="qGV-n2-CNY"/>
         <segue reference="3zH-gj-nru"/>
