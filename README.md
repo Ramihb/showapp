@@ -1,49 +1,142 @@
-# Ios_project
-ShowApp 
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/MGhassen30798/ShowAppiOS">
+    <img src="https://github.com/MGhassen30798/Ios_project/blob/master/LOGO.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">SHOWAPP application</h3>
+
+  <p align="center">
+    Click on the logo to get the Back-end code source
+  </p>
+</div>
 
 
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+        <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## **About The Project**
+>
+>“Showapp” is an application to improve the user experience, it allows for people to consult the products of any brands that have been added in the same application. So any >brand that wants to work with us can rent a place in our application and publish her articles for sales.
+>
+><p align="right">(<a href="#top">back to top</a>)</p>
 >
 >
->![Logo](https://github.com/MGhassen30798/Ios_project/blob/master/LOGO.png)
->  ***LOGO***
+>
+## **Built With**
+>
+>
+>
+>* [Xcode](https://developer.apple.com/xcode/)
+>
+>
+>* [Git hub](https://github.com/)
+>
+>
+><p align="right">(<a href="#top">back to top</a>)</p>
+>
+>
+<!-- GETTING STARTED -->
+## **Getting Started**
+>
+>Before we begin this is the class diagram of our project 
+>
+>
+>![Class Diagram](https://github.com/MGhassen30798/ShowAppiOS/blob/Backend/class%20diagram.png)
+>
+>
+>
+### ***Prerequisites***
+>
+>Follow these steps to clone this front-end.
+>But before we begin you have to download the [Coco](https://cocoapods.org/) to get dependency  
+>and tap
+>* cocoapods
+>  ```sh
+>  sudo gem install cocoapods 
+>  ```
+>
+### Installation
+>
+>_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+>
+>
+>1. Clone the repo
+>
+>```
+>git clone https://github.com/Ramihb/showapp
+>```
+>
+>2. get the dependency
+>
+>```sh
+>pod install
+>```
+>
+>3.Install the server from [Showapp server repository](https://github.com/MGhassen30798/ShowAppiOS)
+>
+>
+>4.run the server
+>```sh
+>npm start
+>```
+>
+>5. open the application from xcode
+> <p align="right">(<a href="#top">back to top</a>)</p>
+>
+>
+
+<!-- USAGE EXAMPLES -->
+## **Usage**
+> _For more information, please refer to the [swagger Documentation](http://localhost:3000/api-docs/) after  you run the server by the fourth step in installation
+>
+>[link : http://localhost:3000/api-docs/](http://localhost:3000/api-docs/)
+>
+>
+>![Swagger interface](https://github.com/MGhassen30798/ShowAppiOS/blob/master/swag.png)
 >
 
 
-# **Introduction**
-
->
->“Showapp” is an application to improve the user experience, it allows for people to consult the products of any brands that have been added in the same application.
->So any brand that wants to work with us can rent a place in our application and publish her articles for sales.
->
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
-# **Ressources**
+<!-- CONTACT -->
+## Contact
+>
+>Rami HBAIEB - [Linkdin](https://www.linkedin.com/in/ramihbaieb/) - rami.hbaieb@esprit.tn
+>
+>Ghassen MALLEK - [Linkdin](https://www.linkedin.com/in/ghassenmallek/) - mallek.ghassen@esprit.tn
+>
+>
+>
+>Project Link: [ShowApp server](https://github.com/MGhassen30798/ShowAppiOS)
+>              [ShowApp front](https://github.com/Ramihb/showapp)
+>
+>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
->
->- 🦊 Git 
->
->- 🍏 MacOS - [Macbook / Virtual machine]
->
->- ❌ XCode 13
->
->- 
->
 
-
-# **Usage**
-
->
->
->
->1. git clone https://github.com/Ramihb/showapp.git
->
->2. Open the command line [Terminal]
->
->3. Migrate into this repo on your local machine [cd /path/to/this/repo]
->
->4. Type the command : Pod install
->
->5. Run the app on your Iphone or iOS simulator.
->
->>For more information contach mallek.ghassen@esprit.tn
->                             rami.hbaieb@esprit.tn
