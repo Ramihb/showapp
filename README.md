@@ -63,10 +63,10 @@
 <!-- GETTING STARTED -->
 ## **Getting Started**
 >
->Before we begin this is the class diagram of our project 
+>launcher screen, 
 >
 >
->![Class Diagram](https://github.com/MGhassen30798/ShowAppiOS/blob/Backend/class%20diagram.png)
+>![Class Diagram](https://github.com/Ramihb/showapp/blob/frontEndRami/capture%20showapp/Capture%20d%E2%80%99%C3%A9cran%202022-01-02%20200621.png)
 >
 >
 >
@@ -112,15 +112,29 @@
 
 <!-- USAGE EXAMPLES -->
 ## **Usage**
-> _For more information, please refer to the [swagger Documentation](http://localhost:3000/api-docs/) after  you run the server by the fourth step in installation
+> _For more information about function, please refer to the [swagger Documentation](http://localhost:3000/api-docs/) after  you run the server by the fourth step in installation
 >
 >[link : http://localhost:3000/api-docs/](http://localhost:3000/api-docs/)
 >
 >
 >![Swagger interface](https://github.com/MGhassen30798/ShowAppiOS/blob/master/swag.png)
 >
-
-
+>`you have to create if you don't have an account and verif it by email the you can sign in `
+>
+>![sign in/up interface](https://github.com/Ramihb/showapp/blob/frontEndRami/capture%20showapp/Capture%20d%E2%80%99%C3%A9cran%202022-01-02%20193843.png)   ![sign up user interface](https://github.com/Ramihb/showapp/blob/frontEndRami/capture%20showapp/Capture%20d%E2%80%99%C3%A9cran%202022-01-02%20193927.png)  ![sign up company interface](https://github.com/Ramihb/showapp/blob/frontEndRami/capture%20showapp/Capture%20d%E2%80%99%C3%A9cran%202022-01-02%20194008.png)
+>
+>
+>` if you sign in as user you can browse these interfaces(Profil, News, Articles, Search...)`
+>
+>![Profile interface](https://github.com/Ramihb/showapp/blob/frontEndRami/capture%20showapp/Capture%20d%E2%80%99%C3%A9cran%202022-01-02%20194206.png)![article details interface](https://github.com/Ramihb/showapp/blob/frontEndRami/capture%20showapp/Capture%20d%E2%80%99%C3%A9cran%202022-01-02%20200121.png)![purchase interface](https://github.com/Ramihb/showapp/blob/frontEndRami/capture%20showapp/Capture%20d%E2%80%99%C3%A9cran%202022-01-02%20200207.png)
+>
+>
+>`if you sign in as company you can browse these interfaces(Profil, add News, add Articles, List of News, List of Articles,)`
+>
+>![Profile interface](https://github.com/Ramihb/showapp/blob/frontEndRami/capture%20showapp/Capture%20d%E2%80%99%C3%A9cran%202022-01-02%20194630.png)![add article interface](https://github.com/Ramihb/showapp/blob/frontEndRami/capture%20showapp/Capture%20d%E2%80%99%C3%A9cran%202022-01-02%20194826.png)![articles' list interface](https://github.com/Ramihb/showapp/blob/frontEndRami/capture%20showapp/Capture%20d%E2%80%99%C3%A9cran%202022-01-02%20194846.png)
+>
+>
+>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
