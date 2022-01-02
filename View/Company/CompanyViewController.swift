@@ -60,6 +60,7 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
         } else {
             self.alert(title: "Warning", message: "please fill all the fields")
         }
+        self.dismiss(animated: true)
         
     }
         struct Response: Decodable {

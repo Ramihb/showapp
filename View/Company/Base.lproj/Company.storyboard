@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-1183" y="-18"/>
         </scene>
-        <!--Connexion-->
+        <!--Main-->
         <scene sceneID="WdZ-01-eRg">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Connexion" id="tbQ-Zs-kCL" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" id="tbQ-Zs-kCL" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tM-fe-gMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2004" y="710"/>

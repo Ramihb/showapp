@@ -28,6 +28,7 @@ class ProfileViewController: UIViewController {
                NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: name, object: nil)
         user1 = SBUUser(userId: "61ca18c42e2609ccdeb2341b", nickname: "showapp", profileUrl: "http://192.168.1.14:3000/images/imagefile.jpg1640634563943.jpg")
                 user2 = SBUUser(userId: UserDefaults.standard.string(forKey: "_id")!, nickname: UserDefaults.standard.string(forKey: "firstName")!, profileUrl: UserDefaults.standard.string(forKey: "profilePicture")!)
+        userMod = SBUUser(userId: "882490", nickname: "modo", profileUrl: "https://file-us-1.sendbird.com/profile_images/99048ad960574d0fb7adcb8ad0088904.png")
         //self.setupPicker()
         
     }
@@ -84,32 +85,33 @@ class ProfileViewController: UIViewController {
         var user1,user2,userMod: SBUUser?
     
     @IBAction func envoyerMessage(_ sender: Any) {
-            SBDMain.connect(withUserId: UserDefaults.standard.string(forKey: "_id")!, completionHandler: { (user, error) in
-                guard error == nil else {
-                    print("erreur function : ",error)
-                    return
-                }
-                            
-            })
-           
-                SBDGroupChannel.createChannel(withUserIds: Array(arrayLiteral: self.user2!.userId,self.user1!.userId), isDistinct: true) { data, error in
-                    
-                    self.channelURL = data!.channelUrl
-                    print("Created channel url : ",self.channelURL)
-                }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        SBDMain.connect(withUserId: UserDefaults.standard.string(forKey: "_id")!, completionHandler: { (user, error) in
+                    guard error == nil else {
+                        print("erreur function : ",error)
+                        return
+                    }
+                                
+                })
+               
+                    SBDGroupChannel.createChannel(withUserIds: Array(arrayLiteral: self.user2!.userId,self.user1!.userId), isDistinct: true) { data, error in
+                        
+                        self.channelURL = data!.channelUrl
+                        print("Created channel url : ",self.channelURL)
+                    }
                 
-                SBDGroupChannel.getWithUrl(self.channelURL) { openChannel, error in
-                    print("Entering channel url",self.channelURL)
-                    print("open channel : ",openChannel,"erreur : ", error)
-                    guard let openChannel = openChannel, error == nil else {
-                        return // Handle error.
-                    }
-                    openChannel.sendUserMessage("Hello") { reponse, error in
-                    }
-      
-            }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    
+                    SBDGroupChannel.getWithUrl(self.channelURL) { openChannel, error in
+                        print("Entering channel url",self.channelURL)
+                        print("open channel : ",openChannel,"erreur : ", error)
+                        guard let openChannel = openChannel, error == nil else {
+                            return // Handle error.
+                        }
+                        openChannel.sendUserMessage("text") { reponse, error in
+                        }
+          
+                }
+                
             }
     }
     
