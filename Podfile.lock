@@ -57,6 +57,11 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.0)
+  - InputBarAccessoryView (5.4.0):
+    - InputBarAccessoryView/Core (= 5.4.0)
+  - InputBarAccessoryView/Core (5.4.0)
+  - MessageKit (3.7.0):
+    - InputBarAccessoryView (~> 5.4.0)
   - PayPalCheckout (0.79.0)
   - SendBirdSDK (3.1.1)
   - SendBirdUIKit (2.2.1):
@@ -71,6 +76,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - GoogleSignIn
+  - MessageKit
   - PayPalCheckout
   - SendBirdUIKit
   - ViewAnimator
@@ -90,6 +96,8 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - InputBarAccessoryView
+    - MessageKit
     - PayPalCheckout
     - SendBirdSDK
     - SendBirdUIKit
@@ -109,11 +117,13 @@ SPEC CHECKSUMS:
   GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  InputBarAccessoryView: 74d471ab1fa1736806be50328df79257e52865a9
+  MessageKit: 8e76dd8d65ad44b49e1651c673497146416461e9
   PayPalCheckout: f6c076f95734804ff5247abb1f27032386c78d22
   SendBirdSDK: f698cf686d732889d79854756aba6bbc20062a00
   SendBirdUIKit: 19f911839f10908e58db91900d33b6758ad47744
   ViewAnimator: a9ceed80266e00fd435ec4fb99b2df64d580d0e4
 
-PODFILE CHECKSUM: 382a71b8dc5518de4ec810f648cb40ba9327a125
+PODFILE CHECKSUM: b076071c60bcfd76fbde7a7b7a5b813ba74c5a9d
 
 COCOAPODS: 1.11.2

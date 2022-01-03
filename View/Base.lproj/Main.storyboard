@@ -1896,38 +1896,19 @@
             <point key="canvasLocation" x="213.04347826086959" y="2118.75"/>
         </scene>
         <!--Messagerie Controller-->
-        <scene sceneID="g6u-6q-a8N">
+        <scene sceneID="I1k-nb-GsN">
             <objects>
-                <viewController id="2xk-ZQ-CT3" customClass="MessagerieController" customModule="showapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LuA-7q-XkR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="BoY-7a-O4f" customClass="MessagerieController" customModule="showapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dxm-Eh-H53">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfK-jo-3zu">
-                                <rect key="frame" x="0.0" y="44" width="50" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Ta6-mY-RSV"/>
-                                    <constraint firstAttribute="width" constant="50" id="bsC-AZ-9ow"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
-                                <connections>
-                                    <action selector="back:" destination="2xk-ZQ-CT3" eventType="touchUpInside" id="0Nz-Mq-Htw"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bkh-1q-UfK"/>
+                        <viewLayoutGuide key="safeArea" id="FOc-yM-936"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="DfK-jo-3zu" firstAttribute="top" secondItem="bkh-1q-UfK" secondAttribute="top" id="TFf-ce-2c9"/>
-                            <constraint firstItem="DfK-jo-3zu" firstAttribute="leading" secondItem="bkh-1q-UfK" secondAttribute="leading" id="Tuq-P7-ZSv"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FZp-p7-Y1r"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3cr-S6-7Sh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Og-QZ-8hX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="3029"/>
+            <point key="canvasLocation" x="175" y="2893"/>
         </scene>
         <!--Profile-->
         <scene sceneID="MVb-Va-zcO">
@@ -2164,7 +2145,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="envoyerMessage:" destination="34j-kk-D1d" eventType="touchUpInside" id="bNr-gk-0VR"/>
-                                    <segue destination="2xk-ZQ-CT3" kind="presentation" modalPresentationStyle="fullScreen" id="o9T-tG-fz7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBm-Pb-Ja5">
@@ -2211,6 +2191,7 @@
                         <outlet property="profileImage" destination="DaU-Qe-An9" id="FqU-VF-sqG"/>
                         <segue destination="DYS-BR-gcz" kind="presentation" identifier="profileModifySegue" modalPresentationStyle="fullScreen" id="vUP-eC-iTZ"/>
                         <segue destination="Wac-0I-5y4" kind="presentation" identifier="logOutSegue" modalPresentationStyle="fullScreen" id="qGV-n2-CNY"/>
+                        <segue destination="BoY-7a-O4f" kind="presentation" identifier="chat" id="Til-1j-hMV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nML-eW-1Qb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2753,7 +2734,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2VN-em-sdM"/>
         <segue reference="CQc-dh-lYr"/>
         <segue reference="qGV-n2-CNY"/>
         <segue reference="3zH-gj-nru"/>

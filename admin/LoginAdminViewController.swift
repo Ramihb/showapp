@@ -7,6 +7,8 @@
 
 import UIKit
 import Alamofire
+import SendBirdUIKit
+import SendBirdSDK
 class LoginAdminViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
@@ -65,6 +67,7 @@ class LoginAdminViewController: UIViewController {
                                     UserDefaults.standard.setValue(value, forKey: key)
                                     print("test:",UserDefaults.standard.string(forKey: "_id"))
                                 }
+                                SBUGlobals.CurrentUser = SBUUser(userId: UserDefaults.standard.string(forKey: "_id")!)
                                 print("Validation Successful")
                             self.performSegue(withIdentifier: "loginToAdmin", sender: "yes")
                             }

@@ -13,7 +13,6 @@
 		4767B2D3275050BE00819AE5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4767B2D2275050BE00819AE5 /* Alamofire */; };
 		4767EA212752FAC400993309 /* CompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767EA202752FAC400993309 /* CompanyService.swift */; };
 		4767EA2327530C6000993309 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4767EA2227530C6000993309 /* Company.swift */; };
-		476804C727779578009BDCFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476804C627779578009BDCFB /* ContentView.swift */; };
 		476858A5273A00F300680CCA /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476858A4273A00F300680CCA /* CompanyViewController.swift */; };
 		47696D582767C23700F5F957 /* CompanyListNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */; };
 		47696D5F27680BA000F5F957 /* QrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47696D5E27680BA000F5F957 /* QrCodeViewController.swift */; };
@@ -34,9 +33,9 @@
 		476D809327430C1F0068053D /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D809227430C1F0068053D /* AddArticleViewController.swift */; };
 		476D809527430C610068053D /* ArticleListeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D809427430C610068053D /* ArticleListeViewController.swift */; };
 		476D809727430CD10068053D /* UpdateArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D809627430CD10068053D /* UpdateArticleViewController.swift */; };
-		476E1C192773C1AC00277A8B /* ChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476E1C182773C1AC00277A8B /* ChannelListView.swift */; };
 		476F1F40274EFF02000AAA17 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476F1F3F274EFF02000AAA17 /* User.swift */; };
 		47745F1827833D5700B546CD /* paypal2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47745F1727833D5700B546CD /* paypal2ViewController.swift */; };
+		47745F1C2783827800B546CD /* AdminMessagerieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47745F1B2783827800B546CD /* AdminMessagerieController.swift */; };
 		47748C5D2766589600A72C27 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47748C5C2766589600A72C27 /* LocationViewController.swift */; };
 		47748C5F27665F2300A72C27 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47748C5E27665F2300A72C27 /* PlacesViewController.swift */; };
 		47750A86275CFC2F00EEDFCA /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47750A85275CFC2F00EEDFCA /* test.swift */; };
@@ -99,7 +98,6 @@
 		47672C072778D94200C7FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Company.storyboard; sourceTree = "<group>"; };
 		4767EA202752FAC400993309 /* CompanyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyService.swift; sourceTree = "<group>"; };
 		4767EA2227530C6000993309 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		476804C627779578009BDCFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		476858A4273A00F300680CCA /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListNewsViewController.swift; sourceTree = "<group>"; };
 		47696D5E27680BA000F5F957 /* QrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeViewController.swift; sourceTree = "<group>"; };
@@ -120,9 +118,9 @@
 		476D809227430C1F0068053D /* AddArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
 		476D809427430C610068053D /* ArticleListeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListeViewController.swift; sourceTree = "<group>"; };
 		476D809627430CD10068053D /* UpdateArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateArticleViewController.swift; sourceTree = "<group>"; };
-		476E1C182773C1AC00277A8B /* ChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListView.swift; sourceTree = "<group>"; };
 		476F1F3F274EFF02000AAA17 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		47745F1727833D5700B546CD /* paypal2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paypal2ViewController.swift; sourceTree = "<group>"; };
+		47745F1B2783827800B546CD /* AdminMessagerieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMessagerieController.swift; sourceTree = "<group>"; };
 		47748C5C2766589600A72C27 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		47748C5E27665F2300A72C27 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		47750A85275CFC2F00EEDFCA /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 				4785C7B4275E5A3F006BCF93 /* News.swift */,
 				47ED06B12763B15B003BC0F3 /* Favourit.swift */,
 				47ED06B32763DD72003BC0F3 /* Facture.swift */,
-				476804C627779578009BDCFB /* ContentView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,7 +255,6 @@
 				476D809627430CD10068053D /* UpdateArticleViewController.swift */,
 				4769FCBC274738C4007EED85 /* DetailArticleViewController.swift */,
 				4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */,
-				476E1C182773C1AC00277A8B /* ChannelListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +274,7 @@
 				476CAEF7277BAF1100C44042 /* LoginAdminViewController.swift */,
 				476CAEF9277BBA1400C44042 /* AdminListViewController.swift */,
 				476CAEFB277BC54D00C44042 /* AdminUserListViewController.swift */,
+				47745F1B2783827800B546CD /* AdminMessagerieController.swift */,
 			);
 			path = admin;
 			sourceTree = "<group>";
@@ -686,7 +683,6 @@
 			files = (
 				476D808927430AA80068053D /* BrandDetailsViewController.swift in Sources */,
 				479C253A275546E70082BF8F /* ArticleService.swift in Sources */,
-				476E1C192773C1AC00277A8B /* ChannelListView.swift in Sources */,
 				47B1B1712739A43900650C1D /* ProfileViewController.swift in Sources */,
 				476F1F40274EFF02000AAA17 /* User.swift in Sources */,
 				47750A86275CFC2F00EEDFCA /* test.swift in Sources */,
@@ -699,6 +695,7 @@
 				47748C5F27665F2300A72C27 /* PlacesViewController.swift in Sources */,
 				476CAEFA277BBA1400C44042 /* AdminListViewController.swift in Sources */,
 				4769FCBD274738C4007EED85 /* DetailArticleViewController.swift in Sources */,
+				47745F1C2783827800B546CD /* AdminMessagerieController.swift in Sources */,
 				476D809727430CD10068053D /* UpdateArticleViewController.swift in Sources */,
 				476D808F27430B4A0068053D /* CompanyNewsViewController.swift in Sources */,
 				4767EA2327530C6000993309 /* Company.swift in Sources */,
@@ -715,7 +712,6 @@
 				47745F1827833D5700B546CD /* paypal2ViewController.swift in Sources */,
 				47ED06B42763DD72003BC0F3 /* Facture.swift in Sources */,
 				476CAEFC277BC54D00C44042 /* AdminUserListViewController.swift in Sources */,
-				476804C727779578009BDCFB /* ContentView.swift in Sources */,
 				477935E02752454300D22A40 /* Login.swift in Sources */,
 				476CAEF8277BAF1100C44042 /* LoginAdminViewController.swift in Sources */,
 				476D809527430C610068053D /* ArticleListeViewController.swift in Sources */,

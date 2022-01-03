@@ -26,7 +26,7 @@ class ProfileViewController: UIViewController {
         updateProfile()
         let name = Notification.Name("updateProfil")
                NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: name, object: nil)
-        user1 = SBUUser(userId: "61ca18c42e2609ccdeb2341b", nickname: "showapp", profileUrl: "http://192.168.1.13:3000/images/imagefile.jpg1640634563943.jpg")
+        user1 = SBUUser(userId: "61d32c4c6bf3dfe9b5a08ed0", nickname: "admin", profileUrl: "http://192.168.1.13:3000/images/imagefile.jpg1641229387654.jpg")
                 user2 = SBUUser(userId: UserDefaults.standard.string(forKey: "_id")!, nickname: UserDefaults.standard.string(forKey: "firstName")!, profileUrl: UserDefaults.standard.string(forKey: "profilePicture")!)
         userMod = SBUUser(userId: "882490", nickname: "modo", profileUrl: "https://file-us-1.sendbird.com/profile_images/99048ad960574d0fb7adcb8ad0088904.png")
         //self.setupPicker()
@@ -77,7 +77,7 @@ class ProfileViewController: UIViewController {
         UserDefaults.standard.setValue([newLanguage], forKey: "AppleLanguages")
         exit(0)
     }
-    var params = SBDUserMessageParams(message: "text")
+    //var params = SBDUserMessageParams(message: "text")
 
         var channelURL = ""
         var user:User?
@@ -99,7 +99,7 @@ class ProfileViewController: UIViewController {
                         print("Created channel url : ",self.channelURL)
                     }
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     
                     SBDGroupChannel.getWithUrl(self.channelURL) { openChannel, error in
                         print("Entering channel url",self.channelURL)
@@ -113,6 +113,7 @@ class ProfileViewController: UIViewController {
                 }
                 
             }
+        performSegue(withIdentifier: "chat", sender: "ok")
     }
     
     

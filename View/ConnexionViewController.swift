@@ -10,7 +10,8 @@ import UIKit
 import GoogleSignIn
 import FBSDKLoginKit
 import Alamofire
-
+import SendBirdSDK
+import SendBirdUIKit
 
 class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
@@ -66,7 +67,9 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
                         if let faza = response["user"] as? [String: Any]{
                             for(key, value) in faza{
                                 UserDefaults.standard.setValue(value, forKey: key)
+                                
                             }
+                            SBUGlobals.CurrentUser = SBUUser(userId: UserDefaults.standard.string(forKey: "_id")!)
 
                         }
                         

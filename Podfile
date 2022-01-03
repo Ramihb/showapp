@@ -17,6 +17,7 @@ pod 'SendBirdUIKit'
 pod 'ViewAnimator'
 pod 'AppCenter'
 pod 'Braintree', '~> 4.22.0'
+pod 'MessageKit'
 
   target 'showappTests' do
     inherit! :search_paths
