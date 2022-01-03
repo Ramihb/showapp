@@ -17,6 +17,8 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
     var tableauCart = [Facture]()
     var gpsLocation = [Double]()
+    var flous = 0
+    
     @IBOutlet weak var tableCart: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,6 +40,10 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         nameLabel.text = "Article: " +  tableauCart[indexPath.row].name!
                         priceLAbel.text = "Price: " + tableauCart[indexPath.row].price!
                         quantiterLAbel.text = "Quantite: " + tableauCart[indexPath.row].qte!
+        flous = flous + (Int(tableauCart[indexPath.row].price!)! * Int(tableauCart[indexPath.row].qte!)!)
+                         print("aaa",Int(tableauCart[indexPath.row].qte!)!)
+        print("hedhi el total",flous)
+        
                         return cell
     }
     
@@ -85,24 +91,25 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard let url = URL(string: "http://192.168.1.13:3000/factures/"+tableauCart[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
+                    fatalError("Error getting the url")
+                }
+
+        AF.request(url, method: .delete,parameters: nil)
+                   .validate()
+                   .responseJSON { response in
+                       switch response.result {
+                           case .success:
+                               print("Article deleted from cart")
+                           case .failure(let error):
+                               print(error)
+                       }
+                   }
         if editingStyle == .delete {
             tableauCart.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
-            guard let url = URL(string: "http://192.168.1.13:3000/factures/"+tableauCart[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
-                        fatalError("Error getting the url")
-                    }
-
-            AF.request(url, method: .delete,parameters: nil)
-                       .validate()
-                       .responseJSON { response in
-                           switch response.result {
-                               case .success:
-                                   print("Article deleted from cart")
-                               case .failure(let error):
-                                   print(error)
-                           }
-                       }
+            
         }
     }
     
@@ -119,7 +126,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             payPalDriver.appSwitchDelegate = self
         
         //specify the transaction amount:
-        let request = BTPayPalRequest(amount: "2.32")
+        let request = BTPayPalRequest(amount: String(flous))
         request.currencyCode = "USD"
         
         payPalDriver.requestOneTimePayment(request) { (tokenizedPayPalAccount, error) in

@@ -55,7 +55,7 @@ class DetailArticleViewController: UIViewController {
     @IBAction func addToFavourite(_ sender: UIButton) {
                 if isActive {
                     isActive = false
-                    guard let url = URL(string: "http://192.168.1.13:3000/favorites/"+article!._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
+                    guard let url = URL(string: "http://192.168.1.14:3000/favorites/"+article!._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
                                 fatalError("Error getting the url")
                             }
 
@@ -75,7 +75,7 @@ class DetailArticleViewController: UIViewController {
             } else {
                 isActive = true
                 sender.setImage(UIImage(named: "redHeart"), for: .normal)
-                guard let url = URL(string: "http://192.168.1.13:3000/favorites/add") else {
+                guard let url = URL(string: "http://192.168.1.14:3000/favorites/add") else {
                             fatalError("Error getting the url")
                         }
 
@@ -104,7 +104,8 @@ class DetailArticleViewController: UIViewController {
     
     @IBOutlet weak var quantiteLabel: UILabel!
     @IBAction func stepper(_ sender: UIStepper) {
-        quantiteLabel.text = String(sender.value)
+        //quantiteLabel.text = String(sender.value)
+        quantiteLabel.text = "\(Int(sender.value))"
     }
     
     @IBAction func addToCart(_ sender: Any) {
