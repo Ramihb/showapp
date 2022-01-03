@@ -26,7 +26,7 @@ class ProfileViewController: UIViewController {
         updateProfile()
         let name = Notification.Name("updateProfil")
                NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: name, object: nil)
-        user1 = SBUUser(userId: "61ca18c42e2609ccdeb2341b", nickname: "showapp", profileUrl: "http://192.168.1.14:3000/images/imagefile.jpg1640634563943.jpg")
+        user1 = SBUUser(userId: "61ca18c42e2609ccdeb2341b", nickname: "showapp", profileUrl: "http://192.168.1.13:3000/images/imagefile.jpg1640634563943.jpg")
                 user2 = SBUUser(userId: UserDefaults.standard.string(forKey: "_id")!, nickname: UserDefaults.standard.string(forKey: "firstName")!, profileUrl: UserDefaults.standard.string(forKey: "profilePicture")!)
         userMod = SBUUser(userId: "882490", nickname: "modo", profileUrl: "https://file-us-1.sendbird.com/profile_images/99048ad960574d0fb7adcb8ad0088904.png")
         //self.setupPicker()

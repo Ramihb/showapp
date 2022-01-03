@@ -16,6 +16,8 @@ pod 'PayPalCheckout'
 pod 'SendBirdUIKit'
 pod 'ViewAnimator'
 pod 'AppCenter'
+pod 'Braintree', '~> 4.22.0'
+
   target 'showappTests' do
     inherit! :search_paths
     # Pods for testing

@@ -46,7 +46,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
 
     }
     func LoginUser(email: String, password: String) {
-        guard let url = URL(string: "http://192.168.1.14:3000/users/login") else {
+        guard let url = URL(string: "http://192.168.1.13:3000/users/login") else {
             fatalError("Error getting the url")
         }
         let params: Parameters = [
@@ -90,7 +90,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
     
     func LoginCompany(email: String, password: String) {
-        guard let url = URL(string: "http://192.168.1.14:3000/company/login") else {
+        guard let url = URL(string: "http://192.168.1.13:3000/company/login") else {
             fatalError("Error getting the url")
         }
         let params: Parameters = [
@@ -289,7 +289,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
     
 //    func fetchData() {
-//        guard let url = URL(string: "http://192.168.1.14:3000/users") else { return}
+//        guard let url = URL(string: "http://192.168.1.13:3000/users") else { return}
 //        let session = URLSession.shared.dataTask(with: url) {
 //            data, response, error in
 //            if let error = error {
@@ -302,7 +302,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
 //        }
 //
 //    func fetchCompanyData() {
-//        guard let url = URL(string: "http://192.168.1.14:3000/company") else { return}
+//        guard let url = URL(string: "http://192.168.1.13:3000/company") else { return}
 //        let session = URLSession.shared.dataTask(with: url) {
 //            data, response, error in
 //            if let error = error {

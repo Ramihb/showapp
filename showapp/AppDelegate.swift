@@ -16,6 +16,7 @@ import SendBirdUIKit
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
+import Braintree
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -24,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           Analytics.self,
           Crashes.self
         ])
+        BTAppSwitch.setReturnURLScheme("rghm.showapp.payments")
         let APP_ID = "57E64C12-D528-4AC6-AE11-47E5C8ABB26E"  // Specify your Sendbird application ID.
                 SBUMain.initialize(applicationId: APP_ID) {
                     // DB migration has started.
@@ -62,6 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               
         func application(_ app: UIApplication, open url: URL,options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool{
             
+            
             var handled: Bool
 
               handled = GIDSignIn.sharedInstance.handle(url)
@@ -76,6 +79,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     annotation: options[UIApplication.OpenURLOptionsKey.annotation]
                 )
               }
+            if url.scheme?.localizedCaseInsensitiveCompare("rghm.showapp.payments") == .orderedSame {
+
+                               return BTAppSwitch.handleOpen(url, options: options)
+                           }
             
             return false
         }

@@ -100,7 +100,7 @@ class AdminListViewController: UIViewController, UITableViewDelegate, UITableVie
 //        updateCompany(idCompany: tableauCompany[indexPath.row]._id!)
 //    }
     func updateCompany(idCompany: String){
-        guard let url = URL(string: "http://192.168.1.14:3000/company/"+idCompany) else {
+        guard let url = URL(string: "http://192.168.1.13:3000/company/"+idCompany) else {
                     fatalError("Error getting the url")
                 }
                 let params: Parameters = [
@@ -145,7 +145,7 @@ class AdminListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
     func updateCompanyFalse(idCompany: String){
-        guard let url = URL(string: "http://192.168.1.14:3000/company/"+idCompany) else {
+        guard let url = URL(string: "http://192.168.1.13:3000/company/"+idCompany) else {
                     fatalError("Error getting the url")
                 }
                 let params: Parameters = [
