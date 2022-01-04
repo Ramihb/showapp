@@ -110,7 +110,7 @@ class DetailArticleViewController: UIViewController {
     
     @IBAction func addToCart(_ sender: Any) {
         
-        guard let url = URL(string: "http://192.168.1.13:3000/factures/add") else {
+        guard let url = URL(string: "http://192.168.1.14:3000/factures/add") else {
                     fatalError("Error getting the url")
                 }
 
@@ -133,6 +133,11 @@ class DetailArticleViewController: UIViewController {
                                print(error)
                        }
                    }
+        let alert = UIAlertController(title: "Messager", message: "article has been added to cart", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
+    
     
 }

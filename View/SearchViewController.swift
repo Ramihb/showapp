@@ -15,7 +15,7 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         tableViewData = [cellData(opened: false, data: "Home", insidedata: []),
                          cellData(opened: false, data: "Mode", insidedata: ["Sweaters", "Outlet", "Pants", "Shoes", "Jackets", "Dress", "Other"]),
-                         cellData(opened: false, data: "High tech", insidedata: ["Pc", "Tv", "Computers accessories", "Other"]),
+                         cellData(opened: false, data: "High tech", insidedata: ["Pc", "Tv", "Computers' accessories", "Other"]),
                          cellData(opened: false, data: "Beauty", insidedata: ["make-up", "Art Supplies", "Other"]),
                          cellData(opened: false, data: "Baby", insidedata: []),
                          cellData(opened: false, data: "Jewellery", insidedata: ["earrings", "rings", "bracelets"]),
@@ -212,7 +212,7 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
         else if segue.identifier == "segueSearchToComputersAccessories" {
             
             let destination = segue.destination as! CategoryClothesViewController
-            destination.sousCategorieName = "Computers accessories"
+            destination.sousCategorieName = "Computers' accessories"
         }
         else if segue.identifier == "segueSearchToHighTechOther" {
             

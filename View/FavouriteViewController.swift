@@ -10,7 +10,10 @@ import Alamofire
 class FavouriteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var tableauFav = [Favorite]()
-    
+    var articleName:String?
+    var articlePrice:String?
+    var articleImage:String?
+    var articleID:String?
     
     @IBOutlet weak var tableFav: UITableView!
     
@@ -47,6 +50,10 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
                 //widgets setting value
         imageView.imageFromServerURL(urlString: tableauFav[indexPath.row].favPicture!)
         nameLabel.text = tableauFav[indexPath.row].name!
+        articleName = tableauFav[indexPath.row].name!
+        articlePrice = tableauFav[indexPath.row].price!
+        articleID = tableauFav[indexPath.row]._id
+        articleImage = tableauFav[indexPath.row].favPicture!
                 
                 return cell
     }
@@ -63,25 +70,60 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard let url = URL(string: "http://192.168.1.14:3000/favorites/"+tableauFav[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
+                    fatalError("Error getting the url")
+                }
+
+        AF.request(url, method: .delete,parameters: nil)
+                   .validate()
+                   .responseJSON { response in
+                       switch response.result {
+                           case .success:
+                               print("Article deleted from favourit")
+                           case .failure(let error):
+                               print(error)
+                       }
+                   }
         if editingStyle == .delete {
             tableauFav.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
-            guard let url = URL(string: "http://192.168.1.13:3000/favorites/"+tableauFav[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
-                        fatalError("Error getting the url")
-                    }
-
-            AF.request(url, method: .delete,parameters: nil)
-                       .validate()
-                       .responseJSON { response in
-                           switch response.result {
-                               case .success:
-                                   print("Article deleted from favourit")
-                               case .failure(let error):
-                                   print(error)
-                           }
-                       }
+            
         }
     }
 
+    
+    
+    
+    @IBAction func addToCartBTN(_ sender: Any) {
+        guard let url = URL(string: "http://192.168.1.14:3000/factures/add") else {
+                    fatalError("Error getting the url")
+                }
+
+                let params: Parameters = [
+                            "name": articleName!,
+                            "price": articlePrice!,
+                            "refArticle": articleID!,
+                            "refuser": UserDefaults.standard.string(forKey: "_id")!,
+                            "cartPicture": articleImage!,
+                            "qte": "1"
+                        ]
+
+        AF.request(url, method: .post,parameters: params)
+                   .validate()
+                   .responseJSON { response in
+                       switch response.result {
+                           case .success:
+                               print("Article added to cart")
+                           case .failure(let error):
+                               print(error)
+                       }
+                   }
+        let alert = UIAlertController(title: "Message", message: "article has been added to cart", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+    
+    
 }
