@@ -70,7 +70,7 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        guard let url = URL(string: "http://192.168.1.14:3000/favorites/"+tableauFav[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
+        guard let url = URL(string: "http://172.17.2.21:3000/favorites/"+tableauFav[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
                     fatalError("Error getting the url")
                 }
 
@@ -96,7 +96,7 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
     
     
     @IBAction func addToCartBTN(_ sender: Any) {
-        guard let url = URL(string: "http://192.168.1.14:3000/factures/add") else {
+        guard let url = URL(string: "http://172.17.2.21:3000/factures/add") else {
                     fatalError("Error getting the url")
                 }
 
