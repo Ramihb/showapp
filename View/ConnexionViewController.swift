@@ -25,7 +25,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
     @IBAction func continueBtn(_ sender: Any) {
         if(emailAdressTextField.text != "" && passwordTextField.text != "" && CompanySwitch.isOn
-         == false){
+                == false){
             LoginUser(email: emailAdressTextField.text!, password: passwordTextField.text!)
             
                    self.navigationController?.popViewController(animated: true)
@@ -47,7 +47,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
 
     }
     func LoginUser(email: String, password: String) {
-        guard let url = URL(string: "http://172.17.2.21:3000/users/login") else {
+        guard let url = URL(string: "http://192.168.1.12:3000/users/login") else {
             fatalError("Error getting the url")
         }
         let params: Parameters = [
@@ -93,7 +93,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
     
     func LoginCompany(email: String, password: String) {
-        guard let url = URL(string: "http://172.17.2.21:3000/company/login") else {
+        guard let url = URL(string: "http://192.168.1.12:3000/company/login") else {
             fatalError("Error getting the url")
         }
         let params: Parameters = [
@@ -292,7 +292,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
     
 //    func fetchData() {
-//        guard let url = URL(string: "http://172.17.2.21:3000/users") else { return}
+//        guard let url = URL(string: "http://192.168.1.12:3000/users") else { return}
 //        let session = URLSession.shared.dataTask(with: url) {
 //            data, response, error in
 //            if let error = error {
@@ -305,7 +305,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
 //        }
 //
 //    func fetchCompanyData() {
-//        guard let url = URL(string: "http://172.17.2.21:3000/company") else { return}
+//        guard let url = URL(string: "http://192.168.1.12:3000/company") else { return}
 //        let session = URLSession.shared.dataTask(with: url) {
 //            data, response, error in
 //            if let error = error {
@@ -356,7 +356,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
                                 //success
                                 /*let vc = UIViewController()
                                 vc.title = "Welcome!"
-                                vc.view.backgroundColor = .systemBlue
+                                vc.view.backgroundColor = w.systemBlue
                                 self?.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)*/
                                 self?.emailAdressTextField.text! = self!.mail
                                 self?.passwordTextField.text! = self!.mdp
@@ -412,4 +412,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
             
         }
     
+    @IBAction func CreateCompany(_ sender: Any) {
+        performSegue(withIdentifier: "createcompanyStoryBoardSegue", sender: "")
+    }
 }

@@ -84,7 +84,7 @@ class CompanyListNewsViewController: UIViewController, UITableViewDelegate, UITa
         }
 
     func deleteNewsFromCompany(i:String) {
-        guard let url = URL(string: "http://172.17.2.21:3000/news/"+i) else {
+        guard let url = URL(string: "http://192.168.1.12:3000/news/"+i) else {
                     fatalError("Error getting the url")
                 }
 

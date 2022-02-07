@@ -26,7 +26,7 @@ class ApiMouchService {
     static func uploadImageToServer(image: UIImage,parameters:[String:Any]) {
        
        guard let mediaImage = Media(withImage: image, forKey: "profilePicture") else { return }
-       guard let url = URL(string: "http://172.17.2.21:3000/users/signup") else { return }
+       guard let url = URL(string: "http://192.168.1.12:3000/users/signup") else { return }
        var request = URLRequest(url: url)
        request.httpMethod = "POST"
        //create boundary

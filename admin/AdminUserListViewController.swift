@@ -100,7 +100,7 @@ class AdminUserListViewController: UIViewController, UITableViewDelegate, UITabl
 //        updateUser(idUser: tableauUser[indexPath.row]._id)
 //    }
     func updateUser(idUser: String){
-        guard let url = URL(string: "http://172.17.2.21:3000/users/"+idUser) else {
+        guard let url = URL(string: "http://192.168.1.12:3000/users/"+idUser) else {
                     fatalError("Error getting the url")
                 }
                 let params: Parameters = [
@@ -142,7 +142,7 @@ class AdminUserListViewController: UIViewController, UITableViewDelegate, UITabl
     
     
     func updateUserFalse(idUser: String){
-        guard let url = URL(string: "http://172.17.2.21:3000/users/"+idUser) else {
+        guard let url = URL(string: "http://192.168.1.12:3000/users/"+idUser) else {
                     fatalError("Error getting the url")
                 }
                 let params: Parameters = [

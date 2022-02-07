@@ -91,7 +91,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        guard let url = URL(string: "http://172.17.2.21:3000/factures/"+tableauCart[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
+        guard let url = URL(string: "http://192.168.1.12:3000/factures/"+tableauCart[indexPath.row]._id+"/"+UserDefaults.standard.string(forKey: "_id")!) else {
                     fatalError("Error getting the url")
                 }
 
