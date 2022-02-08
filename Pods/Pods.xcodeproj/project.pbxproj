@@ -1350,7 +1350,7 @@
 		3F5636A8D51329B557F6CBC4C5CC5BB5 /* PPOTResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PPOTResult.h; path = BraintreePayPal/PayPalOneTouch/Public/PPOTResult.h; sourceTree = "<group>"; };
 		3F5F8E1CF0E032473E8E4EF449D8E4F4 /* AppCenter-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AppCenter-xcframeworks.sh"; sourceTree = "<group>"; };
 		3F7116A84A086DBB064CCFD1B18375D1 /* BTUIPayPalWordmarkCompactVectorArtView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTUIPayPalWordmarkCompactVectorArtView.m; path = "BraintreeUI/Views/Vector Art/BTUIPayPalWordmarkCompactVectorArtView.m"; sourceTree = "<group>"; };
-		3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AppAuth; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD1B4C1246D643E9476438C28048FA8 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		400E13B6513A604331DC23964013D496 /* Pods-showapp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-showapp-Info.plist"; sourceTree = "<group>"; };
 		401AACA444189E29D9384614DDBD00AB /* DropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.release.xcconfig; sourceTree = "<group>"; };
 		406B5795489539B3BFCBED0B270B4FFA /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
@@ -1834,7 +1834,7 @@
 		DB3D8671EA6D0735837FFEF6BD13DFA1 /* PPOTString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PPOTString.h; path = BraintreePayPal/PayPalUtils/Public/PPOTString.h; sourceTree = "<group>"; };
 		DBF324B64804A570D07CEBFD4D2A8E87 /* OIDAuthorizationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationService.h; path = Source/AppAuthCore/OIDAuthorizationService.h; sourceTree = "<group>"; };
 		DC341D9B899362898F9D332A8FDECAB9 /* PPOTDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PPOTDevice.m; path = BraintreePayPal/PayPalUtils/PPOTDevice.m; sourceTree = "<group>"; };
-		DCC59F6B7226FC9D0C772582FCD958DB /* Braintree */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Braintree; path = Braintree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC59F6B7226FC9D0C772582FCD958DB /* Braintree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Braintree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD20AB9059D16201E8324A3E02D266AA /* PPOTAnalyticsTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PPOTAnalyticsTracker.h; path = BraintreePayPal/PayPalOneTouch/Analytics/PPOTAnalyticsTracker.h; sourceTree = "<group>"; };
 		DD2DDF8CAA21394BDF6245AD7EFF7723 /* BTUISummaryView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTUISummaryView.m; path = "BraintreeUI/Views/Payments Components/BTUISummaryView.m"; sourceTree = "<group>"; };
 		DD5132B2ED4C0244475004EEE461E160 /* PPOTSwitchRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PPOTSwitchRequest.m; path = BraintreePayPal/PayPalOneTouch/Models/PPOTSwitchRequest.m; sourceTree = "<group>"; };
@@ -2989,8 +2989,8 @@
 		A1B6ED4635F51B3DDC0A00F6EC30C16E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */,
-				DCC59F6B7226FC9D0C772582FCD958DB /* Braintree */,
+				3FD1B4C1246D643E9476438C28048FA8 /* AppAuth.framework */,
+				DCC59F6B7226FC9D0C772582FCD958DB /* Braintree.framework */,
 				0669A4449A89D583C86BCD24D7CA75F7 /* Braintree-Braintree-Drop-In-Localization */,
 				850CC112A439D2467280787E32F17602 /* Braintree-Braintree-UI-Localization */,
 				9B6725B782188F18CB76A740433F14E4 /* DropDown */,
@@ -3936,7 +3936,7 @@
 			);
 			name = AppAuth;
 			productName = AppAuth;
-			productReference = 3FD1B4C1246D643E9476438C28048FA8 /* AppAuth */;
+			productReference = 3FD1B4C1246D643E9476438C28048FA8 /* AppAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5D8B2B3DA5FFBCA155F75AEF548EA0E9 /* Pods-showapp */ = {
@@ -4102,7 +4102,7 @@
 			);
 			name = Braintree;
 			productName = Braintree;
-			productReference = DCC59F6B7226FC9D0C772582FCD958DB /* Braintree */;
+			productReference = DCC59F6B7226FC9D0C772582FCD958DB /* Braintree.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C8C39DD486923E3933801D232041B590 /* InputBarAccessoryView */ = {
@@ -5751,7 +5751,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AppAuth/AppAuth-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -6449,7 +6449,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AppAuth/AppAuth-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -6484,7 +6484,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Braintree/Braintree-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Braintree/Braintree-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -6694,7 +6694,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Braintree/Braintree-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Braintree/Braintree-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
