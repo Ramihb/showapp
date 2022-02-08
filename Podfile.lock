@@ -70,7 +70,7 @@ PODS:
 
 DEPENDENCIES:
   - AppCenter
-  - Braintree (~> 4.22.0)
+  - Braintree
   - DropDown
   - FBSDKLoginKit
   - GoogleMaps
@@ -124,6 +124,6 @@ SPEC CHECKSUMS:
   SendBirdUIKit: 19f911839f10908e58db91900d33b6758ad47744
   ViewAnimator: a9ceed80266e00fd435ec4fb99b2df64d580d0e4
 
-PODFILE CHECKSUM: b076071c60bcfd76fbde7a7b7a5b813ba74c5a9d
+PODFILE CHECKSUM: 504b3bf2771f4d140a60de33d9c0aa00775e2d3f
 
 COCOAPODS: 1.11.2
