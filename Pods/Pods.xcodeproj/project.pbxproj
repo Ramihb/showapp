@@ -657,7 +657,7 @@
 		CF71895BD099A1182E240FF07D12B8E8 /* GTMSessionFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 87CE6C8FF51E5892C4784610109F2C50 /* GTMSessionFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D08E73CE77698A4EC2EFF175667F92A8 /* OIDEndSessionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E9DB403C554AECE2DAF0E37EB60BE9F4 /* OIDEndSessionRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D09ABF8DC0D31A1320DD6F6D9FD6DB3F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A72B99FFF02D68241AA398E2C34E699 /* Security.framework */; };
-		D1398A7C9C71EC5155E49602496D6ED8 /* Braintree-Braintree-UI-Localization in Resources */ = {isa = PBXBuildFile; fileRef = 850CC112A439D2467280787E32F17602 /* Braintree-Braintree-UI-Localization */; };
+		D1398A7C9C71EC5155E49602496D6ED8 /* Braintree-UI-Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 850CC112A439D2467280787E32F17602 /* Braintree-UI-Localization.bundle */; };
 		D16B01041368AC24C33A1462B5BF720F /* ContactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2089AB9A6FD42E387DF925C30758EE /* ContactItem.swift */; };
 		D187F2BBA741952DC325A6A8DD11556B /* es_ES.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A4F113E53F3AC38F70693BC343D9AC7C /* es_ES.lproj */; };
 		D1C1E6087A86263524CB278874080A3E /* UITableView + ViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160C8EA7662D485CEE171781D10E894A /* UITableView + ViewAnimator.swift */; };
@@ -755,7 +755,7 @@
 		F09A363484A717D7EE9C17664A06B971 /* PPOTConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AF2B7596EE82B990E84362956F296BE /* PPOTConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F0B86C3DAC1F2F8798F05779515178CC /* BTUIVenmoMonogramCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C19909C6A413E262EDABADB7C46BD9B /* BTUIVenmoMonogramCardView.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		F159FDF0C26037758BF2D029A4BDEF6E /* GIDSignIn_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A6A279DDDFB5FF8E12F1B0D0C8E2688 /* GIDSignIn_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F17867155EC0A0FD1929C5BB409C7C4F /* Braintree-Braintree-Drop-In-Localization in Resources */ = {isa = PBXBuildFile; fileRef = 0669A4449A89D583C86BCD24D7CA75F7 /* Braintree-Braintree-Drop-In-Localization */; };
+		F17867155EC0A0FD1929C5BB409C7C4F /* Braintree-Drop-In-Localization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0669A4449A89D583C86BCD24D7CA75F7 /* Braintree-Drop-In-Localization.bundle */; };
 		F1B91B85BB35FE543E8771278D484A98 /* AttachmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBE2CF5FB3BF3051A53037213FA7F61 /* AttachmentManager.swift */; };
 		F2287C78F601912D1FC092EC4915B3B8 /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C912BD77721C5F1BDAAB29721F038CA /* Directions.swift */; };
 		F23CEE6326992BCA15408CE8A833123A /* GIDGoogleUser_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9662466A337AA5488058286EEB764EE5 /* GIDGoogleUser_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -1189,7 +1189,7 @@
 		064C815563B7AA1BDCEFB54D4C4E0679 /* AutocompleteCompletion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutocompleteCompletion.swift; path = Sources/Plugins/AutocompleteManager/Models/AutocompleteCompletion.swift; sourceTree = "<group>"; };
 		065A7EF6F63A71A9A2B80DE48F7F0FA8 /* PPOTRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PPOTRequest.h; path = BraintreePayPal/PayPalOneTouch/Public/PPOTRequest.h; sourceTree = "<group>"; };
 		066106DDAFB89CA05A67E4B53B9F2E35 /* AutocompleteManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutocompleteManager.swift; path = Sources/Plugins/AutocompleteManager/AutocompleteManager.swift; sourceTree = "<group>"; };
-		0669A4449A89D583C86BCD24D7CA75F7 /* Braintree-Braintree-Drop-In-Localization */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Braintree-Braintree-Drop-In-Localization"; path = "Braintree-Drop-In-Localization.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0669A4449A89D583C86BCD24D7CA75F7 /* Braintree-Drop-In-Localization.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Braintree-Drop-In-Localization.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06ED377AF9B58CE673E0186C3517B3B6 /* OIDAuthorizationService+IOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OIDAuthorizationService+IOS.h"; path = "Source/AppAuth/iOS/OIDAuthorizationService+IOS.h"; sourceTree = "<group>"; };
 		070DF1A2DF057256B44A1D2EB82E8D4E /* BTUICVVBackVectorArtView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTUICVVBackVectorArtView.h; path = "BraintreeUI/Views/Vector Art/BTUICVVBackVectorArtView.h"; sourceTree = "<group>"; };
 		0720ECEB298DD298E50F7983CF5064AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
@@ -1559,7 +1559,7 @@
 		84DADC60C4F2397885F11BF2020D7E76 /* BTUIVenmoButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTUIVenmoButton.h; path = BraintreeUI/Public/BTUIVenmoButton.h; sourceTree = "<group>"; };
 		84FA225AE102013803E52BF37016CC00 /* Pods-showapp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-showapp"; path = Pods_showapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FCD4925E1683587E1B3A201173C7B0 /* BTHTTPErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTHTTPErrors.h; path = BraintreeCore/Public/BTHTTPErrors.h; sourceTree = "<group>"; };
-		850CC112A439D2467280787E32F17602 /* Braintree-Braintree-UI-Localization */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Braintree-Braintree-UI-Localization"; path = "Braintree-UI-Localization.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		850CC112A439D2467280787E32F17602 /* Braintree-UI-Localization.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Braintree-UI-Localization.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85331BA3581C36A114B1425FC8835A11 /* OIDURLSessionProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLSessionProvider.h; path = Source/AppAuthCore/OIDURLSessionProvider.h; sourceTree = "<group>"; };
 		855592EBA4308ADAF520F47FFCE9EA71 /* GTMOAuth2KeychainCompatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMOAuth2KeychainCompatibility.m; path = GTMAppAuth/Sources/GTMOAuth2KeychainCompatibility.m; sourceTree = "<group>"; };
 		862D58D8CF95593CCC63C5CD38C86A28 /* BTUIPaymentOptionType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTUIPaymentOptionType.h; path = BraintreeUI/Public/BTUIPaymentOptionType.h; sourceTree = "<group>"; };
@@ -1624,7 +1624,7 @@
 		9A5CA57FFCA30FBCA9DC747943D1DD7A /* BTUIPayPalWordmarkVectorArtView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTUIPayPalWordmarkVectorArtView.m; path = "BraintreeUI/Views/Vector Art/BTUIPayPalWordmarkVectorArtView.m"; sourceTree = "<group>"; };
 		9B005D99E2A0D0F3C1E5A0E69CC4A627 /* Pods-showapp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-showapp-frameworks.sh"; sourceTree = "<group>"; };
 		9B38734DFB49E7BC782342A9C75F51E6 /* BTUIPayPalButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTUIPayPalButton.h; path = BraintreeUI/Public/BTUIPayPalButton.h; sourceTree = "<group>"; };
-		9B6725B782188F18CB76A740433F14E4 /* DropDown */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B95185B7AC66F4CD156E45DE4554C0C /* OIDGrantTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDGrantTypes.m; path = Source/AppAuthCore/OIDGrantTypes.m; sourceTree = "<group>"; };
 		9BC8377000A1013FE6EBF35B60EF0F96 /* FBSDKCoreKit_Basics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.release.xcconfig; sourceTree = "<group>"; };
 		9BD9C9DAE27150FECC1A46B591AF1480 /* BTUICoinbaseMonogramCardView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTUICoinbaseMonogramCardView.m; path = "BraintreeUI/Views/Vector Art/BTUICoinbaseMonogramCardView.m"; sourceTree = "<group>"; };
@@ -2991,9 +2991,9 @@
 			children = (
 				3FD1B4C1246D643E9476438C28048FA8 /* AppAuth.framework */,
 				DCC59F6B7226FC9D0C772582FCD958DB /* Braintree.framework */,
-				0669A4449A89D583C86BCD24D7CA75F7 /* Braintree-Braintree-Drop-In-Localization */,
-				850CC112A439D2467280787E32F17602 /* Braintree-Braintree-UI-Localization */,
-				9B6725B782188F18CB76A740433F14E4 /* DropDown */,
+				0669A4449A89D583C86BCD24D7CA75F7 /* Braintree-Drop-In-Localization.bundle */,
+				850CC112A439D2467280787E32F17602 /* Braintree-UI-Localization.bundle */,
+				9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */,
 				FD56AB51475BC5F592781EE2692D1412 /* GoogleSignIn */,
 				E5BA41B7F2E1FE47F9ABCAC27C9E4281 /* GoogleSignIn-GoogleSignIn */,
 				6FD122EA0AB9AB2A8FFA5F676C795DF0 /* GTMAppAuth */,
@@ -3899,7 +3899,7 @@
 			);
 			name = "Braintree-Braintree-Drop-In-Localization";
 			productName = "Braintree-Drop-In-Localization";
-			productReference = 0669A4449A89D583C86BCD24D7CA75F7 /* Braintree-Braintree-Drop-In-Localization */;
+			productReference = 0669A4449A89D583C86BCD24D7CA75F7 /* Braintree-Drop-In-Localization.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		2D834CBBD351637528FA6B93E42745DC /* MessageKit */ = {
@@ -3990,7 +3990,7 @@
 			);
 			name = "Braintree-Braintree-UI-Localization";
 			productName = "Braintree-UI-Localization";
-			productReference = 850CC112A439D2467280787E32F17602 /* Braintree-Braintree-UI-Localization */;
+			productReference = 850CC112A439D2467280787E32F17602 /* Braintree-UI-Localization.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		7DFA91ED3A3D0BC020C3C843A3D1EB38 /* GoogleSignIn-GoogleSignIn */ = {
@@ -4178,7 +4178,7 @@
 			);
 			name = DropDown;
 			productName = DropDown;
-			productReference = 9B6725B782188F18CB76A740433F14E4 /* DropDown */;
+			productReference = 9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -4407,8 +4407,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F17867155EC0A0FD1929C5BB409C7C4F /* Braintree-Braintree-Drop-In-Localization in Resources */,
-				D1398A7C9C71EC5155E49602496D6ED8 /* Braintree-Braintree-UI-Localization in Resources */,
+				F17867155EC0A0FD1929C5BB409C7C4F /* Braintree-Drop-In-Localization.bundle in Resources */,
+				D1398A7C9C71EC5155E49602496D6ED8 /* Braintree-UI-Localization.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5656,7 +5656,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Braintree";
 				IBSC_MODULE = Braintree;
 				INFOPLIST_FILE = "Target Support Files/Braintree/ResourceBundle-Braintree-UI-Localization-Braintree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "Braintree-UI-Localization";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6018,7 +6018,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Braintree";
 				IBSC_MODULE = Braintree;
 				INFOPLIST_FILE = "Target Support Files/Braintree/ResourceBundle-Braintree-UI-Localization-Braintree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "Braintree-UI-Localization";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6217,7 +6217,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Braintree";
 				IBSC_MODULE = Braintree;
 				INFOPLIST_FILE = "Target Support Files/Braintree/ResourceBundle-Braintree-Drop-In-Localization-Braintree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "Braintree-Drop-In-Localization";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6390,7 +6390,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Braintree";
 				IBSC_MODULE = Braintree;
 				INFOPLIST_FILE = "Target Support Files/Braintree/ResourceBundle-Braintree-Drop-In-Localization-Braintree-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "Braintree-Drop-In-Localization";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6414,7 +6414,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -6625,7 +6625,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
