@@ -1831,6 +1831,7 @@
                                 <rect key="frame" x="107.5" y="548" width="160" height="30"/>
                                 <color key="backgroundColor" name="pink"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ENM-Hd-ybp"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="SZy-4S-JPX"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -1838,7 +1839,7 @@
                                 <state key="normal" title="Contact Us"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="17.5"/>
+                                        <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
