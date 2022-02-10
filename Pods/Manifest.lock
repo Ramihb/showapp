@@ -12,17 +12,28 @@ PODS:
   - AppCenter/Core (4.4.1)
   - AppCenter/Crashes (4.4.1):
     - AppCenter/Core
-  - Braintree (5.5.0):
-    - Braintree/Card (= 5.5.0)
-    - Braintree/Core (= 5.5.0)
-    - Braintree/PayPal (= 5.5.0)
-  - Braintree/Card (5.5.0):
+  - Braintree (4.22.0):
+    - Braintree/Card (= 4.22.0)
+    - Braintree/Core (= 4.22.0)
+    - Braintree/PayPal (= 4.22.0)
+    - Braintree/UI (= 4.22.0)
+  - Braintree/Card (4.22.0):
     - Braintree/Core
-  - Braintree/Core (5.5.0)
-  - Braintree/PayPal (5.5.0):
+  - Braintree/Core (4.22.0)
+  - Braintree/PayPal (4.22.0):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.22.0):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.22.0):
     - Braintree/Core
     - Braintree/PayPalDataCollector
-  - Braintree/PayPalDataCollector (5.5.0)
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.22.0)
+  - Braintree/UI (4.22.0):
+    - Braintree/Card
+    - Braintree/Core
   - DropDown (2.3.13)
   - FBAEMKit (12.1.0):
     - FBSDKCoreKit_Basics (= 12.1.0)
@@ -59,7 +70,7 @@ PODS:
 
 DEPENDENCIES:
   - AppCenter
-  - Braintree
+  - Braintree (~> 4.22.0)
   - DropDown
   - FBSDKLoginKit
   - GoogleMaps
@@ -95,7 +106,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   AppCenter: b0b6f1190215b5f983c42934db718f3b46fff3c0
-  Braintree: acd5dd18b4aff8858346d6b6f6f3b5bc059332fb
+  Braintree: e814ec196208d3e961c488cf4071de043f399cf9
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FBAEMKit: 56c0bb9b42e3747cd82b67934f0c2b19325382ea
   FBSDKCoreKit: 75368765d9c2303073145a7925dfaa9d60bcd77b
@@ -113,6 +124,6 @@ SPEC CHECKSUMS:
   SendBirdUIKit: 19f911839f10908e58db91900d33b6758ad47744
   ViewAnimator: a9ceed80266e00fd435ec4fb99b2df64d580d0e4
 
-PODFILE CHECKSUM: c631f6080b2b59c89c25f5adfda7906bcf2ab161
+PODFILE CHECKSUM: b076071c60bcfd76fbde7a7b7a5b813ba74c5a9d
 
 COCOAPODS: 1.11.2
