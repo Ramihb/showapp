@@ -13,8 +13,7 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewData = [cellData(opened: false, data: "Home", insidedata: []),
-                         cellData(opened: false, data: "Mode", insidedata: ["Sweaters", "Outlet", "Pants", "Shoes", "Jackets", "Dress", "Other"]),
+        tableViewData = [cellData(opened: false, data: "Mode", insidedata: ["Sweaters", "Outlet", "Pants", "Shoes", "Jackets", "Dress", "Other"]),
                          cellData(opened: false, data: "High tech", insidedata: ["Pc", "Tv", "Computers' accessories", "Other"]),
                          cellData(opened: false, data: "Beauty", insidedata: ["make-up", "Art Supplies", "Other"]),
                          cellData(opened: false, data: "Baby", insidedata: []),
@@ -92,9 +91,9 @@ class SearchViewController: UIViewController,UITableViewDataSource, UITableViewD
             }
             
         //Home
-        if tableViewData[indexPath.section].data == "Home" {
-        performSegue(withIdentifier: "segueSearchToHome", sender: indexPath)
-        }
+//        if tableViewData[indexPath.section].data == "Home" {
+//        performSegue(withIdentifier: "segueSearchToHome", sender: indexPath)
+//        }
         //Mode
         if tableViewData[indexPath.section].data == "Mode" && indexPath.row == 1 {
         performSegue(withIdentifier: "segueSearchToModeSweaters", sender: indexPath)

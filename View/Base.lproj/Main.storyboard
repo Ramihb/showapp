@@ -59,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="240" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rYM-cc-OPF">
-                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="240" id="mfB-vb-IIZ">
@@ -90,7 +90,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf2-6E-tUc">
-                                <rect key="frame" x="0.0" y="0.0" width="49" height="40"/>
+                                <rect key="frame" x="0.0" y="44" width="49" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Q3b-xT-jho"/>
                                 </constraints>
@@ -118,7 +118,7 @@
                     <navigationItem key="navigationItem" title="Home" id="odd-zx-weM">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="n8J-hw-V3a">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tFj-DZ-UBy">
-                                <rect key="frame" x="20" y="5" width="92" height="34.5"/>
+                                <rect key="frame" x="16" y="5" width="92" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="magnifyingglass" catalog="system">
@@ -126,12 +126,12 @@
                                 </state>
                             </button>
                             <connections>
-                                <segue destination="5r8-cj-PLa" kind="show" id="3zH-gj-nru"/>
+                                <segue destination="5r8-cj-PLa" kind="presentation" modalPresentationStyle="fullScreen" id="0yb-gb-e7v"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="iPF-33-Uy8">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="9cW-Zb-nbZ">
-                                <rect key="frame" x="341.5" y="0.0" width="52.5" height="44"/>
+                                <rect key="frame" x="306.5" y="0.0" width="52.5" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="cart" catalog="system">
@@ -393,10 +393,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0JM-jZ-S6K">
-                                <rect key="frame" x="16" y="21" width="343" height="646"/>
+                                <rect key="frame" x="16" y="65" width="343" height="553"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x0g-kb-hMO">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="646"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="553"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BrandsCell" rowHeight="140" id="wBx-Hz-5Li">
@@ -432,7 +432,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="rlb-SX-61e"/>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brands" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZf-P2-v8z">
-                                <rect key="frame" x="50" y="0.0" width="25" height="21"/>
+                                <rect key="frame" x="50" y="44" width="25" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -580,7 +580,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="faT-QW-efs">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="672"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategorieSearch" rowHeight="135" id="LXY-c8-Ub2">
@@ -659,7 +659,6 @@
                         <segue destination="ZNh-Za-TUn" kind="presentation" identifier="segueSearchToModeShoes" modalPresentationStyle="fullScreen" id="hym-VC-fdM"/>
                         <segue destination="ZNh-Za-TUn" kind="presentation" identifier="segueSearchToModeJackets" modalPresentationStyle="fullScreen" id="Pue-Yw-fnp"/>
                         <segue destination="ZNh-Za-TUn" kind="presentation" identifier="segueSearchToModeDress" modalPresentationStyle="fullScreen" id="yRr-5a-V9i"/>
-                        <segue destination="FBy-yJ-qog" kind="presentation" identifier="segueSearchToHome" modalPresentationStyle="fullScreen" id="6ei-Hb-nWL"/>
                         <segue destination="ZNh-Za-TUn" kind="presentation" identifier="segueSearchToModeOther" modalPresentationStyle="fullScreen" id="X6g-3m-qbz"/>
                         <segue destination="ZNh-Za-TUn" kind="presentation" identifier="segueSearchToPc" modalPresentationStyle="fullScreen" id="wzG-yK-Dhg"/>
                         <segue destination="ZNh-Za-TUn" kind="presentation" identifier="segueSearchToTv" modalPresentationStyle="fullScreen" id="mfF-PQ-XPB"/>
@@ -2402,9 +2401,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="B98-DF-ffV"/>
         <segue reference="qGV-n2-CNY"/>
-        <segue reference="3zH-gj-nru"/>
+        <segue reference="0yb-gb-e7v"/>
         <segue reference="2Qn-92-HxQ"/>
-        <segue reference="6ei-Hb-nWL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
