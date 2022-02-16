@@ -45,7 +45,7 @@ class LoginAdminViewController: UIViewController {
         }
     }
     func LoginAdmin(email: String, password: String) {
-            guard let url = URL(string: "http://192.168.1.12:3000/admin/login") else {
+            guard let url = URL(string: "https://backend-showapp.herokuapp.com/admin/login") else {
                 fatalError("Error getting the url")
             }
             let params: Parameters = [

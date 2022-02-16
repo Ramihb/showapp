@@ -47,7 +47,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
 
     }
     func LoginUser(email: String, password: String) {
-        guard let url = URL(string: "http://192.168.1.12:3000/users/login") else {
+        guard let url = URL(string: "https://backend-showapp.herokuapp.com/users/login") else {
             fatalError("Error getting the url")
         }
         let params: Parameters = [
@@ -80,11 +80,28 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
                             print("Validation Successful")
                         self.performSegue(withIdentifier: "signinhomesegue", sender: "yes")
                         case .failure(let error):
-                        self.prompt(title: "Echec", message: "Email ou mot de passe incorrect")
-                        if let data = response.data {
-                            let json = String(data: data, encoding: String.Encoding.utf8)
-                            print("Failure Response: \(json)")
-                        }
+                        
+                        
+                        
+//                        if let data = response.data {
+//                            let json = String(data: data, encoding: String.Encoding.utf8)
+//                            print("Failure Response: \(json)")
+//
+//
+//                        }
+                        var errorString: String?
+                                    if let data = response.data {
+                                        if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: String] {
+                                            errorString = json["error"]
+                                            print("errorString\(errorString)")
+                                            if(errorString == "please verify your account"){
+                                                self.prompt(title: "Echec", message: "please verify your account")
+                                            }
+                                            else{
+                                                self.prompt(title: "Echec", message: "Email ou mot de passe incorrect")
+                                            }
+                                        }
+                                    }
                         
                         
                     }
@@ -93,7 +110,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
     
     func LoginCompany(email: String, password: String) {
-        guard let url = URL(string: "http://192.168.1.12:3000/company/login") else {
+        guard let url = URL(string: "https://backend-showapp.herokuapp.com/company/login") else {
             fatalError("Error getting the url")
         }
         let params: Parameters = [
@@ -292,7 +309,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     
     
 //    func fetchData() {
-//        guard let url = URL(string: "http://192.168.1.12:3000/users") else { return}
+//        guard let url = URL(string: "https://backend-showapp.herokuapp.com/users") else { return}
 //        let session = URLSession.shared.dataTask(with: url) {
 //            data, response, error in
 //            if let error = error {
@@ -305,7 +322,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
 //        }
 //
 //    func fetchCompanyData() {
-//        guard let url = URL(string: "http://192.168.1.12:3000/company") else { return}
+//        guard let url = URL(string: "https://backend-showapp.herokuapp.com/company") else { return}
 //        let session = URLSession.shared.dataTask(with: url) {
 //            data, response, error in
 //            if let error = error {

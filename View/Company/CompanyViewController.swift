@@ -89,7 +89,7 @@ class CompanyViewController: UIViewController,UIImagePickerControllerDelegate, U
             }
     
 //    func AddCompany(firstNameCompany: String, lastNameCompany: String, emailCompany: String, passwordCompany: String, phoneNumberCompany: String, categoryCompany: String, businessNameCompany: String) {
-//            let url = "http://192.168.1.12:3000/company/signup"
+//            let url = "https://backend-showapp.herokuapp.com/company/signup"
 //        let params: Parameters = [
 //            "emailCompany": emailCompanyTextField.text!,
 //            "passwordCompany": passwordTextField.text!,

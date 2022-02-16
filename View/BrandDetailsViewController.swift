@@ -86,7 +86,7 @@ class BrandDetailsViewController: UIViewController, UICollectionViewDelegate, UI
         
         
     @IBAction func addToCartBtn(_ sender: Any) {
-        guard let url = URL(string: "http://192.168.1.12:3000/factures/add") else {
+        guard let url = URL(string: "https://backend-showapp.herokuapp.com/factures/add") else {
                     fatalError("Error getting the url")
                 }
 

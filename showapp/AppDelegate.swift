@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           Crashes.self
         ])
         BTAppSwitch.setReturnURLScheme("rghm.showapp.payments")
-        let APP_ID = "57E64C12-D528-4AC6-AE11-47E5C8ABB26E"  // Specify your Sendbird application ID.
+        let APP_ID = "CF932073-4853-4C10-935F-454F5C225178"  // Specify your Sendbird application ID.
         SBUMain.initialize(applicationId: APP_ID) {
                     // DB migration has started.
                 } completionHandler: { error in
