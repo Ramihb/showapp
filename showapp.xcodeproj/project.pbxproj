@@ -41,6 +41,8 @@
 		47750A86275CFC2F00EEDFCA /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47750A85275CFC2F00EEDFCA /* test.swift */; };
 		477935E02752454300D22A40 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477935DF2752454300D22A40 /* Login.swift */; };
 		4779DCC8277A202A003CCEE0 /* MessagerieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4779DCC7277A202A003CCEE0 /* MessagerieController.swift */; };
+		4781842A27BD931D000A4EBC /* tabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4781842927BD931D000A4EBC /* tabBarViewController.swift */; };
+		4781842C27BDA807000A4EBC /* CompanyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4781842B27BDA807000A4EBC /* CompanyTabBarViewController.swift */; };
 		478361552766BC5D00BAE92A /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478361542766BC5D00BAE92A /* PaymentViewController.swift */; };
 		4785C7B5275E5A3F006BCF93 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785C7B4275E5A3F006BCF93 /* News.swift */; };
 		4785C7B7275E797B006BCF93 /* CategoryClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */; };
@@ -126,6 +128,8 @@
 		47750A85275CFC2F00EEDFCA /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		477935DF2752454300D22A40 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		4779DCC7277A202A003CCEE0 /* MessagerieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagerieController.swift; sourceTree = "<group>"; };
+		4781842927BD931D000A4EBC /* tabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarViewController.swift; sourceTree = "<group>"; };
+		4781842B27BDA807000A4EBC /* CompanyTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTabBarViewController.swift; sourceTree = "<group>"; };
 		478361542766BC5D00BAE92A /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		4785C7B4275E5A3F006BCF93 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		4785C7B6275E797B006BCF93 /* CategoryClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryClothesViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 				47CA57A227380A68005E3096 /* Main.storyboard */,
 				47CA57A027380A68005E3096 /* ViewController.swift */,
 				47CA57CF27382018005E3096 /* CartViewController.swift */,
+				4781842927BD931D000A4EBC /* tabBarViewController.swift */,
 				47CA57D327385F15005E3096 /* SearchViewController.swift */,
 				476D80802743086D0068053D /* HomeViewController.swift */,
 				476D8082274308B50068053D /* FavouriteViewController.swift */,
@@ -315,6 +320,7 @@
 				476D808E27430B4A0068053D /* CompanyNewsViewController.swift */,
 				47672C082778D94200C7FF47 /* Company.storyboard */,
 				47696D572767C23700F5F957 /* CompanyListNewsViewController.swift */,
+				4781842B27BDA807000A4EBC /* CompanyTabBarViewController.swift */,
 			);
 			path = Company;
 			sourceTree = "<group>";
@@ -771,6 +777,7 @@
 				479C253C2755558C0082BF8F /* Article.swift in Sources */,
 				478361552766BC5D00BAE92A /* PaymentViewController.swift in Sources */,
 				47CA579D27380A68005E3096 /* AppDelegate.swift in Sources */,
+				4781842C27BDA807000A4EBC /* CompanyTabBarViewController.swift in Sources */,
 				4767EA212752FAC400993309 /* CompanyService.swift in Sources */,
 				476D8085274308DB0068053D /* ConnexionViewController.swift in Sources */,
 				47894F1E275AA6EA00AF65E0 /* ModifierProfileViewController.swift in Sources */,
@@ -780,6 +787,7 @@
 				47745F1827833D5700B546CD /* paypal2ViewController.swift in Sources */,
 				47ED06B42763DD72003BC0F3 /* Facture.swift in Sources */,
 				476CAEFC277BC54D00C44042 /* AdminUserListViewController.swift in Sources */,
+				4781842A27BD931D000A4EBC /* tabBarViewController.swift in Sources */,
 				477935E02752454300D22A40 /* Login.swift in Sources */,
 				476CAEF8277BAF1100C44042 /* LoginAdminViewController.swift in Sources */,
 				476D809527430C610068053D /* ArticleListeViewController.swift in Sources */,

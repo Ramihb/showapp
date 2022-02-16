@@ -62,7 +62,7 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
                 .responseJSON { response in
                     switch response.result {
                         case .success (let json):
-
+                        print(json)
                         let response = json as! NSDictionary
                         if let faza = response["user"] as? [String: Any]{
                             for(key, value) in faza{

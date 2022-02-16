@@ -7,6 +7,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import SendBirdUIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -17,7 +18,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        self.loadBaseController()
     }
+    func loadBaseController() {
+           let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+           guard let window = self.window else { return }
+           window.makeKeyAndVisible()
+            if !( UserDefaults.standard.string(forKey: "_id") ?? "").isEmpty{
+                SBUGlobals.CurrentUser = SBUUser(userId: UserDefaults.standard.string(forKey: "_id")!)
+                if !( UserDefaults.standard.string(forKey: "profilePicture") ?? "").isEmpty{
+                    let homeVC: tabBarViewController = storyboard.instantiateViewController(withIdentifier: "connexion") as! tabBarViewController
+                        self.window?.rootViewController = homeVC
+                }
+                else if !( UserDefaults.standard.string(forKey: "brandPicCompany") ?? "").isEmpty{
+                    let homeVC: CompanyTabBarViewController = storyboard.instantiateViewController(withIdentifier: "CompanyStoryBoard") as! CompanyTabBarViewController
+                        self.window?.rootViewController = homeVC
+                }
+                
+            }
+            self.window?.makeKeyAndVisible()
+
+        }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

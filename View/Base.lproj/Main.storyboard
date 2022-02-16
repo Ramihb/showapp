@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="bhu-wg-Vib">
             <objects>
-                <tabBarController id="7tm-gc-4hy" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="connexion" id="7tm-gc-4hy" customClass="tabBarViewController" customModule="showapp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="SLE-8L-TIJ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QZT-7m-a2L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -1760,9 +1760,6 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="arrow.right.circle" catalog="system"/>
-                                        <connections>
-                                            <action selector="btnChangeLanguage:" destination="34j-kk-D1d" eventType="touchUpInside" id="Zzp-L2-Pie"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -2404,7 +2401,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="B98-DF-ffV"/>
-        <segue reference="q1M-HB-wPM"/>
+        <segue reference="qGV-n2-CNY"/>
         <segue reference="3zH-gj-nru"/>
         <segue reference="2Qn-92-HxQ"/>
         <segue reference="6ei-Hb-nWL"/>
