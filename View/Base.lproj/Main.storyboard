@@ -1266,6 +1266,9 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="adminBtn:" destination="Wac-0I-5y4" eventType="touchUpInside" id="cNK-2B-Ov3"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -1435,6 +1438,7 @@
                         <segue destination="7tm-gc-4hy" kind="presentation" identifier="signinhomesegue" modalPresentationStyle="fullScreen" id="FV7-WE-ndV"/>
                         <segue destination="lPT-Wj-M8H" kind="show" identifier="signUpSegue" id="uhj-76-I2y"/>
                         <segue destination="4py-cE-Ht6" kind="presentation" identifier="forgetPasswordSegue" modalPresentationStyle="fullScreen" id="fze-h0-Koi"/>
+                        <segue destination="H2d-fg-Poh" kind="presentation" identifier="toTheAdmin" modalPresentationStyle="fullScreen" id="OBS-ik-ief"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDL-hY-L9f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2399,6 +2403,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="FV7-WE-ndV"/>
         <segue reference="B98-DF-ffV"/>
         <segue reference="qGV-n2-CNY"/>
         <segue reference="0yb-gb-e7v"/>

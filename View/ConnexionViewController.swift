@@ -432,4 +432,9 @@ class ConnexionViewController: UIViewController, LoginButtonDelegate {
     @IBAction func CreateCompany(_ sender: Any) {
         performSegue(withIdentifier: "createcompanyStoryBoardSegue", sender: "")
     }
+    
+    
+    @IBAction func adminBtn(_ sender: Any) {
+        performSegue(withIdentifier: "toTheAdmin", sender: "")
+    }
 }
