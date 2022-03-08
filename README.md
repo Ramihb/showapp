@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/MGhassen30798/ShowAppiOS">
-    <img src="https://github.com/MGhassen30798/Ios_project/blob/master/LOGO.png" alt="Logo" width="80" height="80">
+    <img src="https://res.cloudinary.com/showapp/image/upload/v1646733872/Showapp_ed9kuq.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">SHOWAPP application</h3>
